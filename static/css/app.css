@@ -973,6 +973,7 @@ ul, ol, li {
     height: 99px;
     float: left;
     padding: 15px 10px 0 10px;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 #content .content-focus-right-user-info_avatar {
@@ -1049,7 +1050,7 @@ ul, ol, li {
 
 #content .content-focus-right .content-focus-right-middle {
     width: 100%;
-    height: 156px;
+    height: 155px;
     float: left;
 }
 
