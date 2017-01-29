@@ -85,7 +85,7 @@ $(function(){
     }
 });
 
-/* Vue */
+/* VueJs */
 $(function () {
     var vm = new Vue({
         el:"#searchBar",
