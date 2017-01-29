@@ -507,17 +507,17 @@ ul, ol, li {
     left: 0;
     width: 190px;
     height: 170px;
-    overflow: hidden;
-    background-color: #FFFFFF;
-    box-shadow: 0 -12px 10px rgba(0, 0, 0, .2);
 }
 
 #header .headerMain .logo > h1 {
     position: absolute;
+    left: -10px;
     margin-top: 0;
     margin-bottom: 0;
     width: 100%;
+    padding: 0 10px;
     height: 100%;
+    overflow: hidden;
 }
 
 #header .headerMain .logo > h1 > a {
@@ -526,6 +526,8 @@ ul, ol, li {
     overflow: hidden;
     display: block;
     text-indent: -999px;
+    background-color: #FFFFFF;
+    box-shadow: 0 -12px 10px rgba(0, 0, 0, .2);
 }
 
 #header .headerMain .logo > h1 > a > img {
