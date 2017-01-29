@@ -1,4 +1,7 @@
-$(function () {});
+$(function () {
+    var i = $('.slideBox').find('.active').index();
+    console.log(i);
+});
 
 /* 侧边栏 */
 $(function(){

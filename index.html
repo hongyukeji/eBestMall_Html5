@@ -245,7 +245,7 @@
     <!-- Content-内容 -->
     <div class="content-body">
         <!-- Content-焦点区-->
-        <div class="content-focus mb-small">
+        <div class="content-focus">
             <div class="content-focus-left">
                 <div class="content-focus-left-classify">
                     <ul>
@@ -348,7 +348,122 @@
                 </div>
             </div>
             <div class="content-focus-middle ">
-                <div class="content-focus-middle-slider mb-small"><img src="static/img/temp/temp-01.jpg" width="100%" height="100%" alt=""></div>
+                <!--<div class="content-focus-middle-slider"><img src="static/img/temp/temp-01.jpg" width="100%" height="100%" alt=""></div>-->
+                <div class="content-focus-middle-slider">
+                    <style type="text/css">
+                        .slideBox{
+                            width: 100%;
+                            height: 100%;
+                            float: left;
+                            overflow: hidden;
+                            position: relative;
+                        }
+                        /* 轮播图-Main */
+                        .slideBox-body > ul{
+                            width: 100%;
+                            height: 100%;
+                            float: left;
+                        }
+                        .slideBox-body > ul > li{
+                            width: 100%;
+                            height: 100%;
+                            float: left;
+                            display: none;
+                        }
+                        .slideBox-body img {
+                            width: 100%;
+                            height: 100%;
+                            float: left;
+                        }
+
+                        /* 轮播图-底部按钮 */
+                        .slideBox-btn {
+                            height: 20px;
+                            position: absolute;
+                            left: 50%;
+                            bottom: 15px;
+                        }
+                        .slideBox-btn > ul {
+                            position: relative;
+                            left: -50%;
+                            z-index: 1;
+                            font-size: 0;
+                            padding: 4px 4px;
+                            border-radius: 12px;
+                            background-color: hsla(0,0%,100%,.3);
+                        }
+                        .slideBox-btn > ul > li {
+                            width: 12px;
+                            height: 12px;
+                            margin: 0 5px;
+                            cursor: pointer;
+                            display: inline-block;
+                            border-radius: 100%;
+                            background-color: #FFFFFF;
+                        }
+                        .slideBox-btn > ul > li:hover {
+                            background-color: #F10215;
+                        }
+                        /* 轮播图-左右按钮 */
+                        .slideBox-control a {
+                            width: 30px;
+                            height: 60px;
+                            line-height: 60px;
+                            color: #FFFFFF;
+                            overflow: hidden;
+                            margin: -30px 0 0;
+                            display: block;
+                            position: absolute;
+                            background-color: rgba(0, 0, 0, .1);
+                            text-align: center;
+                            top: 50%;
+                            cursor: pointer;
+                            filter:alpha(opacity=0);
+                            opacity: 0;
+                            -webkit-transition: all .3s ease;
+                            font-size: 20px;
+                        }
+                        .slideBox-control a:hover {
+                            background-color: rgba(0, 0, 0, .6);
+                        }
+                        .slideBox-control .slideBox-control-prev {
+                            left: 0;
+                        }
+                        .slideBox-control .slideBox-control-next {
+                            right: 0;
+                        }
+                        .slideBox:hover .slideBox-control > a {
+                            filter:alpha(opacity=80);
+                            opacity: 0.8;
+                        }
+                        .slideBox .slideBox-body .active {
+                            display: block;
+                        }
+                        .slideBox .slideBox-btn .active {
+                            background-color: #F10215;
+                        }
+                    </style>
+                    <div class="slideBox">
+                        <div class="slideBox-body">
+                            <ul>
+                                <li class="active"><a href="javascript:;"><img src="static/img/temp/temp-01.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="static/img/temp/temp-01.jpg" alt=""></a></li>
+                                <li><a href="javascript:;"><img src="static/img/temp/temp-01.jpg" alt=""></a></li>
+                            </ul>
+                        </div>
+                        <div class="slideBox-btn">
+                            <ul>
+                                <li class="active">1</li>
+                                <li>2</li>
+                                <li>3</li>
+                            </ul>
+                        </div>
+                        <div class="slideBox-control">
+                            <a href="javascript:;" class="slideBox-control-prev"><i class="icon-navigate_before"></i></a>
+                            <a href="javascript:;" class="slideBox-control-next"><i class="icon-navigate_next"></i></a>
+                        </div>
+                    </div>
+                </div>
                 <div class="content-focus-middle-slider-extend">
                     <div class="content-focus-middle-slider-extend-left">
                         <a href="javascript:;">

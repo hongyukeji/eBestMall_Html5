@@ -755,14 +755,11 @@ ul, ol, li {
     margin-bottom: 30px;
 }
 
-#content .content-body .mb-small {
-    margin-bottom: 10px;
-}
-
 #content .content-body .content-focus {
     width: 100%;
     height: 480px;
     float: left;
+    margin-bottom: 10px;
 }
 
 #content .content-focus > div {
@@ -824,6 +821,7 @@ ul, ol, li {
     width: 100%;
     height: 340px;
     float: left;
+    overflow: hidden;
     position: relative;
 }
 
@@ -831,6 +829,7 @@ ul, ol, li {
     width: 100%;
     height: 130px;
     float: left;
+    margin-top: 10px;
 }
 
 #content .content-focus-middle-slider-extend a {
