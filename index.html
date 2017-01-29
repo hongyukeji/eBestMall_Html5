@@ -410,7 +410,7 @@
                     </div>
                 </div>
                 <!--Tab切换-->
-                <div class="content-focus-right-middle bg-gray">
+                <div class="content-focus-right-middle">
                     <style type="text/css">
                         .content-focus-right-middle-tab{}
 
@@ -453,9 +453,17 @@
                         }
                         .content-focus-right-middle-tab-body{
                             width: 160px;
-                            height: 104px;
+                            height: 96px;
                             float: left;
-                            margin: 12px 15px;
+                            overflow: hidden;
+                            margin: 12px 15px 20px 15px;
+                        }
+                        .content-focus-right-middle-tab-body > ul > li {
+                            max-width: 160px;
+                            line-height:24px;
+                            white-space:nowrap;
+                            text-overflow:ellipsis;
+                            overflow:hidden;
                         }
                     </style>
                     <div class="content-focus-right-middle-tab">
@@ -466,10 +474,18 @@
                                 <div class="content-focus-right-middle-tab-title-more"><a href="javascript:;">更多</a> </div>
                             </ul>
                         </div>
-                        <div class="content-focus-right-middle-tab-body bg-primary">
+                        <div class="content-focus-right-middle-tab-body">
                             <ul>
-                                <li></li>
-                                <li></li>
+                                <li><a href="javascript:;">春节好礼 抽1000元E卡</a> </li>
+                                <li><a href="javascript:;">过年吃点儿好的！</a> </li>
+                                <li><a href="javascript:;">春节好礼 抽1000元E卡</a> </li>
+                                <li><a href="javascript:;">过年吃点儿好的！</a> </li>
+                            </ul>
+                            <ul>
+                                <li><a href="javascript:;">春节好礼 抽1000元E卡</a> </li>
+                                <li><a href="javascript:;">过年吃点儿好的！</a> </li>
+                                <li><a href="javascript:;">春节好礼 抽1000元E卡</a> </li>
+                                <li><a href="javascript:;">过年吃点儿好的！</a> </li>
                             </ul>
                         </div>
                     </div>
@@ -477,7 +493,7 @@
 
                 <!--常用导航-->
                 <div class="content-focus-right-service bg-info">
-                    <!--<img src="static/img/temp/content-focus-right-service.png" alt="">-->
+                    <img src="static/img/temp/content-focus-right-service.png" alt="">
                 </div>
             </div>
         </div>
