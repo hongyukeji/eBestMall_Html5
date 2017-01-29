@@ -1,0 +1,97 @@
+/* sliderBar start */
+#sliderBar {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+#sliderBar .slides {
+}
+
+#sliderBar .slides li {
+    width: 100%;
+    height: 100%;
+}
+
+#sliderBar .slides a {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+#sliderBar .slides a img {
+    width: 100%;
+    height: 100%;
+    min-width: 810px;
+    min-height: 340px;
+    display: block;
+}
+
+#sliderBar .slider-control-nav {
+    width: 100%;
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+}
+
+#sliderBar .slider-control-nav li {
+    margin: 0 2px;
+    display: inline-block;
+}
+
+.slider-control-btn li a {
+    height: 12px;
+    width: 12px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    text-indent: -99em;
+    cursor: pointer;
+    display: block;
+    border-radius: 100%;
+}
+
+.slider-direction-nav a {
+    width: 30px;
+    height: 60px;
+    line-height: 60px;
+    color: #FFFFFF;
+    overflow: hidden;
+    margin: -30px 0 0;
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .1);
+    text-align: center;
+    top: 50%;
+    cursor: pointer;
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    font-size: 20px;
+}
+
+.slider-direction-nav a:hover {
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.slider-direction-nav .slider-next {
+    right: 0;
+}
+
+.slider-direction-nav .slider-prev {
+    left: 0;
+}
+
+#sliderBar:hover .slider-next {
+    opacity: 0.8;
+}
+
+#sliderBar:hover .slider-prev {
+    opacity: 0.8;
+}
+
+.slider-control-btn li a.slider-active, .slider-control-btn li.active a {
+    background-color: red;
+}
+
+/* sliderBar end */

@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <title>eBestMall - B2B2C商城系统</title>
+    <link rel="stylesheet" href="static/css/app.css"/>
+</head>
+<body>
+<!-- 公共页眉 -->
+<div id="header">
+    <!-- 公共页眉-顶部广告 -->
+    <div class="header-event">
+        <div class="w">
+            <a class="header-event-bar" href="javascript:;"><img src="static/img/temp/header-top.jpg" /> </a>
+            <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
+        </div>
+    </div>
+
+    <!-- 公共页眉-顶部导航 -->
+    <div class="headerTop">
+        <div class="w">
+            <ul class="fl">
+                <li class="headerRegion"><i class="icon-location"></i><span>北京</span>
+                    <div class="listRegion">
+                        <div><a class="active" href="javascript:;">北京</a></div>
+                        <div><a href="javascript:;">上海</a></div>
+                        <div><a href="javascript:;">深圳</a></div>
+                        <div><a href="javascript:;">天津</a></div>
+                        <div><a href="javascript:;">江苏</a></div>
+                        <div><a href="javascript:;">贵州</a></div>
+                        <div><a href="javascript:;">广西</a></div>
+                        <div><a href="javascript:;">百色</a></div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="menuTop fr">
+                <li><div><a href="javascript:;">您好，请登录</a></div></li>
+                <li><div><a class="active" href="javascript:;">免费注册</a></div></li><li class="spacer"></li>
+                <li class="downTop">
+                    <div><a href="javascript:;">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div class="listTop">
+                        <div><a href="javascript:;">已买到的宝贝</a></div>
+                        <div><a href="javascript:;">我的收藏</a></div>
+                        <div><a href="javascript:;">浏览过的宝贝</a></div>
+                    </div>
+                </li><li class="spacer"></li>
+                <!-- Top顶部购物车 -->
+                <li class="downTop header-top-cart">
+                    <div><a href="javascript:;">购物车<span class="down-top-span-cart-number">0</span></a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div class="listTop cartTop"></div>
+                </li><li class="spacer header-top-cart"></li>
+                <li class="downTop">
+                    <div><a href="javascript:;">卖家中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div class="listTop">
+                        <div><a href="javascript:;">免费开店</a></div>
+                        <div><a href="javascript:;">已卖出的宝贝</a></div>
+                        <div><a href="javascript:;">出售中的宝贝</a></div>
+                    </div>
+                </li><li class="spacer"></li>
+                <li class="downTop">
+                    <div><a href="javascript:;">商品分类</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div class="listTop">
+                        <div><a href="javascript:;">家用电器</a></div>
+                        <div><a href="javascript:;">手机数码</a></div>
+                        <div><a href="javascript:;">电脑办公</a></div>
+                        <div><a href="javascript:;">食品烟酒</a></div>
+                    </div>
+                </li><li class="spacer"></li>
+                <li class="downTop">
+                    <div><span class="down-top-span-a">客户服务</span><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div class="listTop">
+                        <div><a href="javascript:;">买家客服</a></div>
+                        <div><a href="javascript:;">联系我们</a></div>
+                    </div>
+                </li><li class="spacer"></li>
+                <li class="downTop">
+                    <div><span class="down-top-span-a">网址导航</span><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
+                    <div class="siteTop">
+                        <dl>
+                            <dt>百易购专场</dt>
+                            <dd>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>鸿宇B2BC商城</dt>
+                            <dd>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                                <div><a href="javascript:;">eBestMall</a> </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>鸿宇科技</dt>
+                            <dd>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                                <div><a href="javascript:;">鸿宇科技</a> </div>
+                            </dd>
+                        </dl>
+                        <dl>
+                            <dt>百易购专场</dt>
+                            <dd>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                                <div><a href="javascript:;">百易购</a> </div>
+                            </dd>
+                        </dl>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 公共页眉-主要内容 -->
+    <div class="headerMain">
+        <div class="w">
+            <div class="logo">
+                <h1>
+                    <!--<a href="javascript:;">eBestMall<img src="static/img/public/logo-e.png" alt="eBestMall" /> </a>-->
+                    <a href="javascript:;">eBestMall<img src="static/img/public/logo-byg.png" alt="eBestMall" /> </a>
+                    <!--<a href="javascript:;">eBestMall<img src="https://img13.360buyimg.com/da/jfs/t3904/208/1495717082/85522/658af7d7/587dc8eaN0e297af5.gif" alt="eBestMall" /> </a>-->
+                </h1>
+            </div>
+            <!-- 公共页眉-搜索框-购物车-导航 -->
+            <div class="header-main-right">
+                <div class="header-search-cart-bar">
+                    <div class="header-search-bar fl">
+                        <div class="header-search">
+                            <form class="header-search-form" action="javascript:;" method="get">
+                                <input type="text" name="key" placeholder="eBestMall" />
+                                <button type="submit"><i class="icon-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="header-hot-words">
+                            <ul>
+                                <li class="item"><a class="active" href="javascript:;">平板电脑</a></li>
+                                <li class="item"><a href="javascript:;">液晶电视</a></li>
+                                <li class="item"><a href="javascript:;">家电</a></li>
+                                <li class="item"><a href="javascript:;">风衣</a></li>
+                                <li class="item"><a href="javascript:;">靴子</a></li>
+                                <li class="item"><a href="javascript:;">亿元红包</a></li>
+                                <li class="item"><a href="javascript:;">品质家电</a></li>
+                                <li class="item"><a href="javascript:;">女包</a></li>
+                                <li class="item"><a href="javascript:;">羽绒服</a></li>
+                                <li class="item"><a href="javascript:;">笔记本</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="header-cart-bar">
+                        <div class="header-cart">
+                            <div class="header-cart-btn">
+                                <i class="icon-shopping_cart"></i>
+                                <a href="javascript:;">我的购物车</a>
+                                <span>0</span>
+                            </div>
+                            <div class="header-cart-body">
+                                <div class="spacer"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header-nav-bar">
+                    <ul>
+                        <li class="item"><a href="javascript:;">首页</a></li>
+                        <li class="item"><a href="javascript:;">商城</a></li>
+                    </ul>
+                    <!--<div class="spacer"> </div>-->
+                    <!--<ul>-->
+                        <!--<li class="item"><a href="javascript:;">秒杀</a></li>-->
+                        <!--<li class="item"><a href="javascript:;">优惠券</a></li>-->
+                        <!--<li class="item"><a href="javascript:;">团购</a></li>-->
+                        <!--<li class="item"><a href="javascript:;">拍卖</a></li>-->
+                        <!--<li class="item"><a href="javascript:;">服装城</a></li>-->
+                        <!--<li class="item"><a href="javascript:;">生鲜</a></li>-->
+                        <!--<li class="item"><a href="javascript:;">同城</a></li>-->
+                        <!--<li class="item"><a href="javascript:;">全球购</a></li>-->
+                    <!--</ul>-->
+                    <div class="spacer"> </div>
+                    <ul>
+                        <li class="item"><a href="javascript:;">学校通知</a></li>
+                        <li class="item"><a href="javascript:;">课表查询</a></li>
+                        <li class="item"><a href="javascript:;">各院风采</a></li>
+                    </ul>
+                    <div class="spacer"> </div>
+                    <ul>
+                        <li class="item"><a href="javascript:;">招聘</a></li>
+                        <li class="item"><a href="javascript:;">跳蚤市场</a></li>
+                        <li class="item"><a href="javascript:;">百院论坛</a></li>
+                        <li class="item"><a href="javascript:;">中科创业</a></li>
+                    </ul>
+
+                </div>
+                <div class="header-activity-bar">
+                    <a href="javascript:;"><img src="static/img/temp/activity.png" alt="新年红包抢不停"/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Content -->
+<div id="content">
+    <!-- Content-内容 -->
+    <div class="content-body">
+        <!-- Content-焦点区-->
+        <div class="content-focus mb-small">
+            <div class="content-focus-left">
+                <div class="content-focus-left-classify">
+                    <ul>
+                        <li class="item"><a href="javascript:;">家用电器</a></li>
+                        <li class="item">
+                            <a href="javascript:;">手机数码</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">运营商</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">数码</a>
+                        </li>
+                        <li class="item"><a href="javascript:;">电脑办公</a></li>
+                        <li class="item">
+                            <a href="javascript:;">家居</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">家具</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">家装</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">厨具</a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">男装</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">女装</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">童装</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">内衣</a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">个护化妆</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">清洁用品</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">宠物</a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">鞋靴</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">箱包</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">珠宝</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">奢侈品</a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">运动</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">户外</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">钟表</a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">汽车</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">汽车用品</a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">母婴</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">玩具乐器</a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">食品</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">酒类</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">生鲜</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">特产</a>
+                        </li>
+                        <li class="item"><a href="javascript:;">医药保健</a></li>
+                        <li class="item">
+                            <a href="javascript:;">图书</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">音像</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">电子书</a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">机票</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">酒店</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">旅游</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">生活</a>
+                        </li>
+                        <li class="item">
+                            <a href="javascript:;">理财</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">众筹</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">白条</a>
+                            <span class="item-line">/</span>
+                            <a href="javascript:;">保险</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="content-focus-middle ">
+                <div class="content-focus-middle-slider mb-small"><img src="static/img/temp/temp-01.jpg" width="100%" height="100%" alt=""></div>
+                <div class="content-focus-middle-slider-extend">
+                    <div class="content-focus-middle-slider-extend-left">
+                        <a href="javascript:;">
+                            <img src="static/img/temp/temp-extend-left.jpg" />
+                        </a>
+                    </div>
+                    <div class="content-focus-middle-slider-extend-middle"></div>
+                    <div class="content-focus-middle-slider-extend-right">
+                        <a href="javascript:;">
+                            <img src="static/img/temp/temp-extend-right.jpg" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="content-focus-right ">
+                <div class="content-focus-right-user">
+                    <div class="content-focus-right-user-info_avatar">
+                        <a href="javascript:;"><img src="static/img/user/no_login.jpg" alt=""></a>
+                    </div>
+                    <div class="content-focus-right-user-info_show">
+                        <p>Hi，欢迎来到百易购</p>
+                        <p>
+                            <a href="javascript:;">登录</a>
+                            <a href="javascript:;">注册</a>
+                        </p>
+                    </div>
+                    <div class="content-focus-right-user-profit">
+                        <a href="javascript:;" target="_blank">新人福利</a>
+                        <a href="javascript:;" target="_blank">PLUS会员</a>
+                    </div>
+                </div>
+                <!--Tab切换-->
+                <div class="content-focus-right-middle bg-warning"></div>
+                <div class="content-focus-right-service bg-info">
+                    <img src="static/img/temp/content-focus-right-service.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- Content-秒杀-->
+        <div class="content-sec-kill mb-big bg-warning">
+            <div class="content-sec-kill-hd bg-info">
+                <div class="content-sec-kill-hd-col-left">
+                    <i class="content-sec-kill-hd-dec"></i>
+                    <i class="content-sec-kill-hd-icon"></i>
+                    <h3 class="content-sec-kill-hd-title">京东秒杀</h3>
+                    <a href="javascript:;" target="_blank" class="content-sec-kill-hd-more">总有你想不到的低价<i class="content-sec-kill-hd-more-arrow"></i></a>
+                </div>
+                <div class="content-sec-kill-hd-col-right"></div>
+            </div>
+            <div class="content-sec-kill-body bg-gray"></div>
+
+        </div>
+
+        <!--Content-领券-->
+        <div class="content-coupons mb-big bg-info"></div>
+
+        <!--Content-楼层-->
+        <div class="content-storey mb-big bg-primary"></div>
+    </div>
+
+    <!-- 首页-页脚 -->
+    <div class="index-footer bg-info"></div>
+</div>
+
+<!-- 公共-页脚 -->
+<div id="footer"></div>
+
+<!-- 搜索条 -->
+<div id="searchBar">{{title}}</div>
+
+<!-- 侧边栏 -->
+<div id="sideBar">
+    <div class="sideBarBody"></div>
+    <div class="sideBarContent">
+        <ul>
+            <li class="item">
+                <div class="item-btn">
+                    <!--登陆后显示用户头像-->
+                    <a href="javascript:;"><img src="static/img/user/getAvatar.jpg" /></a>
+                    <!--<a href="javascript:;"><i class="icon-user-o"></i></a>-->
+                    <div class="item-title"><a href="javascript:;">会员中心<span>◆</span></a></div>
+                </div>
+                <div class="item-body">会员中心</div>
+            </li>
+            <li class="item item-cartBar">
+                <div class="item-btn">
+                    <a href="javascript:;"><i class="icon-cart2"></i><div class="item-cart"><div>购物车</div><span>0</span></div></a>
+                </div>
+                <div class="item-body">购物车</div>
+            </li>
+            <li class="item">
+                <div class="item-btn">
+                    <a href="javascript:;"><i class="icon-heart-o"></i></a>
+                    <div class="item-title"><a href="javascript:;">我的收藏<span>◆</span></a></div>
+                </div>
+                <div class="item-body">我的收藏</div>
+            </li>
+            <li class="item">
+                <div class="item-btn">
+                    <a href="javascript:;"><i class="icon-history"></i></a>
+                    <div class="item-title"><a href="javascript:;">浏览记录<span>◆</span></a></div>
+                </div>
+                <div class="item-body">浏览记录</div>
+            </li>
+        </ul>
+    </div>
+    <div class="sideBarDown">
+        <ul>
+            <li class="item">
+                <a href="javascript:;"><i class="icon-edit"></i></a>
+                <div class="item-title"><a href="javascript:;">用户反馈<span>◆</span></a></div>
+            </li>
+            <li id="returnTop" class="item">
+                <a href="javascript:;"><i class="icon-move-up"></i></a>
+                <div class="item-title"><a href="javascript:;">返回顶部<span>◆</span></a></div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/javascript" src="static/js/jquery.min.js"></script>
+<script type="text/javascript" src="static/js/vue.min.js"></script>
+<script type="text/javascript" src="static/js/app.js"></script>
+
+</body>
+</html>
