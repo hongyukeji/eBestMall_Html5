@@ -1,6 +1,8 @@
 $(function () {
-    var i = $('.slideBox').find('.active').index();
+    var i = $('.slideBox').find('.slideBox-body').find('.active').index();
+    var n = $('.slideBox').find('.slideBox-btn').find('.active').index();
     console.log(i);
+    console.log(n);
 });
 
 /* 侧边栏 */
