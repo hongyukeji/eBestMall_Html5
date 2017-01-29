@@ -3,14 +3,24 @@ $(function () {});
 /* 侧边栏 */
 $(function(){
     /* 页面鼠标点击事件 */
-    $(document).click(function whichButton(event)
-    {
+    $(document).click(function whichButton(event) {
         var btnNum = event.button;
-        if (btnNum==2){ console.log("鼠标右键被点击！");}
-        else if(btnNum==0){
+        if(btnNum==0){
             /*鼠标左键被点击*/
             sideBarClose();
-        } else if(btnNum==1){console.log("鼠标中键被点击！");} else {console.log("您点击了" + btnNum+ "号键，我不能确定它的名称。");}
+        }
+        /*
+        if (btnNum == 2) {
+            // console.log("鼠标右键被点击！");
+        }
+        else if(btnNum==0){
+            // console.log("鼠标左键被点击！");
+        } else if (btnNum == 1) {
+            // console.log("鼠标中键被点击！");
+        } else {
+            // console.log("您点击了" + btnNum + "号键，我不能确定它的名称。");
+        }
+        */
     });
 
     /* 阻止侧边栏冒泡事件 */
