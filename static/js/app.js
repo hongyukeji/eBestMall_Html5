@@ -266,13 +266,17 @@ $(function() {
 $(function () {
     var tabTitle = $('.content-focus-right-middle-tab-title li');
     var tabContent = $('.content-focus-right-middle-tab-body ul');
-    if (tabTitle.length != tabContent.length){return false;}
-    for (var i = 0; i < tabTitle.length; i++){
-        tabTitle[i].className=i;
-        tabTitle[i].onmouseover = function () {
-            var num = this.className;
-            tabTitle.eq(num).find('a').css("border-bottom","2px solid #db192b").parent().siblings().find('a').css("border","none");
-            tabContent.eq(num).css("display","block").siblings().css("display","none");
+    tab(tabTitle,tabContent);
+
+    function tab(tabTitle,tabContent) {
+        if (tabTitle.length != tabContent.length){return false;}
+        for (var i = 0; i < tabTitle.length; i++){
+            tabTitle[i].className=i;
+            tabTitle[i].onmouseover = function () {
+                var num = this.className;
+                tabTitle.eq(num).find('a').css("border-bottom","2px solid #db192b").parent().siblings().find('a').css("border","none");
+                tabContent.eq(num).css("display","block").siblings().css("display","none");
+            }
         }
     }
 });
