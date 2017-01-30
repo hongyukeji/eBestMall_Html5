@@ -1139,6 +1139,7 @@ ul, ol, li {
     width: 15px;
     height: 16px
 }
+
 #content .content-sec-kill .content-sec-kill-hd-col-right {
     float: right;
 }
@@ -1171,7 +1172,7 @@ ul, ol, li {
 /*-------------------- 搜索条 --------------------*/
 #searchBar {
     width: 100%;
-    height: 50px;
+    height: 48px;
     position: fixed;
     top: 0;
     left: 0;
