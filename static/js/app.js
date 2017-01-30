@@ -1,4 +1,6 @@
-$(function () {});
+$(function () {
+    /* JavaScript Test */
+});
 
 /* 侧边栏 */
 $(function(){
