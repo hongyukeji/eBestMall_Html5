@@ -585,7 +585,7 @@ ul, ol, li {
 }
 
 #header .header-search .header-search-form > button > i {
-    vertical-align: -3px;
+    vertical-align: -2px;
 }
 
 #header .header-hot-words {
@@ -1178,18 +1178,22 @@ ul, ol, li {
     left: 0;
     right: 0;
     z-index: 3;
-    /*display: none;*/
+    display: none;
     border-bottom: 2px solid red;
     background-color: #FFFFFF;
 }
 .searchBar-logo{
     max-width: 300px;
-    /*width: 150px;*/
+    width: 150px;
     height: 35px;
-    background-color: red;
+    float: left;
+    overflow: hidden;
+}
+.searchBar-logo img{
+    width: 100%;
+    height: 100%;
     float: left;
 }
-
 .searchBar-search{
     width: 550px;
     height: 35px;
@@ -1204,7 +1208,8 @@ ul, ol, li {
     font-size: 14px;
     color: rgb(51, 51, 51);
     float: left;
-    border: 2px solid #F10215;;
+    border: 2px solid #efefef;
+    background-color: #efefef;
 }
 
 .searchBar-search button {
@@ -1220,7 +1225,7 @@ ul, ol, li {
 }
 
 .searchBar-search button > i {
-    vertical-align: -3px;
+    vertical-align: -2px;
 }
 
 
