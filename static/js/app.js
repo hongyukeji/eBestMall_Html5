@@ -269,7 +269,7 @@ $(function () {
         tabTitle[i].className=i;
         tabTitle[i].onmouseover = function () {
             var num = this.className;
-            tabTitle.eq(num).find('a').css("border-bottom","2px solid #db192b").parents().siblings().find('a').css("border","none");
+            tabTitle.eq(num).find('a').css("border-bottom","2px solid #db192b").parent().siblings().find('a').css("border","none");
             tabContent.eq(num).css("display","block").siblings().css("display","none");
         }
     }
