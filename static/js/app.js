@@ -264,20 +264,16 @@ $(function() {
 
 /* Tab选项卡 */
 $(function () {
-    var tabTitle = $('.content-focus-right-middle-tab-title li');
-    var tabContent = $('.content-focus-right-middle-tab-body ul');
-    tab(tabTitle,tabContent);
-
-    function tab(tabTitle,tabContent) {
-        if (tabTitle.length != tabContent.length){return false;}
-        for (var i = 0; i < tabTitle.length; i++){
-            tabTitle[i].className=i;
-            tabTitle[i].onmouseover = function () {
-                var num = this.className;
-                tabTitle.eq(num).find('a').css("border-bottom","2px solid #db192b").parent().siblings().find('a').css("border","none");
-                tabContent.eq(num).css("display","block").siblings().css("display","none");
-            }
-        }
+    tab('.content-focus-right-middle-tab-title li','.content-focus-right-middle-tab-body ul');
+    function tab(tabTitles,tabContents) {
+        var tabTitle = $(tabTitles);
+        var tabContent = $(tabContents);
+        tabTitle.on('mouseover',function () {
+            if (tabTitle.length != tabContent.length){return false;}
+            var index = tabTitle.index(this);
+            tabTitle.eq(index).find('a').css("border-bottom","2px solid #db192b").parent().siblings().find('a').css("border","none");
+            tabContent.eq(index).show().siblings().hide();
+        });
     }
 });
 
