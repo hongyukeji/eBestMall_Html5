@@ -1184,10 +1184,11 @@ ul, ol, li {
 }
 .searchBar-logo{
     max-width: 300px;
-    width: 150px;
-    height: 35px;
+    min-width: 125px;
+    height: 40px;
     float: left;
     overflow: hidden;
+    margin-top: -2px;
 }
 .searchBar-logo img{
     width: 100%;
