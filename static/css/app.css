@@ -1233,6 +1233,7 @@ em, i {
     height: 100%;
     float: left;
     position: relative;
+    overflow: hidden;
 }
 
 .content-sec-kill-body-list-wrapper:hover .content-sec-kill-body-list-wrapper-navigate {
