@@ -1272,7 +1272,9 @@ em, i {
 .content-sec-kill-body-list-wrapper-navigate .content-sec-kill-body-list-wrapper-navigate-next {
     float: right;
 }
-
+.content-sec-kill-body-list-wrapper > ul {
+    position: absolute;
+}
 .content-sec-kill-body-list-wrapper > ul > li {
     width: 174px;
     height: 226px;
