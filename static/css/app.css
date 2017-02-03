@@ -310,6 +310,7 @@ em, i {
 #header .downTop .down-top-span-a {
     float: left;
     margin-right: 3px;
+    cursor: default;
 }
 
 #header .downTop:hover .listTop {
