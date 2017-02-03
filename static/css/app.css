@@ -64,6 +64,10 @@ ul, ol, li {
     list-style: none;
 }
 
+em, i {
+    font-style: normal;
+}
+
 :focus {
     outline: none !important;
 }
@@ -746,15 +750,16 @@ ul, ol, li {
     float: left;
     position: relative;
 }
-
+#content .content-index{
+    width: 100%;
+    float: left;
+    position: relative;
+    background-color: #F6F6F6;
+}
 #content .content-body {
     width: 1210px;
     margin: 0 auto;
     position: relative;
-}
-
-#content .content-body .mb-big {
-    margin-bottom: 30px;
 }
 
 #content .content-body .content-focus {
@@ -1055,6 +1060,75 @@ ul, ol, li {
 }
 
 /* Tab切换 */
+#content .content-focus-right-middle-tab {
+    position: relative;
+}
+
+#content .content-focus-right-middle-tab-title-more {
+    position: absolute;
+    top: 6px;
+    right: 15px;
+}
+
+#content .content-focus-right-middle-tab-title > ul {
+    /*position:relative;*/
+    margin: 8px 15px 0 15px;
+    padding-bottom: 4px;
+    width: 160px;
+    float: left;
+    height: 14px;
+    line-height: 14px;
+    border-bottom: 1px solid #e6e6e6;
+
+}
+
+#content .content-focus-right-middle-tab-title > ul > li {
+    float: left;
+    height: 14px;
+    text-align: center;
+    padding-right: 10px;
+    padding-left: 10px;
+    border-left: 1px solid #dfe0e1;
+}
+
+#content .content-focus-right-middle-tab-title > ul > li > a {
+    float: left;
+    height: 17px;
+    line-height: 14px;
+    padding: 0 2px;
+    color: #333333;
+    /*text-align: center;*/
+}
+
+#content .content-focus-right-middle-tab-title > ul > li .active {
+    border-bottom: 2px solid #db192b;
+}
+
+#content .content-focus-right-middle-tab-title > ul > li:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+#content .content-focus-right-middle-tab-title-more {
+    float: right;
+}
+
+#content .content-focus-right-middle-tab-body {
+    width: 160px;
+    height: 93px;
+    float: left;
+    overflow: hidden;
+    margin: 12px 15px 20px 15px;
+}
+
+#content .content-focus-right-middle-tab-body > ul > li {
+    max-width: 160px;
+    line-height: 24px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
 #content .content-focus-right .content-focus-right-service {
     width: 100%;
     height: 210px;
@@ -1066,6 +1140,8 @@ ul, ol, li {
     height: 305px;
     float: left;
     overflow: hidden;
+    background-color: #FFFFFF;
+    margin-bottom: 30px;
 }
 
 #content .content-sec-kill .content-sec-kill-hd {
@@ -1146,7 +1222,165 @@ ul, ol, li {
 
 #content .content-sec-kill .content-sec-kill-body {
     width: 100%;
-    height: 250px;
+    height: 226px;
+    float: left;
+    padding: 12px 0;
+}
+
+.content-sec-kill-body-list-wrapper {
+    width: 1020px;
+    height: 100%;
+    float: left;
+}
+
+.content-sec-kill-body-list-wrapper > ul > li {
+    width: 174px;
+    height: 226px;
+    float: left;
+    padding: 0 14px 0 15px;
+    border-right: 1px solid #e7e7e7;
+}
+
+.content-sec-kill-body-list-wrapper > ul > li > div {
+    width: 100%;
+    height: 196px;
+    position: relative;
+    text-align:center;
+}
+
+.content-sec-kill-body-list-wrapper > ul > li > div > a {
+    width: 100%;
+    height: 196px;
+    float: left;
+    text-align: center;
+}
+
+.content-sec-kill-body-list-wrapper > ul > li > div > span {
+    width: 170px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 130px;
+    text-align: center;
+    background: url(../img/public/sprite_index_icon.png) no-repeat 0 0;
+    -moz-background-size: 218px 188px;
+    background-size: 218px 188px;
+}
+
+.content-sec-kill-body-list-wrapper > ul > li > div > a:hover img {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px)
+}
+
+.content-sec-kill-body-list-wrapper > ul > li > div > a > img {
+    width: 130px;
+    height: 130px;
+    margin: 17px 0;
+    -webkit-transition: -webkit-transform .4s ease;
+    -moz-transition: -moz-transform .4s ease;
+    transition: -webkit-transform .4s ease;
+    -moz-transition: transform .4s ease, -moz-transform .4s ease;
+    transition: transform .4s ease;
+    transition: transform .4s ease, -webkit-transform .4s ease, -moz-transform .4s ease;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0)
+}
+
+.content-sec-kill-body-list-wrapper > ul > li > div > a > p {
+    max-width: 100%;
+    height: 32px;
+    line-height: 16px;
+    color: #999999;
+    overflow: hidden;
+    text-align: left;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.content-sec-kill-body-list-wrapper > ul > li > div > a > p:hover {
+    color: #c81623;
+}
+
+.content-sec-kill-body-list-wrapper > ul > li > p {
+    padding: 3px 0;
+    height: 25px;
+}
+
+.content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background: url(../img/public/sprite_index_icon.png) no-repeat -54px -40px;
+    -moz-background-size: 218px 188px;
+    background-size: 218px 188px;
+    width: 30px;
+    height: 40px;
+    line-height: 40px;
+    z-index: 1;
+}
+.content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-tag > b {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align:middle;
+    font-size:0;
+    font-weight: bold;
+    float: left;
+}
+
+.content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-tag > span {
+    font-size: 12px;
+    color: #fff;
+    line-height: 14px;
+    vertical-align: 2px;
+    padding-top: 2px;
+    display: inline-block;
+
+}
+.content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-price-new {
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 8px;
+    color: #f10214;
+}
+
+.content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-price-new i {
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 3px;
+    font-family: Arial;
+}
+
+.content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-price-origin {
+    color: #999;
+    font-size: 12px
+}
+
+.content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-price-origin i {
+    font-size: 12px;
+    font-weight: 400;
+    margin-right: 3px;
+    font-family: Arial;
+}
+
+.content-sec-kill-body-list-wrapper .content-sec-kill-body-list-wrapper-price-origin del {
+    font-weight: 400;
+}
+
+.content-sec-kill-body-special {
+    width: 180px;
+    height: 100%;
+    float: left;
+}
+
+.content-sec-kill-body-special img {
+    width: 100%;
+    height: 100%;
     float: left;
 }
 
@@ -1154,12 +1388,14 @@ ul, ol, li {
     width: 100%;
     height: 215px;
     float: left;
+    margin-bottom: 30px;
 }
 
 #content .content-storey {
     width: 100%;
     height: 523px;
     float: left;
+    margin-bottom: 30px;
 }
 
 #content .index-footer {
@@ -1182,7 +1418,8 @@ ul, ol, li {
     border-bottom: 2px solid red;
     background-color: #FFFFFF;
 }
-.searchBar-logo{
+
+.searchBar-logo {
     max-width: 300px;
     min-width: 125px;
     height: 40px;
@@ -1190,12 +1427,14 @@ ul, ol, li {
     overflow: hidden;
     margin-top: -2px;
 }
-.searchBar-logo img{
+
+.searchBar-logo img {
     width: 100%;
     height: 100%;
     float: left;
 }
-.searchBar-search{
+
+.searchBar-search {
     width: 550px;
     height: 35px;
     margin: 7px auto 6px auto;
@@ -1228,7 +1467,6 @@ ul, ol, li {
 .searchBar-search button > i {
     vertical-align: -2px;
 }
-
 
 /*-------------------- 侧边栏 --------------------*/
 #sideBar {
