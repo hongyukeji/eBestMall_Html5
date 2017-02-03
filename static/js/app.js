@@ -271,7 +271,7 @@ $(function () {
         tabTitle.on('mouseover',function () {
             if (tabTitle.length != tabContent.length){return false;}
             var index = tabTitle.index(this);
-            tabTitle.eq(index).find('a').css("border-bottom","2px solid #db192b").parent().siblings().find('a').css("border","none");
+            tabTitle.eq(index).find('a').addClass('active').parent().siblings().find('a').removeClass('active');
             tabContent.eq(index).show().siblings().hide();
         });
     }
