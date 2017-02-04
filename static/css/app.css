@@ -1275,6 +1275,7 @@ em, i {
 }
 .content-sec-kill-body-list-wrapper > ul {
     position: absolute;
+    right: 0;
 }
 .content-sec-kill-body-list-wrapper > ul > li {
     width: 174px;

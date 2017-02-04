@@ -262,7 +262,7 @@ $(function() {
     }
 });
 
-/* Tab选项卡 */
+/* 首页公告Tab选项卡 */
 $(function () {
     tab('.content-focus-right-middle-tab-title li','.content-focus-right-middle-tab-body ul');
     function tab(tabTitles,tabContents) {
@@ -275,6 +275,38 @@ $(function () {
             tabContent.eq(index).show().siblings().hide();
         });
     }
+});
+
+/* 首页秒杀 */
+$(function () {
+    var tabBar = $('.content-sec-kill-body-list-wrapper ul');
+    var tabPrev = $('.content-sec-kill-body-list-wrapper-navigate-prev');
+    var tabNext = $('.content-sec-kill-body-list-wrapper-navigate-next');
+    var tabBarWidth = tabBar.width();
+    var tabPage = 1;
+    var tabPageNum = 5;
+    var tabBarNum = tabBar.find(".item").length;
+    var tabPageCount = Math.ceil(tabBarNum / tabPageNum);
+
+    tabNext.click(function () {
+        if (tabPage == tabPageCount){
+            tabBar.animate({left:'0px'},'slow');
+            tabPage = 1;
+        }else {
+            tabBar.animate({left:'-='+ tabBarWidth},'slow');
+            tabPage++;
+        }
+    });
+    tabPrev.click(function () {
+        if (tabBar.css('left') == '0px' || tabBar.css('left') == 'auto'){
+            var _tabPageNum = tabPageNum - 1;
+            tabBar.animate({left:'-' + _tabPageNum * tabBarWidth},'slow');
+            tabPage = tabPageCount;
+        }else {
+            tabBar.animate({left:'+='+ tabBarWidth},'slow');
+            tabPage--;
+        }
+    });
 });
 
 /* VueJs */
