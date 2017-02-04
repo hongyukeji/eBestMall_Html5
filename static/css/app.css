@@ -1241,24 +1241,19 @@ em, i {
 }
 
 .content-sec-kill-body-list-wrapper-navigate {
-    width: 1006px;
-    height: 50px;
-    margin-top: -25px;
-    position: absolute;
-    top: 50%;
-    left: 7px;
-    right: 7px;
     display: none;
-    /*background-color: #272526;*/
 }
 
 .content-sec-kill-body-list-wrapper-navigate a {
     width: 20px;
     height: 50px;
-    background: rgba(0, 0, 0, .1);
     line-height: 50px;
-    text-align: center;
+    margin-top: -25px;
     color: #666666;
+    text-align: center;
+    background: rgba(0, 0, 0, .1);
+    position: absolute;
+    top: 50%;
 }
 
 .content-sec-kill-body-list-wrapper-navigate a {
@@ -1267,16 +1262,20 @@ em, i {
 }
 
 .content-sec-kill-body-list-wrapper-navigate .content-sec-kill-body-list-wrapper-navigate-prev {
+    left: 7px;
     float: left;
 }
 
 .content-sec-kill-body-list-wrapper-navigate .content-sec-kill-body-list-wrapper-navigate-next {
+    right: 7px;
     float: right;
 }
+
 .content-sec-kill-body-list-wrapper > ul {
     position: absolute;
     right: 0;
 }
+
 .content-sec-kill-body-list-wrapper > ul > li {
     width: 174px;
     height: 226px;
@@ -1297,6 +1296,7 @@ em, i {
     height: 196px;
     float: left;
     text-align: center;
+    outline: 0;
 }
 
 .content-sec-kill-body-list-wrapper > ul > li > div > span {
@@ -1311,17 +1311,11 @@ em, i {
     background-size: 218px 188px;
 }
 
-.content-sec-kill-body-list-wrapper > ul > li > div > a:hover img {
-    -webkit-transform: translateY(-5px);
-    -moz-transform: translateY(-5px);
-    -ms-transform: translateY(-5px);
-    transform: translateY(-5px)
-}
-
 .content-sec-kill-body-list-wrapper > ul > li > div > a > img {
     width: 130px;
     height: 130px;
     margin: 17px 0;
+    cursor: pointer;
     -webkit-transition: -webkit-transform .4s ease;
     -moz-transition: -moz-transform .4s ease;
     transition: -webkit-transform .4s ease;
@@ -1332,6 +1326,13 @@ em, i {
     -moz-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0)
+}
+
+.content-sec-kill-body-list-wrapper > ul > li > div > a:hover img {
+    -webkit-transform: translateY(-5px);
+    -moz-transform: translateY(-5px);
+    -ms-transform: translateY(-5px);
+    transform: translateY(-5px)
 }
 
 .content-sec-kill-body-list-wrapper > ul > li > div > a > p {
