@@ -241,7 +241,7 @@ em, i {
 #header .menuTop > li {
     float: left;
     height: 32px;
-    border: 1px solid #F5F5F5;
+    /*border: 1px solid #F5F5F5;*/
     line-height: 32px;
 }
 
