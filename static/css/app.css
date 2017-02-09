@@ -363,8 +363,8 @@ em, i {
     border-top: none;
     padding: 20px 20px 20px 0;
     white-space: nowrap;
-    width: 1210px;
-    min-height: 168px;
+    width: 1194px;
+    min-height: 98px;
     right: -1px;
     background-color: #FFFFFF;
 }
@@ -394,7 +394,7 @@ em, i {
 
 #header .siteTop > dl {
     width: 256px;
-    min-height: 128px;
+    /*min-height: 128px;*/
     float: left;
     padding-left: 20px;
     margin-right: 20px;
@@ -674,8 +674,8 @@ em, i {
 }
 
 #header .header-cart-body {
-    width: 300px;
-    height: 80px;
+    width: 310px;
+    min-height: 76px;
     position: absolute;
     top: 34px;
     right: -1px;
