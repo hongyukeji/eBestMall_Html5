@@ -1,5 +1,6 @@
 $(function () {
     /* JavaScript Test */
+    /* console.log(); */
 });
 
 /* 侧边栏 */
