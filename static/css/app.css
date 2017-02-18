@@ -987,7 +987,6 @@ em, i {
 
 /*-------------------- Footer --------------------*/
 #footer {
-    margin-top: 30px;
     width: 100%;
     float: left;
     position: relative;
@@ -1077,6 +1076,7 @@ em, i {
     float: left;
     position: relative;
     background-color: #F6F6F6;
+    margin-bottom: 30px;
 }
 
 .content-body {
