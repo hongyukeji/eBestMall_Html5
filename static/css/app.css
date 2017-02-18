@@ -1036,7 +1036,7 @@ em, i {
 
 #footer .footer-links > ul > li {
     float: left;
-    width: calc(1210px / 6);
+    width: 201px;
 }
 
 #footer .footer-links-item > ul > li {
