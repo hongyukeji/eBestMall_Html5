@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?u6uz5w');
-  src:  url('fonts/icomoon.eot?u6uz5w#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?u6uz5w') format('truetype'),
-    url('fonts/icomoon.woff?u6uz5w') format('woff'),
-    url('fonts/icomoon.svg?u6uz5w#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?vxosnc');
+  src:  url('fonts/icomoon.eot?vxosnc#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vxosnc') format('truetype'),
+    url('fonts/icomoon.woff?vxosnc') format('woff'),
+    url('fonts/icomoon.svg?vxosnc#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,8 +24,62 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-refresh:before {
+  content: "\e90b";
+}
+.icon-map:before {
+  content: "\e906";
+}
+.icon-guide:before {
+  content: "\e906";
+}
+.icon-truck:before {
+  content: "\e90a";
+}
+.icon-transit:before {
+  content: "\e90a";
+}
+.icon-transport:before {
+  content: "\e90a";
+}
+.icon-delivery:before {
+  content: "\e90a";
+}
+.icon-vehicle:before {
+  content: "\e90a";
+}
+.icon-gift:before {
+  content: "\e903";
+}
+.icon-close:before {
+  content: "\e900";
+}
+.icon-edit:before {
+  content: "\e901";
+}
 .icon-cart2:before {
   content: "\e902";
+}
+.icon-opencart:before {
+  content: "\e904";
+}
+.icon-shopping_cart:before {
+  content: "\e905";
+}
+.icon-chevron-down:before {
+  content: "\e907";
+}
+.icon-user-o:before {
+  content: "\e908";
+}
+.icon-heart-o:before {
+  content: "\e909";
+}
+.icon-navigate_next:before {
+  content: "\e90c";
+}
+.icon-navigate_before:before {
+  content: "\e90d";
 }
 .icon-location:before {
   content: "\e947";
@@ -44,32 +98,5 @@
 }
 .icon-move-up:before {
   content: "\ea46";
-}
-.icon-edit:before {
-  content: "\e901";
-}
-.icon-navigate_before:before {
-  content: "\e90d";
-}
-.icon-navigate_next:before {
-  content: "\e90c";
-}
-.icon-shopping_cart:before {
-  content: "\e905";
-}
-.icon-close:before {
-  content: "\e900";
-}
-.icon-opencart:before {
-  content: "\e904";
-}
-.icon-user-o:before {
-  content: "\e908";
-}
-.icon-heart-o:before {
-  content: "\e909";
-}
-.icon-chevron-down:before {
-  content: "\e907";
 }
 
