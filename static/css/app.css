@@ -1192,7 +1192,6 @@ em, i {
 }
 
 #content .content-sec-kill .content-sec-kill-hd-more {
-    *cursor: pointer;
     position: relative;
     float: left;
     margin-top: 19px;
@@ -1436,6 +1435,199 @@ em, i {
     height: 215px;
     float: left;
     margin-bottom: 30px;
+}
+
+.content-coupons-head {
+    float: left;
+    width: 200px;
+    height: 100%;
+    background-color: #ea3524;
+}
+
+.content-coupons-head > a {
+    display: block;
+    padding: 25px 30px;
+    width: 140px;
+    height: 165px;
+    color: #fff
+}
+
+.content-coupons-head > a:hover {
+    color: #ffffff;
+}
+
+.content-coupons-head > a > h3 {
+    overflow: hidden;
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    font-size: 28px;
+    font-family: fzzhengheis-el-gbregular;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 400;
+}
+
+.content-coupons-head-transverse {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 20px;
+    width: 55px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.content-coupons-head > a > p {
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.content-coupons-head-btn {
+    display: block;
+    position: relative;
+    margin-top: 20px;
+    padding: 2px 35px 4px 15px;
+    height: 20px;
+    border: 2px solid #fff;
+    line-height: 20px;
+    overflow: hidden;
+}
+
+.content-coupons-head-btn > i {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    width: 15px;
+    height: 16px;
+    background: url(../img/public/sprite_index_icon.png) no-repeat -154px -40px;
+
+}
+
+.content-coupons-body {
+    float: left;
+    width: 1010px;
+    height: 100%;
+    background-color: #ffffff;
+}
+
+.content-coupons-body > ul {
+    padding: 10px 0;
+}
+
+.content-coupons-body > ul > li {
+    position: relative;
+    float: left;
+    width: 199px;
+    height: 195px;
+    border-right: 1px solid #e7e7e7;
+    overflow: hidden;
+}
+
+.content-coupons-body > ul > li:last-child {
+    width: 200px;
+    border-right: 0 none;
+}
+
+.content-coupons-body > ul > li > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.content-coupons-body > ul > li > a > div {
+    position: absolute;
+    z-index: 1;
+    left: 15px;
+    top: 15px;
+    width: 100px;
+    border-top: 3px solid #e93524;
+    background-color: #ffffff;
+}
+
+.content-coupons-body > ul > li > a > img {
+    overflow: hidden;
+    position: absolute;
+    right: 15px;
+    top: 25px;
+    width: 140px;
+    height: 140px;
+    -webkit-transition: -webkit-transform .5s;
+    transition: -webkit-transform .5s;
+    -moz-transition: transform .5s, -moz-transform .5s;
+    transition: transform .5s;
+}
+
+.content-coupons-body > ul > li:hover a > img {
+    -webkit-transform: translateX(15px);
+    -moz-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+.content-coupons-body-mod-price {
+    color: #f10214;
+}
+
+.content-coupons-body-coupon-price {
+    overflow: hidden;
+    margin-top: 7px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.content-coupons-body-coupon-desc {
+    overflow: hidden;
+    margin: 3px;
+    height: 36px;
+    line-height: 18px;
+    color: #e93524;
+}
+
+.content-coupons-body-coupon-desc-txt {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.content-coupons-body-coupon-limit {
+    overflow: hidden;
+    padding: 15px 10px;
+    width: 80px;
+    height: 36px;
+    background: #e7e7e7 url("../img/public/coupon_limit_bg.jpg") repeat-x 0 0;
+    color: #666666;
+}
+
+.content-coupons-body-coupon-limit-txt {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.content-coupons-body-coupon-more {
+    overflow: hidden;
+    width: 100%;
+    height: 26px;
+    background: #e93524;
+    line-height: 26px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    text-align: center;
+    color: #ffffff;
+}
+
+.content-coupons-body-coupon-item-shadow {
+    position: absolute;
+    left: 100px;
+    top: 33px;
+    width: 15px;
+    height: 117px;
+    -moz-box-shadow: 0 0 30px #999;
+    box-shadow: 0 0 30px #999999;
 }
 
 #content .content-storey {
