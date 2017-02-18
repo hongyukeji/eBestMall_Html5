@@ -1957,13 +1957,13 @@ em, i {
 
 .content-find-brand-hot > div {
     width: 396px;
-    height: 444px;
+    height: 445px;
     float: left;
     background-color: #ffffff;
     overflow: hidden;
 }
 
-.content-find-brand-hot > div:nth-child(2) {
+.content-find-brand-hot .content-find-brand-hot-two{
     margin: 0 11px;
 }
 
@@ -2076,22 +2076,26 @@ em, i {
     position: relative;
 }
 
-.content-find-brand-hot-body > ul > li:nth-child(2n) {
+.content-find-brand-hot-body .content-find-brand-hot-body-nth-child-2{
     border-right: 0;
     margin-right: -1px;
 }
-
-.content-find-brand-hot-body > ul > li:nth-child(5) {
+.content-find-brand-hot-body .content-find-brand-hot-body-nth-child-4{
+    border-right: 0;
+    margin-right: -1px;
+}
+.content-find-brand-hot-body .content-find-brand-hot-body-nth-child-5{
+    border-bottom: 0;
+}
+.content-find-brand-hot-body .content-find-brand-hot-body-nth-child-6{
+    border-right: 0;
+    margin-right: -1px;
     border-bottom: 0;
 }
 
-.content-find-brand-hot-body > ul > li:last-child {
-    border-bottom: 0;
-}
 .content-find-brand-hot-body > ul > li > a {
-    display: block;
     width: 188px;
-    height: 120px;
+    height: 122px;
     position: relative;
 }
 
@@ -2252,9 +2256,122 @@ em, i {
 
 }
 
+.content-special{
+    width: 100%;
+    height: 405px;
+    float: left;
+    background-color: #f6f6f6;
+}
+.content-special-head{
+    overflow: hidden;
+    padding: 0 0 20px;
+    height: 35px;
+    background: url("../img/public/index_dot.png") repeat-x 2px 18px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 35px;
+}
 
+.content-special-head h3 {
+    display: inline;
+    padding: 0 50px;
+    background-color: #f6f6f6;
+    font-weight: 400;
+    font-size: 26px;
+    color: #333;
+    font-family: fzzhengheis-el-gbregular;
+}
 
+.content-special-body{
+    width: 100%;
+    height: 350px;
+    float: left;
+    overflow: hidden;
+}
+.content-special-body > ul > li {
+    width: 396px;
+    height: 170px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+}
+.content-special-body .content-special-body-nth-child-1 {
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+.content-special-body .content-special-body-nth-child-2 {
+    margin: 0 11px 10px 11px ;
+}
+.content-special-body .content-special-body-nth-child-3 {
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+.content-special-body .content-special-body-nth-child-5 {
+    margin: 0 11px 10px 11px ;
+}
+.content-special-body > ul > li > a {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+.content-special-body > ul > li > a > div {
+    width: 142px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    color: #fff;
+    opacity: .9;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -ms-transform: translate(0);
+    transform: translate(0);
+    z-index: 1;
+}
+.content-special-body > ul > li > a > img {
+    width: 406px;
+    height: 170px;
+    -webkit-transition: -webkit-transform .3s ease-in;
+    -moz-transition: -moz-transform .3s ease-in;
+    transition: -webkit-transform .3s ease-in;
+    -moz-transition: transform .3s ease-in, -moz-transform .3s ease-in;
+    transition: transform .3s ease-in;
+    transition: transform .3s ease-in, -webkit-transform .3s ease-in, -moz-transform .3s ease-in;
+}
+.content-special-body > ul > li:hover a > img {
+    -webkit-transform: translateX(-10px);
+    -moz-transform: translateX(-10px);
+    -ms-transform: translateX(-10px);
+    transform: translateX(-10px);
+}
+.content-special-body > ul > li > a > div > div{
+    padding-top: 45px;
+    width: 100px;
+    font-size: 14px;
+    margin:0 auto;
+}
+.content-special-body > ul > li > a > div > div > h4 {
+    overflow: hidden;
+    height: 40px;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    font-size: 20px;
+    line-height: 40px;
+    text-align: center;
+    font-family: fzzhengheis-el-gbregular;
+    font-weight: 400;
+}
 
+.content-special-body > ul > li > a > div > div > p {
+    overflow: hidden;
+    margin-top: 8px;
+    height: 32px;
+    line-height: 16px;
+}
 
 
 
