@@ -95,7 +95,7 @@ $(function(){
     }
 });
 
-/* 首页轮播图 */
+/* 首页-轮播图 */
 $(function() {
     var bannerSlider = new Slider($('#sliderBar'), {
         time: 5000,
@@ -263,7 +263,7 @@ $(function() {
     }
 });
 
-/* 首页公告Tab选项卡 */
+/* 首页-公告Tab选项卡 */
 $(function () {
     tab('.content-focus-right-middle-tab-title li','.content-focus-right-middle-tab-body ul');
     function tab(tabTitles,tabContents) {
@@ -278,7 +278,7 @@ $(function () {
     }
 });
 
-/* 首页秒杀 */
+/* 首页-秒杀 */
 $(function () {
     var tabBar = $('.content-sec-kill-body-list-wrapper ul');
     var tabPrev = $('.content-sec-kill-body-list-wrapper-navigate-prev');
@@ -309,39 +309,69 @@ $(function () {
         }
     });
 });
+
+/* 首页-楼层Tab选项卡 */
 $(function () {
-    var tabBar = $('.content-storey-body-brand-body');
-    var tabPrev = $('.content-storey-body-brand-btn .prev');
-    var tabNext = $('.content-storey-body-brand-btn .next');
-    storeyTab(tabBar,tabPrev,tabNext);
-    function storeyTab(tabBar,tabPrev,tabNext) {
-        var tabBarWidth = tabBar.width();
+    storeyTab(".storey-tab-one-left");
+    storeyTab(".storey-tab-one-right");
+
+    storeyTab(".storey-tab-two-left");
+    storeyTab(".storey-tab-two-right");
+
+    storeyTab(".storey-tab-three-left");
+    storeyTab(".storey-tab-three-right");
+
+    storeyTab(".storey-tab-four-left");
+    storeyTab(".storey-tab-four-right");
+
+    storeyTab(".storey-tab-five-left");
+    storeyTab(".storey-tab-five-right");
+
+    storeyTab(".storey-tab-six-left");
+    storeyTab(".storey-tab-six-right");
+
+    storeyTab(".storey-tab-seven-left");
+    storeyTab(".storey-tab-seven-right");
+
+    storeyTab(".storey-tab-eight-left");
+    storeyTab(".storey-tab-eight-right");
+
+    storeyTab(".storey-tab-nine-left");
+    storeyTab(".storey-tab-nine-right");
+
+    storeyTab(".storey-tab-ten-left");
+    storeyTab(".storey-tab-ten-right");
+
+    function storeyTab(tabName) {
+        var tabBar = $(tabName);
         var tabPage = 1;
         var tabPageNum = 6;
-        var tabBarNum = tabBar.find(".item").length;
-        var tabPageCount = Math.ceil(tabBarNum / tabPageNum);
-
-        tabNext.click(function () {
+        var tabNum = tabBar.find("ul li").length;
+        var tabWidth = tabBar.find("li").outerWidth(true) * tabPageNum;
+        var tabPageCount = Math.ceil(tabNum / tabPageNum);
+        tabBar.find("ul").css("width",(tabNum * tabBar.find("li").outerWidth(true)));
+        tabBar.find(".next").click(function () {
             if (tabPage == tabPageCount){
-                tabBar.animate({left:'0px'},'slow');
+                tabBar.find("ul").animate({left:'0'},'slow');
                 tabPage = 1;
             }else {
-                tabBar.animate({left:'-='+ tabBarWidth},'slow');
+                tabBar.find("ul").animate({left:'-='+ tabWidth},'slow');
                 tabPage++;
             }
         });
-        tabPrev.click(function () {
-            if (tabBar.css('left') == '0px' || tabBar.css('left') == 'auto'){
-                var _tabPageNum = tabPageNum - 1;
-                tabBar.animate({left:'-' + _tabPageNum * tabBarWidth},'slow');
+        tabBar.find(".prev").click(function () {
+            if (tabPage == 1){
+                var tabPageEnd = tabWidth * tabPageCount - tabWidth;
+                tabBar.find("ul").animate({left:'-=' + tabPageEnd},'slow');
                 tabPage = tabPageCount;
             }else {
-                tabBar.animate({left:'+='+ tabBarWidth},'slow');
+                tabBar.find("ul").animate({left:'+='+ tabWidth},'slow');
                 tabPage--;
             }
         });
     }
 });
+
 /* VueJs */
 $(function () {
     var vm = new Vue({
