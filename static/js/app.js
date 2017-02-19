@@ -309,7 +309,39 @@ $(function () {
         }
     });
 });
+$(function () {
+    var tabBar = $('.content-storey-body-brand-body');
+    var tabPrev = $('.content-storey-body-brand-btn .prev');
+    var tabNext = $('.content-storey-body-brand-btn .next');
+    storeyTab(tabBar,tabPrev,tabNext);
+    function storeyTab(tabBar,tabPrev,tabNext) {
+        var tabBarWidth = tabBar.width();
+        var tabPage = 1;
+        var tabPageNum = 6;
+        var tabBarNum = tabBar.find(".item").length;
+        var tabPageCount = Math.ceil(tabBarNum / tabPageNum);
 
+        tabNext.click(function () {
+            if (tabPage == tabPageCount){
+                tabBar.animate({left:'0px'},'slow');
+                tabPage = 1;
+            }else {
+                tabBar.animate({left:'-='+ tabBarWidth},'slow');
+                tabPage++;
+            }
+        });
+        tabPrev.click(function () {
+            if (tabBar.css('left') == '0px' || tabBar.css('left') == 'auto'){
+                var _tabPageNum = tabPageNum - 1;
+                tabBar.animate({left:'-' + _tabPageNum * tabBarWidth},'slow');
+                tabPage = tabPageCount;
+            }else {
+                tabBar.animate({left:'+='+ tabBarWidth},'slow');
+                tabPage--;
+            }
+        });
+    }
+});
 /* VueJs */
 $(function () {
     var vm = new Vue({
