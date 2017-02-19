@@ -2712,6 +2712,7 @@ em, i {
     text-align: center;
     background: rgba(0, 0, 0, .1);
     z-index: 1;
+    opacity: 0.5;
 }
 .content-storey-body-brand .tab .tab-btn .prev{left: 0;}
 .content-storey-body-brand .tab .tab-btn  .next{right: 0;}
