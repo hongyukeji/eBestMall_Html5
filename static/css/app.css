@@ -989,7 +989,6 @@ em, i {
 #footer {
     width: 100%;
     float: left;
-    position: relative;
 }
 
 #footer .footer-service {
@@ -2426,22 +2425,26 @@ em, i {
 .content-storey-nav-bar {
     position: absolute;
     left: -65px;
+    display: none;
 }
 
 .content-storey-nav {
     position: fixed;
-    top: 35%;
+    top: 0;
     width: 35px;
-    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
-    background-color: #918888;
-    z-index: 3;
-    display: none;
+    height: 100%;
+    line-height:100%;
+    display: table;
 }
 
 .content-storey-nav > ul {
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .content-storey-nav > ul > li {
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    background-color: #918888;
     border-top: 1px solid #b1aaaa;
     -webkit-transition: background-color .1s;
     -moz-transition: background-color .1s;

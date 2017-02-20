@@ -3,11 +3,13 @@ $(function () {
     /* console.log(); */
 });
 
-/* 首页-全局事件 */
+/* 首页-滚动事件 */
 $(function () {
 
     /* 鼠标滚动监听事件 */
     $(window).on('scroll', function () {
+
+        /* console.log($(window).scrollTop()); */
 
         /* 首页顶部搜索框-返回顶部按钮 显示/隐藏事件 */
         var returnTop = $('.returnTop');
@@ -21,46 +23,36 @@ $(function () {
         }
 
         /* 首页楼层导航 显示/隐藏事件 */
-        if ($(window).scrollTop() > ($(window).height() * 2 + 350)) {
-            $('.content-storey-nav').fadeIn();
+        var storeyShowDistance = 2340;
+        if ($('.header-event').css('display') !== 'none'){
+            storeyShowDistance += $('.header-event').outerHeight(true);
+        }
+
+        if ($(window).scrollTop() > storeyShowDistance - 220) {
+            $('.content-storey-nav-bar').fadeIn();
         } else {
-            $('.content-storey-nav').fadeOut();
-
+            $('.content-storey-nav-bar').fadeOut();
         }
     });
 
-    /* 页面鼠标点击事件 */
-    $(document).click(function whichButton(event) {
-        var btnNum = event.button;
-        if (btnNum == 0) {
-            /*鼠标左键被点击*/
-            sideBarClose();
-        }
-        /*
-         if (btnNum == 2) {
-         // console.log("鼠标右键被点击！");
-         }
-         else if(btnNum==0){
-         // console.log("鼠标左键被点击！");
-         } else if (btnNum == 1) {
-         // console.log("鼠标中键被点击！");
-         } else {
-         // console.log("您点击了" + btnNum + "号键，我不能确定它的名称。");
-         }
-         */
-    });
+    /* 首页-楼层按钮被单击事件 */
+    $('.content-storey-nav .item').on('click', function () {
+        var storeyInitDistance = 2480;
+        var _this = $(this);
+        var storeyNum = _this.index();
+        var storeyHeight = $('.content-storey').outerHeight(true);
+        _this.addClass('active').siblings('.item').removeClass('active');
+        $('html,body').animate({scrollTop: storeyInitDistance + (storeyNum * storeyHeight)}, 588);
+    })
 
-    /* 阻止侧边栏冒泡事件 */
-    $('#sideBar').click(function (event) {
-        event.stopPropagation();
-    });
+});
 
-    /* 关闭首页顶部广告 */
+/* 关闭首页顶部广告 */
+$(function () {
     $('.close-event').on('click', function () {
         $(this).parent().parent().fadeOut(588);
         /* $(this).parent().next().find().addClass("hidden").removeClass("hidden");  // @父辈 parent() @同辈 next()  @儿子 find() */
     });
-
 });
 
 /* 侧边栏 */
@@ -102,6 +94,32 @@ $(function () {
         thisAll.css({"background-color": ""}).find('.item-body').animate({"right": itemBodyClose}, "fast");
         thisNow.css({"background-color": itemBg}).find('.item-body').animate({"right": itemBodyOpen}, "fast");
     }
+
+    /* 页面鼠标点击事件 */
+    $(document).click(function whichButton(event) {
+        var btnNum = event.button;
+        if (btnNum == 0) {
+            /*鼠标左键被点击*/
+            sideBarClose();
+        }
+        /*
+         if (btnNum == 2) {
+         // console.log("鼠标右键被点击！");
+         }
+         else if(btnNum==0){
+         // console.log("鼠标左键被点击！");
+         } else if (btnNum == 1) {
+         // console.log("鼠标中键被点击！");
+         } else {
+         // console.log("您点击了" + btnNum + "号键，我不能确定它的名称。");
+         }
+         */
+    });
+
+    /* 阻止侧边栏冒泡事件 */
+    $('#sideBar').click(function (event) {
+        event.stopPropagation();
+    });
 
     /* Top返回顶部按钮被单击事件 */
     $('.returnTop').click(function () {
