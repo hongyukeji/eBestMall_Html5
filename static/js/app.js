@@ -22,34 +22,31 @@ $(function () {
             returnTop.fadeOut();
         }
 
-        /* 首页楼层导航 显示/隐藏事件 */
-        var storeyShowDistance = 2340;
+        /* 首页-楼层导航-滚动 显示/隐藏/焦点事件 */
+        var storeyInitDistance = 2400;
         if ($('.header-event').css('display') !== 'none') {
-            storeyShowDistance += $('.header-event').outerHeight(true);
+            storeyInitDistance += $('.header-event').outerHeight(true);
         }
-
-        if ($(window).scrollTop() > storeyShowDistance - 220) {
-            $('.content-storey-nav-bar').fadeIn();
-        } else {
-            $('.content-storey-nav-bar').fadeOut();
-        }
-
-        /* 首页-楼层-滚动按钮获取焦点事件 */
-        var storeyInitDistance = 2480;
         var storeyBtn = $('.content-storey-nav .item');
         var storeyHeight = $('.content-storey').outerHeight(true);
         var storeyTotalHeight = storeyInitDistance + (storeyBtn.length * storeyHeight);
-        if ($(window).scrollTop() > storeyInitDistance && $(window).scrollTop() < storeyTotalHeight) {
+        if ($(window).scrollTop() > storeyInitDistance - 150 && $(window).scrollTop() < storeyTotalHeight) {
             var storeyFloorOn = Math.round(($(window).scrollTop() - (storeyInitDistance)) / storeyHeight);
-            console.log(storeyFloorOn);
             storeyNavActive(storeyBtn.eq(storeyFloorOn));
+            $('.content-storey-nav-bar').fadeIn();
+        } else {
+            storeyBtn.removeClass('active');
+            $('.content-storey-nav-bar').fadeOut();
         }
     });
 
 
     /* 首页-楼层按钮被单击事件 */
     $('.content-storey-nav .item').on('click', function () {
-        var storeyInitDistance = 2480;
+        var storeyInitDistance = 2400;
+        if ($('.header-event').css('display') !== 'none') {
+            storeyInitDistance += $('.header-event').outerHeight(true);
+        }
         var _this = $(this);
         var storeyNum = _this.index();
         var storeyHeight = $('.content-storey').outerHeight(true);
