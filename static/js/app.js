@@ -3,27 +3,27 @@ $(function () {
     /* console.log(); */
 });
 
-/* 全局事件 */
+/* 首页-全局事件 */
 $(function () {
 
     /* 鼠标滚动监听事件 */
-    $(window).on('scroll', function(){
+    $(window).on('scroll', function () {
 
         /* 首页顶部搜索框-返回顶部按钮 显示/隐藏事件 */
         var returnTop = $('.returnTop');
         var searchBar = $('#searchBar');
-        if($(window).scrollTop() > $(window).height()){
+        if ($(window).scrollTop() > $(window).height()) {
             searchBar.fadeIn();
             returnTop.fadeIn();
-        }else{
+        } else {
             searchBar.fadeOut();
             returnTop.fadeOut();
         }
 
         /* 首页楼层导航 显示/隐藏事件 */
-        if($(window).scrollTop() > ($(window).height() * 2 + 350)){
+        if ($(window).scrollTop() > ($(window).height() * 2 + 350)) {
             $('.content-storey-nav').fadeIn();
-        }else {
+        } else {
             $('.content-storey-nav').fadeOut();
 
         }
@@ -32,7 +32,7 @@ $(function () {
     /* 页面鼠标点击事件 */
     $(document).click(function whichButton(event) {
         var btnNum = event.button;
-        if(btnNum==0){
+        if (btnNum == 0) {
             /*鼠标左键被点击*/
             sideBarClose();
         }
@@ -51,18 +51,60 @@ $(function () {
     });
 
     /* 阻止侧边栏冒泡事件 */
-    $('#sideBar').click(function(event){
+    $('#sideBar').click(function (event) {
         event.stopPropagation();
     });
 
     /* 关闭首页顶部广告 */
-    $('.close-event').on('click', function(){
+    $('.close-event').on('click', function () {
         $(this).parent().parent().fadeOut(588);
         /* $(this).parent().next().find().addClass("hidden").removeClass("hidden");  // @父辈 parent() @同辈 next()  @儿子 find() */
     });
 
+});
+
+/* 侧边栏 */
+$(function () {
+    $('.item-btn').click(function () {
+        var itemAll = $('.item');
+        var thisNow = $(this).parent(itemAll);
+        var sideBarRight = $('#sideBar').css("right");
+        var itemBody = $(this).parent(itemAll).find('.item-body').css("right");
+
+        if (sideBarRight == "0px" && itemBody == "-270px") {
+            sideBarOpen(thisNow);
+        } else if (sideBarRight == "270px" && itemBody == "0px") {
+            sideBarClose();
+        } else if (sideBarRight == "270px" && itemBody == "-270px") {
+            sideBarChange(thisNow, itemAll);
+        }
+    });
+    function sideBarOpen(thisNow) {
+        var sideBar = $('#sideBar');
+        var sideBarOpen = "270px";
+        var itemBg = "#C40000";
+        sideBar.animate({"right": sideBarOpen}, "fast");
+        thisNow.css({"background-color": itemBg}).find('.item-body').animate({"right": "0"}, "fast");
+    }
+
+    function sideBarClose() {
+        var sideBar = $('#sideBar');
+        var sideBarClose = "0px";
+        var itemBodyClose = "-270px";
+        sideBar.animate({"right": sideBarClose}, "fast");
+        $('.item').css({"background-color": ""}).find('.item-body').animate({"right": itemBodyClose}, "fast");
+    }
+
+    function sideBarChange(thisNow, thisAll) {
+        var itemBodyOpen = "0px";
+        var itemBodyClose = "-270px";
+        var itemBg = "#C40000";
+        thisAll.css({"background-color": ""}).find('.item-body').animate({"right": itemBodyClose}, "fast");
+        thisNow.css({"background-color": itemBg}).find('.item-body').animate({"right": itemBodyOpen}, "fast");
+    }
+
     /* Top返回顶部按钮被单击事件 */
-    $('.returnTop').click(function(){
+    $('.returnTop').click(function () {
         returnTop();
     });
 
@@ -72,47 +114,8 @@ $(function () {
     }
 });
 
-/* 侧边栏 */
-$(function(){
-    $('.item-btn').click(function(){
-        var itemAll = $('.item');
-        var thisNow = $(this).parent(itemAll);
-        var sideBarRight = $('#sideBar').css("right");
-        var itemBody = $(this).parent(itemAll).find('.item-body').css("right");
-
-        if(sideBarRight == "0px" && itemBody == "-270px"){
-            sideBarOpen(thisNow);
-        }else if(sideBarRight == "270px" && itemBody == "0px"){
-            sideBarClose();
-        }else if(sideBarRight == "270px" && itemBody == "-270px"){
-            sideBarChange(thisNow,itemAll);
-        }
-    });
-    function sideBarOpen (thisNow){
-        var sideBar = $('#sideBar');
-        var sideBarOpen = "270px";
-        var itemBg = "#C40000";
-        sideBar.animate({"right":sideBarOpen},"fast");
-        thisNow.css({"background-color":itemBg}).find('.item-body').animate({"right":"0"},"fast");
-    }
-    function sideBarClose (){
-        var sideBar = $('#sideBar');
-        var sideBarClose = "0px";
-        var itemBodyClose = "-270px";
-        sideBar.animate({"right":sideBarClose},"fast");
-        $('.item').css({"background-color":""}).find('.item-body').animate({"right":itemBodyClose},"fast");
-    }
-    function sideBarChange (thisNow,thisAll){
-        var itemBodyOpen = "0px";
-        var itemBodyClose = "-270px";
-        var itemBg = "#C40000";
-        thisAll.css({"background-color":""}).find('.item-body').animate({"right":itemBodyClose},"fast");
-        thisNow.css({"background-color":itemBg}).find('.item-body').animate({"right":itemBodyOpen},"fast");
-    }
-});
-
 /* 首页-轮播图 */
-$(function() {
+$(function () {
     var bannerSlider = new Slider($('#sliderBar'), {
         time: 5000,
         delay: 400,
@@ -122,10 +125,10 @@ $(function() {
         controller: $('#sliderIndicator'),
         activeControllerCls: 'active'
     });
-    $('#sliderBar .slider-prev').click(function() {
+    $('#sliderBar .slider-prev').click(function () {
         bannerSlider.prev()
     });
-    $('#sliderBar .slider-next').click(function() {
+    $('#sliderBar .slider-next').click(function () {
         bannerSlider.next()
     });
     function Slider(container, options) {
@@ -234,7 +237,8 @@ $(function() {
             try {
                 controller.children('.' + cls).removeClass(cls);
                 controller.children().eq(index).addClass(cls);
-            } catch (e) { }
+            } catch (e) {
+            }
 
             currentIndex = index;
 
@@ -281,12 +285,14 @@ $(function() {
 
 /* 首页-公告Tab选项卡 */
 $(function () {
-    tab('.content-focus-right-middle-tab-title li','.content-focus-right-middle-tab-body ul');
-    function tab(tabTitles,tabContents) {
+    tab('.content-focus-right-middle-tab-title li', '.content-focus-right-middle-tab-body ul');
+    function tab(tabTitles, tabContents) {
         var tabTitle = $(tabTitles);
         var tabContent = $(tabContents);
-        tabTitle.on('mouseover',function () {
-            if (tabTitle.length != tabContent.length){return false;}
+        tabTitle.on('mouseover', function () {
+            if (tabTitle.length != tabContent.length) {
+                return false;
+            }
             var index = tabTitle.index(this);
             tabTitle.eq(index).find('a').addClass('active').parent().siblings().find('a').removeClass('active');
             tabContent.eq(index).show().siblings().hide();
@@ -306,21 +312,21 @@ $(function () {
     var tabPageCount = Math.ceil(tabBarNum / tabPageNum);
 
     tabNext.click(function () {
-        if (tabPage == tabPageCount){
-            tabBar.animate({left:'0px'},'slow');
+        if (tabPage == tabPageCount) {
+            tabBar.animate({left: '0px'}, 'slow');
             tabPage = 1;
-        }else {
-            tabBar.animate({left:'-='+ tabBarWidth},'slow');
+        } else {
+            tabBar.animate({left: '-=' + tabBarWidth}, 'slow');
             tabPage++;
         }
     });
     tabPrev.click(function () {
-        if (tabBar.css('left') == '0px' || tabBar.css('left') == 'auto'){
+        if (tabBar.css('left') == '0px' || tabBar.css('left') == 'auto') {
             var _tabPageNum = tabPageNum - 1;
-            tabBar.animate({left:'-' + _tabPageNum * tabBarWidth},'slow');
+            tabBar.animate({left: '-' + _tabPageNum * tabBarWidth}, 'slow');
             tabPage = tabPageCount;
-        }else {
-            tabBar.animate({left:'+='+ tabBarWidth},'slow');
+        } else {
+            tabBar.animate({left: '+=' + tabBarWidth}, 'slow');
             tabPage--;
         }
     });
@@ -365,23 +371,23 @@ $(function () {
         var tabNum = tabBar.find("ul li").length;
         var tabWidth = tabBar.find("li").outerWidth(true) * tabPageNum;
         var tabPageCount = Math.ceil(tabNum / tabPageNum);
-        tabBar.find("ul").css("width",(tabNum * tabBar.find("li").outerWidth(true)));
+        tabBar.find("ul").css("width", (tabNum * tabBar.find("li").outerWidth(true)));
         tabBar.find(".next").click(function () {
-            if (tabPage == tabPageCount){
-                tabBar.find("ul").animate({left:'0'},'slow');
+            if (tabPage == tabPageCount) {
+                tabBar.find("ul").animate({left: '0'}, 'slow');
                 tabPage = 1;
-            }else {
-                tabBar.find("ul").animate({left:'-='+ tabWidth},'slow');
+            } else {
+                tabBar.find("ul").animate({left: '-=' + tabWidth}, 'slow');
                 tabPage++;
             }
         });
         tabBar.find(".prev").click(function () {
-            if (tabPage == 1){
+            if (tabPage == 1) {
                 var tabPageEnd = tabWidth * tabPageCount - tabWidth;
-                tabBar.find("ul").animate({left:'-=' + tabPageEnd},'slow');
+                tabBar.find("ul").animate({left: '-=' + tabPageEnd}, 'slow');
                 tabPage = tabPageCount;
-            }else {
-                tabBar.find("ul").animate({left:'+='+ tabWidth},'slow');
+            } else {
+                tabBar.find("ul").animate({left: '+=' + tabWidth}, 'slow');
                 tabPage--;
             }
         });
@@ -391,16 +397,16 @@ $(function () {
 /* VueJs */
 $(function () {
     var vm = new Vue({
-        el:"#searchBar",
-        data:{
-            title:"Hello Vue"
+        el: "#searchBar",
+        data: {
+            title: "Hello Vue"
         },
         mounted: function () {
             // console.log('Title is: ' + this.title);
             this.edit();
         },
-        methods:{
-            edit: function(){
+        methods: {
+            edit: function () {
                 this.title = "Hello eBestMall";
             }
         }
