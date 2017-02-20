@@ -30,6 +30,12 @@ $(function () {
         var storeyBtn = $('.content-storey-nav .item');
         var storeyHeight = $('.content-storey').outerHeight(true);
         if ($(window).scrollTop() > storeyInitDistance - 150) {
+            if( document.body.clientWidth <= (1366 - 27)){
+                $('.content-storey-nav-bar').css("left","-35px");
+            }else {
+                $('.content-storey-nav-bar').css("left","-65px");
+            }
+            console.log();
             var storeyFloorOn = Math.round(($(window).scrollTop() - (storeyInitDistance)) / storeyHeight);
             storeyNavActive(storeyBtn.eq(storeyFloorOn));
             $('.content-storey-nav-bar').fadeIn();
