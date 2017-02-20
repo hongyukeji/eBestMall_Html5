@@ -35,7 +35,6 @@ $(function () {
             }else {
                 $('.content-storey-nav-bar').css("left","-65px");
             }
-            console.log();
             var storeyFloorOn = Math.round(($(window).scrollTop() - (storeyInitDistance)) / storeyHeight);
             storeyNavActive(storeyBtn.eq(storeyFloorOn));
             $('.content-storey-nav-bar').fadeIn();
@@ -56,7 +55,7 @@ $(function () {
         var storeyNum = _this.index();
         var storeyHeight = $('.content-storey').outerHeight(true);
         storeyNavActive(_this);
-        $('html,body').animate({scrollTop: storeyInitDistance + (storeyNum * storeyHeight)}, 588);
+        $('html,body').animate({scrollTop: storeyInitDistance + (storeyNum * storeyHeight)}, 'normal');
     });
 
     function storeyNavActive(_this) {
