@@ -981,7 +981,7 @@ em, i {
     text-align: center;
 }
 
-#returnTop {
+.returnTop {
     display: none;
 }
 
@@ -2395,6 +2395,12 @@ em, i {
     line-height: 16px;
 }
 
+.content-storey-bar {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
 .content-storey-title {
     width: 100%;
     height: 35px;
@@ -2415,6 +2421,81 @@ em, i {
     font-size: 26px;
     color: #333;
     font-family: fzzhengheis-el-gbregular;
+}
+
+.content-storey-nav-bar {
+    position: absolute;
+    left: -65px;
+}
+
+.content-storey-nav {
+    position: fixed;
+    top: 35%;
+    width: 35px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .2);
+    background-color: #918888;
+    z-index: 3;
+    display: none;
+}
+
+.content-storey-nav > ul {
+}
+
+.content-storey-nav > ul > li {
+    border-top: 1px solid #b1aaaa;
+    -webkit-transition: background-color .1s;
+    -moz-transition: background-color .1s;
+    transition: background-color .1s
+}
+
+.content-storey-nav > ul > li > a {
+    overflow: hidden;
+    display: block;
+    width: 25px;
+    padding: 10px 5px;
+    line-height: 14px;
+    text-align: center;
+    color: #fefefe;
+    -webkit-transition: color .1s;
+    -moz-transition: color .1s;
+    transition: color .1s
+}
+
+.content-storey-nav > ul > li:hover {
+    border-top: 1px solid #d70b1c;
+    background-color: #5e4a4a;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.content-storey-nav > ul > li:hover a {
+    position: relative;
+    border-bottom: 1px solid #d70b1c;
+    margin-bottom: -1px;
+    border-color: #d70b1c;
+    background-color: #d70b1c
+}
+
+.content-storey-nav .active {
+    border-top: 1px solid #d70b1c !important;
+    background-color: #5e4a4a;
+    border-bottom: 0;
+    margin-bottom: 0;
+}
+
+.content-storey-nav .active > a {
+    position: relative;
+    border-bottom: 1px solid #d70b1c;
+    margin-bottom: -1px;
+    background-color: #d70b1c
+}
+
+.content-storey-nav > ul > li:first-child {
+    border-top: 0 !important;
+}
+
+.content-storey-nav .active:first-child {
+    border-top: 0 !important;
 }
 
 .content-storey {

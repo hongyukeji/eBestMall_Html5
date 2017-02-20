@@ -3,8 +3,32 @@ $(function () {
     /* console.log(); */
 });
 
-/* 侧边栏 */
-$(function(){
+/* 全局事件 */
+$(function () {
+
+    /* 鼠标滚动监听事件 */
+    $(window).on('scroll', function(){
+
+        /* 首页顶部搜索框-返回顶部按钮 显示/隐藏事件 */
+        var returnTop = $('.returnTop');
+        var searchBar = $('#searchBar');
+        if($(window).scrollTop() > $(window).height()){
+            searchBar.fadeIn();
+            returnTop.fadeIn();
+        }else{
+            searchBar.fadeOut();
+            returnTop.fadeOut();
+        }
+
+        /* 首页楼层导航 显示/隐藏事件 */
+        if($(window).scrollTop() > ($(window).height() * 2 + 350)){
+            $('.content-storey-nav').fadeIn();
+        }else {
+            $('.content-storey-nav').fadeOut();
+
+        }
+    });
+
     /* 页面鼠标点击事件 */
     $(document).click(function whichButton(event) {
         var btnNum = event.button;
@@ -13,17 +37,17 @@ $(function(){
             sideBarClose();
         }
         /*
-        if (btnNum == 2) {
-            // console.log("鼠标右键被点击！");
-        }
-        else if(btnNum==0){
-            // console.log("鼠标左键被点击！");
-        } else if (btnNum == 1) {
-            // console.log("鼠标中键被点击！");
-        } else {
-            // console.log("您点击了" + btnNum + "号键，我不能确定它的名称。");
-        }
-        */
+         if (btnNum == 2) {
+         // console.log("鼠标右键被点击！");
+         }
+         else if(btnNum==0){
+         // console.log("鼠标左键被点击！");
+         } else if (btnNum == 1) {
+         // console.log("鼠标中键被点击！");
+         } else {
+         // console.log("您点击了" + btnNum + "号键，我不能确定它的名称。");
+         }
+         */
     });
 
     /* 阻止侧边栏冒泡事件 */
@@ -31,7 +55,25 @@ $(function(){
         event.stopPropagation();
     });
 
-    /*侧边栏*/
+    /* 关闭首页顶部广告 */
+    $('.close-event').on('click', function(){
+        $(this).parent().parent().fadeOut(588);
+        /* $(this).parent().next().find().addClass("hidden").removeClass("hidden");  // @父辈 parent() @同辈 next()  @儿子 find() */
+    });
+
+    /* Top返回顶部按钮被单击事件 */
+    $('.returnTop').click(function(){
+        returnTop();
+    });
+
+    /* 返回顶部函数 */
+    function returnTop() {
+        $('html,body').animate({scrollTop: 0}, 588);
+    }
+});
+
+/* 侧边栏 */
+$(function(){
     $('.item-btn').click(function(){
         var itemAll = $('.item');
         var thisNow = $(this).parent(itemAll);
@@ -66,32 +108,6 @@ $(function(){
         var itemBg = "#C40000";
         thisAll.css({"background-color":""}).find('.item-body').animate({"right":itemBodyClose},"fast");
         thisNow.css({"background-color":itemBg}).find('.item-body').animate({"right":itemBodyOpen},"fast");
-    }
-
-    /* 关闭首页顶部广告 */
-    $('.close-event').on('click', function(){
-        $(this).parent().parent().fadeOut(588);
-        /* $(this).parent().next().find().addClass("hidden").removeClass("hidden");  // @父辈 parent() @同辈 next()  @儿子 find() */
-    });
-
-    /* Top返回顶部 */
-    $('#returnTop').click(function(){
-        returnTop();
-    });
-    $(window).on('scroll', function(){
-        var returnTop = $('#returnTop');
-        var searchBar = $('#searchBar');
-        /* scroll-linked 定位 BUG - 待解决 Shadow */
-        if($(window).scrollTop() > $(window).height()){
-            searchBar.fadeIn();
-            returnTop.fadeIn();
-        }else{
-            searchBar.fadeOut();
-            returnTop.fadeOut();
-        }
-    });
-    function returnTop() {
-        $('html,body').animate({scrollTop: 0}, 588);
     }
 });
 
