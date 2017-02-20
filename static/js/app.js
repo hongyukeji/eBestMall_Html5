@@ -23,18 +23,16 @@ $(function () {
         }
 
         /* 首页-楼层导航-滚动 显示/隐藏/焦点事件 */
-        var storeyInitDistance = 2400;
-        if ($('.header-event').css('display') !== 'none') {
-            storeyInitDistance += $('.header-event').outerHeight(true);
-        }
+        var storeyInitDistance = $('.content-storey-bar').offset().top;
         var storeyBtn = $('.content-storey-nav .item');
         var storeyHeight = $('.content-storey').outerHeight(true);
         if ($(window).scrollTop() > storeyInitDistance - 150) {
-            if( document.body.clientWidth <= (1366 - 27)){
-                $('.content-storey-nav-bar').css("left","-35px");
-            }else {
-                $('.content-storey-nav-bar').css("left","-65px");
+            if (document.body.clientWidth <= (1366 - 27)) {
+                $('.content-storey-nav-bar').css("left", "-35px");
+            } else {
+                $('.content-storey-nav-bar').css("left", "-65px");
             }
+            console.log($('.content-storey-bar').offset().top);
             var storeyFloorOn = Math.round(($(window).scrollTop() - (storeyInitDistance)) / storeyHeight);
             storeyNavActive(storeyBtn.eq(storeyFloorOn));
             $('.content-storey-nav-bar').fadeIn();
@@ -47,10 +45,7 @@ $(function () {
 
     /* 首页-楼层按钮被单击事件 */
     $('.content-storey-nav .item').on('click', function () {
-        var storeyInitDistance = 2400;
-        if ($('.header-event').css('display') !== 'none') {
-            storeyInitDistance += $('.header-event').outerHeight(true);
-        }
+        var storeyInitDistance = $('.content-storey-bar').offset().top;
         var _this = $(this);
         var storeyNum = _this.index();
         var storeyHeight = $('.content-storey').outerHeight(true);
