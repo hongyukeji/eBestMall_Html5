@@ -30,7 +30,7 @@ $(function () {
         var storeyBtn = $('.content-storey-nav .item');
         var storeyHeight = $('.content-storey').outerHeight(true);
         var storeyTotalHeight = storeyInitDistance + (storeyBtn.length * storeyHeight);
-        if ($(window).scrollTop() > storeyInitDistance - 150 && $(window).scrollTop() < storeyTotalHeight) {
+        if ($(window).scrollTop() > storeyInitDistance - 150 && $(window).scrollTop() < storeyTotalHeight - (storeyHeight / 2)) {
             var storeyFloorOn = Math.round(($(window).scrollTop() - (storeyInitDistance)) / storeyHeight);
             storeyNavActive(storeyBtn.eq(storeyFloorOn));
             $('.content-storey-nav-bar').fadeIn();
