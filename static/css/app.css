@@ -2519,13 +2519,13 @@ em, i {
     height: 100%;
     float: left;
     margin-left: 10px;
-    background-color: #3aaba9;
 }
 
 .content-storey-head {
     height: 26px;
     padding: 16px 20px 16px 25px;
     overflow: hidden;
+    background-color:#999999;
 }
 
 .content-storey-head > h3 {
@@ -2557,7 +2557,6 @@ em, i {
     height: 24px;
     line-height: 24px;
     padding: 0 10px;
-    border: 1px solid #fff;
     color: #fff;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -2567,6 +2566,7 @@ em, i {
     word-break: break-all;
     white-space: nowrap;
     text-overflow: ellipsis;
+    border: 1px solid hsla(0, 0%, 100%, .2);
     background-color: hsla(0, 0%, 100%, .2);
 }
 

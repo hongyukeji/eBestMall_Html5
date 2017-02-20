@@ -24,7 +24,7 @@ $(function () {
 
         /* 首页楼层导航 显示/隐藏事件 */
         var storeyShowDistance = 2340;
-        if ($('.header-event').css('display') !== 'none'){
+        if ($('.header-event').css('display') !== 'none') {
             storeyShowDistance += $('.header-event').outerHeight(true);
         }
 
@@ -33,7 +33,19 @@ $(function () {
         } else {
             $('.content-storey-nav-bar').fadeOut();
         }
+
+        /* 首页-楼层-滚动按钮获取焦点事件 */
+        var storeyInitDistance = 2480;
+        var storeyBtn = $('.content-storey-nav .item');
+        var storeyHeight = $('.content-storey').outerHeight(true);
+        var storeyTotalHeight = storeyInitDistance + (storeyBtn.length * storeyHeight);
+        if ($(window).scrollTop() > storeyInitDistance && $(window).scrollTop() < storeyTotalHeight) {
+            var storeyFloorOn = Math.round(($(window).scrollTop() - (storeyInitDistance)) / storeyHeight);
+            console.log(storeyFloorOn);
+            storeyNavActive(storeyBtn.eq(storeyFloorOn));
+        }
     });
+
 
     /* 首页-楼层按钮被单击事件 */
     $('.content-storey-nav .item').on('click', function () {
@@ -41,8 +53,17 @@ $(function () {
         var _this = $(this);
         var storeyNum = _this.index();
         var storeyHeight = $('.content-storey').outerHeight(true);
-        _this.addClass('active').siblings('.item').removeClass('active');
+        storeyNavActive(_this);
         $('html,body').animate({scrollTop: storeyInitDistance + (storeyNum * storeyHeight)}, 588);
+    });
+
+    function storeyNavActive(_this) {
+        _this.addClass('active').siblings('.item').removeClass('active');
+    }
+
+    /* 首页-楼层返回顶部按钮 */
+    $('.content-storey-nav .returnTop').on('click', function () {
+        $(this).siblings('.item').removeClass('active');
     })
 
 });
