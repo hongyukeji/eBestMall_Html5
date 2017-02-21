@@ -1098,15 +1098,15 @@ em, i {
 .content-focus-left {
     width: 190px;
     height: 100%;
+    position: relative;
 }
 
 .content-focus-left-classify {
     width: 100%;
     height: 100%;
-    /*background-color: red;*/
 }
 
-.content-focus-left-classify ul {
+.content-focus-left-classify > ul {
     overflow: hidden;
     padding: 15px 0;
     height: 450px;
@@ -1114,7 +1114,7 @@ em, i {
     background-color: #6e6568;
 }
 
-.content-focus-left-classify ul .item {
+.content-focus-left-classify > ul .item {
     overflow: hidden;
     padding-left: 12px;
     height: 30px;
@@ -1126,7 +1126,7 @@ em, i {
     background-color: #999395;
 }
 
-.content-focus-left-classify ul .item a {
+.content-focus-left-classify > ul .item a {
     font-size: 14px;
     color: #FFFFFF;
 }
@@ -1136,7 +1136,7 @@ em, i {
     font-size: 12px;
 }
 
-.content-focus-left-classify ul .item a:hover {
+.content-focus-left-classify > ul .item a:hover {
     color: #C81623;
 }
 .content-focus-left-classify .list {
