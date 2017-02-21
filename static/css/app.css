@@ -1139,7 +1139,23 @@ em, i {
 .content-focus-left-classify ul .item a:hover {
     color: #C81623;
 }
-
+.content-focus-left-classify .list {
+    width: 1018px;
+    min-height: 478px;
+    position: absolute;
+    left: 190px;
+    top:0;
+    background-color: #f7f7f7;
+    border: 1px solid #f7f7f7;
+    box-shadow:2px 0 5px rgba(0,0,0,.3);
+    -webkit-transition:top .25s ease;
+    transition:top .25s ease;
+    z-index: 1;
+    display: none;
+}
+.content-focus-left-classify .item:hover .list{
+    display: block;
+}
 .content-focus-middle {
     width: 810px;
     height: 100%;
