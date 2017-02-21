@@ -156,12 +156,37 @@
             <!-- 公共页眉-搜索框-购物车-导航 -->
             <div class="header-main-right">
                 <div class="header-search-cart-bar">
-                    <div class="header-search-bar fl">
+                    <div class="header-search-bar">
                         <div class="header-search">
                             <form class="header-search-form" action="javascript:;" method="get">
-                                <input type="text" name="key" placeholder="eBestMall" />
+                                <!--<input type="text" name="key" placeholder="eBestMall" autocomplete="off" onfocus="$('.header-search-record').css('display','block')" onblur="$('.header-search-record').css('display','none')" />-->
+                                <input type="text" name="key" placeholder="eBestMall" autocomplete="off" onfocus="$('.header-search-record').css('display','block')" />
                                 <button type="submit"><i class="icon-search"></i></button>
                             </form>
+                            <div class="header-search-record">
+                                <ul>
+                                    <li class="item" title="eBestMall">
+                                        <div class="item-left">eBestMall</div>
+                                        <div class="item-right">搜索历史</div>
+                                        <div class="item-delete"><a href="javascript:;">删除</a></div>
+                                    </li>
+                                    <li class="item" title="鸿宇科技">
+                                        <div class="item-left">鸿宇科技</div>
+                                        <div class="item-right">搜索历史</div>
+                                        <div class="item-delete"><a href="javascript:;">删除</a></div>
+                                    </li>
+                                    <li class="item" title="鸿宇论坛">
+                                        <div class="item-left">鸿宇论坛</div>
+                                        <div class="item-right">搜索历史</div>
+                                        <div class="item-delete"><a href="javascript:;">删除</a></div>
+                                    </li>
+
+                                    <li class="close">
+                                        <div class="item-left"><a href="javascript:;">清空历史</a></div>
+                                        <div class="item-right"><a href="javascript:;" onclick="$('.header-search-record').css('display','none')">关闭</a></div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div class="header-hot-words">
                             <ul>

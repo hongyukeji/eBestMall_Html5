@@ -74,6 +74,52 @@ $(function () {
 
 /* 侧边栏 */
 $(function () {
+    /* 页面鼠标点击事件 */
+    $(document).click(function whichButton(event) {
+        var btnNum = event.button;
+        if (btnNum == 0) {
+            /*鼠标左键被点击*/
+
+            // 关闭侧边栏
+            sideBarClose();
+
+            // 关闭搜索下拉框
+            $('.header-search-record').css('display','none');
+        }
+        /*
+         if (btnNum == 2) {
+         // console.log("鼠标右键被点击！");
+         }
+         else if(btnNum==0){
+         // console.log("鼠标左键被点击！");
+         } else if (btnNum == 1) {
+         // console.log("鼠标中键被点击！");
+         } else {
+         // console.log("您点击了" + btnNum + "号键，我不能确定它的名称。");
+         }
+         */
+    });
+
+    /* 阻止侧边栏冒泡事件 */
+    $('#sideBar').click(function (event) {
+        event.stopPropagation();
+    });
+
+    /* 阻止搜索下拉框冒泡事件 */
+    $('.header-search').click(function (event) {
+        event.stopPropagation();
+    });
+
+    /* Top返回顶部按钮被单击事件 */
+    $('.returnTop').click(function () {
+        returnTop();
+    });
+
+    /* 返回顶部函数 */
+    function returnTop() {
+        $('html,body').animate({scrollTop: 0}, 588);
+    }
+
     $('.item-btn').click(function () {
         var itemAll = $('.item');
         var thisNow = $(this).parent(itemAll);
@@ -112,41 +158,6 @@ $(function () {
         thisNow.css({"background-color": itemBg}).find('.item-body').animate({"right": itemBodyOpen}, "fast");
     }
 
-    /* 页面鼠标点击事件 */
-    $(document).click(function whichButton(event) {
-        var btnNum = event.button;
-        if (btnNum == 0) {
-            /*鼠标左键被点击*/
-            sideBarClose();
-        }
-        /*
-         if (btnNum == 2) {
-         // console.log("鼠标右键被点击！");
-         }
-         else if(btnNum==0){
-         // console.log("鼠标左键被点击！");
-         } else if (btnNum == 1) {
-         // console.log("鼠标中键被点击！");
-         } else {
-         // console.log("您点击了" + btnNum + "号键，我不能确定它的名称。");
-         }
-         */
-    });
-
-    /* 阻止侧边栏冒泡事件 */
-    $('#sideBar').click(function (event) {
-        event.stopPropagation();
-    });
-
-    /* Top返回顶部按钮被单击事件 */
-    $('.returnTop').click(function () {
-        returnTop();
-    });
-
-    /* 返回顶部函数 */
-    function returnTop() {
-        $('html,body').animate({scrollTop: 0}, 588);
-    }
 });
 
 /* 首页-轮播图 */
