@@ -1679,6 +1679,7 @@ em, i {
 }
 
 .content-sec-kill .content-sec-kill-hd-col-right {
+    height: 100%;
     float: right;
 }
 
