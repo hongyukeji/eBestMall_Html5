@@ -1104,14 +1104,16 @@ em, i {
 .content-focus-left-classify {
     width: 100%;
     height: 100%;
+    background-color: #6e6568;
 }
 
 .content-focus-left-classify > ul {
-    overflow: hidden;
-    padding: 15px 0;
+    width: 100%;
     height: 450px;
     color: #FFFFFF;
-    background-color: #6e6568;
+    float: left;
+    margin: 15px 0;
+    overflow: hidden;
 }
 
 .content-focus-left-classify > ul .item {
@@ -1137,7 +1139,6 @@ em, i {
 .content-focus-left-classify .item > ul > li:first-child .item-line {
     display: none;
 }
-
 
 .content-focus-left-classify .item:hover {
     background-color: #999395;
