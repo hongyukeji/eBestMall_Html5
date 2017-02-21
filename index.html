@@ -160,7 +160,7 @@
                         <div class="header-search">
                             <form class="header-search-form" action="javascript:;" method="get">
                                 <!--<input type="text" name="key" placeholder="eBestMall" autocomplete="off" onfocus="$('.header-search-record').css('display','block')" onblur="$('.header-search-record').css('display','none')" />-->
-                                <input type="text" name="key" placeholder="eBestMall" autocomplete="off" onfocus="$('.header-search-record').css('display','block')" />
+                                <input type="text" name="key" placeholder="eBestMall" autocomplete="off" onfocus="if($('.header-search-record ul li').length >= 1){$('.header-search-record').css('display','block')}" />
                                 <button type="submit"><i class="icon-search"></i></button>
                             </form>
                             <div class="header-search-record">
@@ -180,12 +180,11 @@
                                         <div class="item-right">搜索历史</div>
                                         <div class="item-delete"><a href="javascript:;">删除</a></div>
                                     </li>
-
-                                    <li class="close">
-                                        <div class="item-left"><a href="javascript:;">清空历史</a></div>
-                                        <div class="item-right"><a href="javascript:;" onclick="$('.header-search-record').css('display','none')">关闭</a></div>
-                                    </li>
                                 </ul>
+                                <div class="close">
+                                    <div class="item-left"><a href="javascript:;">清空历史</a></div>
+                                    <div class="item-right"><a href="javascript:;" onclick="$('.header-search-record').css('display','none')">关闭</a></div>
+                                </div>
                             </div>
                         </div>
                         <div class="header-hot-words">

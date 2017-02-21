@@ -570,7 +570,7 @@ em, i {
 
 #header .header-search-record {
     width: 496px;
-    /*min-height: 80px;*/
+    min-height: 53px;
     max-height: 288px;
     position: absolute;
     top: 35px;
@@ -582,6 +582,11 @@ em, i {
     z-index: 1;
     display: none;
     /*display: block !important;*/
+}
+
+#header .header-search-record > ul {
+    max-height: 262px;
+    overflow: hidden;
 }
 
 #header .header-search-record > ul > li {
@@ -614,6 +619,7 @@ em, i {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+
 #header .header-search-record > ul > li > .item-delete {
     width: 294px;
     height: 100%;
@@ -621,19 +627,48 @@ em, i {
     text-align: right;
     display: none;
 }
-#header .header-search-record > ul > li > .item-delete > a{
+
+#header .header-search-record > ul > li > .item-delete > a {
     color: #005AA0;
 }
-#header .header-search-record > ul > .item:hover .item-right{
+
+#header .header-search-record > ul > .item:hover .item-right {
     display: none;
 }
-#header .header-search-record > ul > .item:hover .item-delete{
+
+#header .header-search-record > ul > .item:hover .item-delete {
     display: block;
 }
 
-
-#header .header-search-record > ul > .close {
+#header .header-search-record .close {
+    padding: 1px 6px;
+    height: 24px;
+    line-height: 24px;
     border-top: 1px solid #efefef;
+}
+
+#header .header-search-record .close .item-left {
+    width: 190px;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#header .header-search-record .close .item-right {
+    width: 294px;
+    height: 100%;
+    float: left;
+    color: #aaaaaa;
+    text-align: right;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#header .header-search-record > ul > li:hover {
+    background-color: #f5f5f5;
 }
 
 #header .header-search .header-search-form > input[type="text"] {

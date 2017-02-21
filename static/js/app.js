@@ -1,6 +1,6 @@
 $(function () {
     /* JavaScript Test */
-    /* console.log(); */
+    // console.log();
 });
 
 /* 首页-滚动事件 */
@@ -84,7 +84,7 @@ $(function () {
             sideBarClose();
 
             // 关闭搜索下拉框
-            $('.header-search-record').css('display','none');
+            $('.header-search-record').css('display', 'none');
         }
         /*
          if (btnNum == 2) {
