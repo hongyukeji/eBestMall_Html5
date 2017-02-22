@@ -22,7 +22,7 @@ $(function () {
     });
 });
 
-
+/* 在DOM加载完成时运行 */
 $(document).ready(function(){
     clickEvent();    // 全局单击事件
     sideBar();    // 全局-侧边栏
