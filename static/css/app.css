@@ -1087,7 +1087,7 @@ em, i {
     text-align: center;
 }
 
-.returnTop {
+#sideBar .returnTop {
     display: none;
 }
 
