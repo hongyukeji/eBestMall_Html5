@@ -23,33 +23,38 @@ $(function () {
 });
 
 /* 全局-在DOM加载完成时运行 */
-$(document).ready(function(){
-    clickEvent();    // 全局-页面鼠标点击事件
-    scroll();    // 全局-滚动事件
-    sideBar();    // 全局-侧边栏
+$(document).ready(function () {
+    clickEventOverall();    // 全局-页面鼠标点击-事件
+    scrollOverall();    // 全局-滚动-事件
+    sideBarOverall();    // 全局-侧边栏-事件
+    searchOverall();    // 全局-input搜索框-事件
 
     /* 全局-页面鼠标点击-函数 */
-    function clickEvent() {
+    function clickEventOverall() {
         /* 页面鼠标点击事件 */
         $(document).click(function whichButton(event) {
             var btnNum = event.button;
             if (btnNum == 0) {
                 // console.log("鼠标左键被点击！");
+                // $('.header-search-record').css('display', 'none');  // 关闭搜索下拉框
             }
 
             /*
-            if (btnNum == 2) {
-                console.log("鼠标右键被点击！");
-            }
-            else if (btnNum == 0) {
-                console.log("鼠标左键被点击！");
-            } else if (btnNum == 1) {
-                console.log("鼠标中键被点击！");
-            } else {
-                console.log("您点击了" + btnNum + "号键，我不能确定它的名称。");
-            }
-            */
-
+             if (btnNum == 2) {
+             console.log("鼠标右键被点击！");
+             }
+             else if (btnNum == 0) {
+             console.log("鼠标左键被点击！");
+             } else if (btnNum == 1) {
+             console.log("鼠标中键被点击！");
+             } else {
+             console.log("您点击了" + btnNum + "号键，我不能确定它的名称。");
+             }
+             */
+            /* 阻止搜索下拉框冒泡事件 */
+            $('.header-search').click(function (event) {
+                event.stopPropagation();
+            });
         });
 
         /* 返回顶部按钮被单击事件 */
@@ -58,8 +63,8 @@ $(document).ready(function(){
         });
     }
 
-    /* 全局-滚动事件-函数 */
-    function scroll() {
+    /* 全局-滚动-函数 */
+    function scrollOverall() {
         /* 鼠标滚动监听事件 */
         $(window).on('scroll', function () {
 
@@ -74,8 +79,113 @@ $(document).ready(function(){
         });
     }
 
+    /* 全局-input搜索框-函数*/
+    function searchOverall() {
+        var searchBar = $('.header-search');
+        var searchInput = $('.header-search-form-input-text');
+        var searchListBar = $('.header-search-record');
+        var searchData = ["eBestMall", "鸿宇科技"];
+        // console.log(searchData);
+        searchInput.keyup(function(){
+            var _this = this;
+            searchLists(_this);
+        });
+        searchInput.on('focus', function () {
+            var _this = this;
+            searchLists(_this);
+        });
+        // searchInput.on('blur', function () {});
+        searchBar.find('.close .item-left').on('click', function () {
+            hideSearchList();
+            searchData.splice(0,searchData.length);//清空数组
+            searchListBar.find('li').remove();
+        });
+        searchBar.find('.close .item-right').on('click', function () {
+            hideSearchList();
+        });
+
+        // 页面鼠标点击事件
+        $(document).click(function whichButton(event) {
+            var btnNum = event.button;
+            if (btnNum == 0) {
+                hideSearchList();  // 关闭搜索下拉框
+            }
+        });
+
+        // 阻止搜索下拉框冒泡事件
+        searchBar.click(function (event) {
+            event.stopPropagation();
+        });
+
+        function searchLists(_this) {
+            var searchVal = _this.value;
+            var searchMatchedData = [];
+
+            for (var i = 0; i < searchData.length; i++ ){
+                if (searchVal.trim().length >= 0 && searchData[i].indexOf(searchVal) > -1) {
+                    searchMatchedData.push(searchData[i]);
+                }
+            }
+
+            if (searchMatchedData.length > 0){
+                searchListBar.find('li').remove();
+                showSearchList();
+            }
+
+            for (var i = 0; i < searchMatchedData.length; i++) {
+                var ele_data_list = document.getElementById("header-search-record-ul");
+                var ele_li = document.createElement('li');
+                var ele_div_left = document.createElement('div');
+                var ele_div_right = document.createElement('div');
+                var ele_div_delete = document.createElement('div');
+                var ele_div_left_a = document.createElement('a');
+                var ele_div_delete_a = document.createElement('a');
+
+                ele_div_left.setAttribute("class", "item-left");
+                ele_div_left_a.setAttribute("href", "javascript:;");
+                ele_div_left_a.textContent = searchMatchedData[i];
+
+                ele_div_right.setAttribute("class", "item-right");
+                ele_div_right.textContent = "搜索历史";
+
+                ele_div_delete.setAttribute("class", "item-delete");
+                ele_div_delete_a.setAttribute("href", "javascript:;");
+                ele_div_delete_a.textContent = "删除";
+
+
+                ele_li.setAttribute("class", "item");
+                ele_div_delete_a.onclick = function () {
+                    var arr = searchData.indexOf(this.parentNode.parentNode.firstChild.textContent);
+                    searchData.splice(arr,1);// 删除数组中当前搜索记录的值
+                    this.parentNode.parentNode.remove();
+                };
+
+                ele_div_left.onclick = function () {
+                    _this.value = this.textContent;
+                };
+
+                ele_div_delete.appendChild(ele_div_delete_a);
+                ele_div_left.appendChild(ele_div_left_a);
+                ele_li.appendChild(ele_div_left);
+                ele_li.appendChild(ele_div_right);
+                ele_li.appendChild(ele_div_delete);
+
+                ele_data_list.appendChild(ele_li);
+            }
+        }
+
+        function showSearchList() {
+            searchListBar.css('visibility', 'visible');
+        }
+
+        function hideSearchList() {
+            searchListBar.css('visibility', 'hidden');
+        }
+    }
+
+
     /* 全局-侧边栏-函数 */
-    function sideBar() {
+    function sideBarOverall() {
         $(document).click(function whichButton(event) {
             var btnNum = event.button;
             if (btnNum == 0) {
@@ -128,7 +238,7 @@ $(document).ready(function(){
 });
 
 /* 首页-在DOM加载完成时运行 */
-$(document).ready(function(){
+$(document).ready(function () {
     indexClickEvent();    // 首页-单击事件
     indexScroll();    // 首页-滚动事件
     indexBannerSlider();    // 首页-轮播图
@@ -141,17 +251,14 @@ $(document).ready(function(){
     function indexClickEvent() {
 
         /* 首页-鼠标点击事件 */
-        $(document).click(function whichButton(event) {
-            var btnNum = event.button;
-            if (btnNum == 0) {
-                $('.header-search-record').css('display', 'none');  // 关闭搜索下拉框
-            }
-        });
-
-        /* 阻止搜索下拉框冒泡事件 */
-        $('.header-search').click(function (event) {
-            event.stopPropagation();
-        });
+        /*
+         $(document).click(function whichButton(event) {
+         var btnNum = event.button;
+         if (btnNum == 0) {
+         // console.log("鼠标左键被点击！");
+         }
+         });
+         */
 
         /* 关闭首页顶部广告 */
         $('.close-event').on('click', function () {

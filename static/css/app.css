@@ -56,8 +56,8 @@ img {
     vertical-align: middle;
 }
 
-button {
-    cursor: pointer;
+button, input {
+    font-family: Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
 }
 
 ul, ol, li {
@@ -570,7 +570,7 @@ em, i {
 
 #header .header-search-record {
     width: 496px;
-    min-height: 53px;
+    /*min-height: 53px;*/
     max-height: 288px;
     position: absolute;
     top: 35px;
@@ -580,7 +580,8 @@ em, i {
     box-shadow: 1px 2px 1px rgba(0, 0, 0, .2);
     overflow: hidden;
     z-index: 1;
-    display: none;
+    visibility: hidden;
+    /*display: none;*/
     /*display: block !important;*/
 }
 
@@ -593,7 +594,6 @@ em, i {
     padding: 1px 6px;
     height: 24px;
     line-height: 24px;
-    cursor: pointer;
 }
 
 #header .header-search-record > ul > li:hover {
@@ -621,9 +621,9 @@ em, i {
 }
 
 #header .header-search-record > ul > li > .item-delete {
-    width: 294px;
+    width: auto;
     height: 100%;
-    float: left;
+    float: right;
     text-align: right;
     display: none;
 }
