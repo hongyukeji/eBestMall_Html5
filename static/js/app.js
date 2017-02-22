@@ -94,7 +94,10 @@ $(document).ready(function () {
             var _this = this;
             searchLists(_this);
         });
-        // searchInput.on('blur', function () {});
+        /* searchInput.on('blur', function () {}); */
+        searchBar.find('button[type="submit"]').on('click', function () {
+            hideSearchList();
+        });
         searchBar.find('.close .item-left').on('click', function () {
             hideSearchList();
             searchData.splice(0,searchData.length);//清空数组
