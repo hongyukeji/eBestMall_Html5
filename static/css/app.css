@@ -1077,6 +1077,96 @@ em, i {
     right: -270px;
 }
 
+#sideBar .sideBar-cartBar-body {
+    width: 100%;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+
+#sideBar .sideBar-cartBar-body-head {
+    width: 100%;
+    height: 28px;
+    line-height: 28px;
+    float: left;
+    background-color: #e6e6e6;
+}
+
+#sideBar .sideBar-cartBar-body-head-left {
+    padding-left: 8px;
+    float: left;
+    color: gray;
+}
+
+#sideBar .sideBar-cartBar-body-head-left input[type="checkbox"] {
+    margin-top: 7px;
+    margin-right: 5px;
+    float: left;
+}
+
+#sideBar .sideBar-cartBar-body-head-right {
+    margin-right: 8px;
+    float: right;
+}
+
+#sideBar .sideBar-cartBar-body-head-right a {
+    color: gray;
+}
+
+#sideBar .sideBar-cartBar-body-footer {
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #e6e6e6;
+}
+
+#sideBar .sideBar-cartBar-body-footer-number-money-bar {
+    width: 238px;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin: 0 15px;
+}
+
+.sideBar-cartBar-body-footer-number {
+    width: 100px;
+    float: left;
+    text-align: left;
+}
+
+.sideBar-cartBar-body-footer-money {
+    width: 138px;
+    float: left;
+    text-align: right;
+}
+
+.sideBar-cartBar-body-footer-money > span > strong {
+    font-weight: 400;
+    color: rgb(196, 0, 0);
+}
+
+#sideBar .sideBar-cartBar-body-footer-btn-settlement {
+    width: 100%;
+    float: left;
+}
+
+#sideBar .sideBar-cartBar-body-footer-btn-settlement a {
+    width: 238px;
+    height: 40px;
+    line-height: 40px;
+    float: left;
+    margin: 0 15px;
+    background-color: rgb(196, 0, 0);
+}
+
+#sideBar .sideBar-cartBar-body-footer-btn-settlement > a > i {
+    margin-left: 10px;
+    vertical-align: -3px;
+}
+
 #sideBar .sideBarDown {
     width: 100%;
     position: absolute;
