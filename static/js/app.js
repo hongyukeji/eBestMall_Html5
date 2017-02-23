@@ -249,7 +249,6 @@ $(document).ready(function () {
     indexSecKill();    // 首页-秒杀
     indexStoreysTab();   // 首页-楼层Tab选项卡
 
-
     /* 首页-单击事件-函数 */
     function indexClickEvent() {
 
@@ -539,36 +538,26 @@ $(document).ready(function () {
 
     /* 首页-楼层Tab选项卡-函数 */
     function indexStoreysTab() {
-        storeyTab(".storey-tab-one-left");
-        storeyTab(".storey-tab-one-right");
+        var tabBtnPrev = $('.content-storey-bar .tab .tab-btn .prev');
+        var tabBtnNext = $('.content-storey-bar .tab .tab-btn .next');
 
-        storeyTab(".storey-tab-two-left");
-        storeyTab(".storey-tab-two-right");
+        tabBtnPrev.on('click', function () {
+            var _this = $(this);
+            var tabBtnName = this.className;
+            var tabName = _this.parent().parent();
+            storeyTab(tabName,tabBtnName);
+        });
+        tabBtnNext.on('click', function () {
+            var _this = $(this);
+            var tabBtnName = this.className;
+            var tabName = _this.parent().parent();
+            storeyTab(tabName,tabBtnName);
+        });
 
-        storeyTab(".storey-tab-three");
-
-        storeyTab(".storey-tab-four-left");
-        storeyTab(".storey-tab-four-right");
-
-        storeyTab(".storey-tab-five");
-
-        storeyTab(".storey-tab-six-left");
-        storeyTab(".storey-tab-six-right");
-
-        storeyTab(".storey-tab-seven-left");
-        storeyTab(".storey-tab-seven-right");
-
-        storeyTab(".storey-tab-eight-left");
-        storeyTab(".storey-tab-eight-right");
-
-        storeyTab(".storey-tab-nine-left");
-        storeyTab(".storey-tab-nine-right");
-
-        storeyTab(".storey-tab-ten");
-
-        function storeyTab(tabName) {
+        function storeyTab(tabName,tabBtnName) {
+            console.log(tabName);
             var tabBar = $(tabName);
-            var tabPage = 1;
+            var tabPages = 1;
             var tabPageNum = 6;
             if(tabBar.outerWidth(true) > 600) {
                 tabPageNum = 12;
@@ -578,9 +567,20 @@ $(document).ready(function () {
             var tabNum = tabBar.find("ul li").length;
             var tabWidth = tabBar.find("li").outerWidth(true) * tabPageNum;
             var tabPageCount = Math.ceil(tabNum / tabPageNum);
-
             tabBar.find("ul").css("width", (tabNum * tabBar.find("li").outerWidth(true)));
-            tabBar.find(".next").click(function () {
+
+            if (tabBtnName == 'next') {
+                tabBarNext(tabPages);
+            }
+            if (tabBtnName == 'prev') {
+                tabBarPrev(tabPages);
+            }
+
+            function tabBarNext(tabPages) {
+                if (isNaN(tabBar.attr('page')) == true){
+                    tabBar.attr('page',tabPages);
+                }
+                var tabPage = tabBar.attr('page');
                 if (tabPage == tabPageCount) {
                     tabBar.find("ul").animate({left: '0'}, 'slow');
                     tabPage = 1;
@@ -588,8 +588,14 @@ $(document).ready(function () {
                     tabBar.find("ul").animate({left: '-=' + tabWidth}, 'slow');
                     tabPage++;
                 }
-            });
-            tabBar.find(".prev").click(function () {
+                tabBar.attr('page',tabPage);
+            }
+
+            function tabBarPrev(tabPages) {
+                if (isNaN(tabBar.attr('page')) == true){
+                    tabBar.attr('page',tabPages);
+                }
+                var tabPage = tabBar.attr('page');
                 if (tabPage == 1) {
                     var tabPageEnd = tabWidth * tabPageCount - tabWidth;
                     tabBar.find("ul").animate({left: '-=' + tabPageEnd}, 'slow');
@@ -598,7 +604,9 @@ $(document).ready(function () {
                     tabBar.find("ul").animate({left: '+=' + tabWidth}, 'slow');
                     tabPage--;
                 }
-            });
+                tabBar.attr('page',tabPage);
+            }
+
         }
     }
 });

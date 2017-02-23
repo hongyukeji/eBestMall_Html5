@@ -3021,13 +3021,16 @@ content-storey-left-right {
 
 .content-storey-body-brand .tab .tab-body {
     width: 582px;
-    /*width: 9999px;*/
     height: 35px;
     float: left;
     position: absolute;
     left: 0;
     display: inline-block;
     white-space: nowrap;
+}
+
+.content-storey-left-right .content-storey-body-brand .tab .tab-body {
+    width: 1188px;
 }
 
 .content-storey-body-brand .tab .tab-body li {
