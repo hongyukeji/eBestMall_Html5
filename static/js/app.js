@@ -84,8 +84,12 @@ $(document).ready(function () {
         var searchBar = $('.header-search');
         var searchInput = $('.header-search-form-input-text');
         var searchListBar = $('.header-search-record');
-        var searchData = ["eBestMall", "鸿宇科技"];
-        // console.log(searchData);
+
+        var searchData = [];
+        for(var i = 0; i < searchListBar.find('ul .item').length; i++){
+            searchData.push(searchListBar.find('ul .item').eq(i).find('.item-left a').text());
+        }
+
         searchInput.keyup(function(){
             var _this = this;
             searchLists(_this);
@@ -94,14 +98,14 @@ $(document).ready(function () {
             var _this = this;
             searchLists(_this);
         });
-        /* searchInput.on('blur', function () {}); */
         searchBar.find('button[type="submit"]').on('click', function () {
             hideSearchList();
         });
         searchBar.find('.close .item-left').on('click', function () {
-            hideSearchList();
+            // 后台待对接post请求-Shadow
             searchData.splice(0,searchData.length);//清空数组
             searchListBar.find('li').remove();
+            hideSearchList();
         });
         searchBar.find('.close .item-right').on('click', function () {
             hideSearchList();
@@ -158,6 +162,7 @@ $(document).ready(function () {
 
                 ele_li.setAttribute("class", "item");
                 ele_div_delete_a.onclick = function () {
+                    // 后台待对接post请求-Shadow
                     var arr = searchData.indexOf(this.parentNode.parentNode.firstChild.textContent);
                     searchData.splice(arr,1);// 删除数组中当前搜索记录的值
                     this.parentNode.parentNode.remove();
