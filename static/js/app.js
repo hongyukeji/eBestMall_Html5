@@ -582,10 +582,10 @@ $(document).ready(function () {
             }
 
             function tabBarNext(tabPages) {
-                if (isNaN(tabBar.attr('page')) == true){
-                    tabBar.attr('page',tabPages);
+                if (isNaN(tabBar.attr('data-page')) == true){
+                    tabBar.attr('data-page',tabPages);
                 }
-                var tabPage = tabBar.attr('page');
+                var tabPage = tabBar.attr('data-page');
                 if (tabPage == tabPageCount) {
                     tabBar.find("ul").animate({left: '0'}, 'slow');
                     tabPage = 1;
@@ -593,14 +593,14 @@ $(document).ready(function () {
                     tabBar.find("ul").animate({left: '-=' + tabWidth}, 'slow');
                     tabPage++;
                 }
-                tabBar.attr('page',tabPage);
+                tabBar.attr('data-page',tabPage);
             }
 
             function tabBarPrev(tabPages) {
-                if (isNaN(tabBar.attr('page')) == true){
-                    tabBar.attr('page',tabPages);
+                if (isNaN(tabBar.attr('data-page')) == true){
+                    tabBar.attr('data-page',tabPages);
                 }
-                var tabPage = tabBar.attr('page');
+                var tabPage = tabBar.attr('data-page');
                 if (tabPage == 1) {
                     var tabPageEnd = tabWidth * tabPageCount - tabWidth;
                     tabBar.find("ul").animate({left: '-=' + tabPageEnd}, 'slow');
@@ -609,7 +609,7 @@ $(document).ready(function () {
                     tabBar.find("ul").animate({left: '+=' + tabWidth}, 'slow');
                     tabPage--;
                 }
-                tabBar.attr('page',tabPage);
+                tabBar.attr('data-page',tabPage);
             }
 
         }
