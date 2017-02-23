@@ -1161,6 +1161,7 @@ em, i {
     margin: 0 15px;
     background-color: rgb(196, 0, 0);
 }
+
 #sideBar .sideBar-cartBar-body-footer-btn-settlement a:hover {
     background-color: #a91500;
 }
@@ -2744,6 +2745,12 @@ em, i {
     margin-bottom: 30px;
 }
 
+content-storey-left-right {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
 .content-storey-left {
     width: 600px;
     height: 100%;
@@ -2793,7 +2800,7 @@ em, i {
     height: 24px;
     line-height: 24px;
     padding: 0 10px;
-    color: #fff;
+    color: #ffffff;
     margin-left: 10px;
     margin-bottom: 10px;
     max-width: 100px;
@@ -2815,6 +2822,29 @@ em, i {
     padding: 10px;
     background-color: #fff;
     overflow: hidden;
+}
+
+.content-storey-body-left {
+    width: 595px;
+    height: 400px;
+    float: left;
+}
+
+.content-storey-body-right {
+    width: 580px;
+    height: 400px;
+    float: left;
+    border-left: 1px solid #e6e6e6;
+    padding-left: 14px;
+}
+
+.content-storey-left-right .content-storey-body-brand .tab .tab-body li {
+    padding: 0 11px;
+}
+
+.content-storey-left-right .content-storey-body-brand .tab {
+    width: 1186px;
+    margin: 0 2px;
 }
 
 .content-storey-body-cover {
@@ -3063,8 +3093,8 @@ em, i {
 
 .storey-one .content-storey-left .content-storey-head > div > a {
     border-color: #c187af;
-    background-color: #ac6f93;
-    color: #fff;
+    /*background-color: #ac6f93;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-one .content-storey-right .content-storey-head {
@@ -3077,8 +3107,8 @@ em, i {
 
 .storey-one .content-storey-right .content-storey-head > div > a {
     border-color: #de7b95;
-    background-color: #d36581;
-    color: #ffffff;
+    /*background-color: #d36581;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-two .content-storey-left .content-storey-head {
@@ -3091,8 +3121,8 @@ em, i {
 
 .storey-two .content-storey-left .content-storey-head > div > a {
     border-color: #9e84b1;
-    background-color: #9379a5;
-    color: #fff;
+    /*background-color: #9379a5;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-two .content-storey-right .content-storey-head {
@@ -3105,8 +3135,22 @@ em, i {
 
 .storey-two .content-storey-right .content-storey-head > div > a {
     border-color: #94a1c0;
-    background-color: #7f8ca8;
-    color: #fff;
+    /*background-color: #7f8ca8;*/
+    background-color: hsla(0, 0%, 100%, .2);
+}
+
+.storey-three .content-storey-left-right .content-storey-head {
+    background-color: #488bad;
+    background-image: -webkit-linear-gradient(90deg, #488bad, #337e8d);
+    background-image: -webkit-linear-gradient(left, #488bad, #337e8d);
+    background-image: -moz-linear-gradient(left, #488bad, #337e8d);
+    background-image: linear-gradient(90deg, #488bad, #337e8d);
+}
+
+.storey-three .content-storey-left-right .content-storey-head > div > a {
+    border-color: #77b6c3;
+    /*background-color: #6da6be;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-four .content-storey-left .content-storey-head {
@@ -3119,8 +3163,8 @@ em, i {
 
 .storey-four .content-storey-left .content-storey-head > div > a {
     border-color: #6fcfce;
-    background-color: #65bbb9;
-    color: #fff;
+    /*background-color: #65bbb9;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-four .content-storey-right .content-storey-head {
@@ -3133,8 +3177,22 @@ em, i {
 
 .storey-four .content-storey-right .content-storey-head > div > a {
     border-color: #79aa9e;
-    background-color: #72a293;
-    color: #fff;
+    /*background-color: #72a293;*/
+    background-color: hsla(0, 0%, 100%, .2);
+}
+
+.storey-five .content-storey-left-right .content-storey-head {
+    background-color: #eeb924;
+    background-image: -webkit-linear-gradient(90deg, #eeb924, #e49433);
+    background-image: -webkit-linear-gradient(left, #eeb924, #e49433);
+    background-image: -moz-linear-gradient(left, #eeb924, #e49433);
+    background-image: linear-gradient(90deg, #eeb924, #e49433);
+}
+
+.storey-five .content-storey-left-right .content-storey-head > div > a {
+    border-color: #f9d661;
+    /*background-color: #edca56;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-six .content-storey-left .content-storey-head {
@@ -3147,8 +3205,8 @@ em, i {
 
 .storey-six .content-storey-left .content-storey-head > div > a {
     border-color: #ef9f81;
-    background-color: #e28465;
-    color: #fff;
+    /*background-color: #e28465;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-six .content-storey-right .content-storey-head {
@@ -3161,8 +3219,8 @@ em, i {
 
 .storey-six .content-storey-right .content-storey-head > div > a {
     border-color: #c19369;
-    background-color: #b08061;
-    color: #fff;
+    /*background-color: #b08061;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-seven .content-storey-left .content-storey-head {
@@ -3175,8 +3233,8 @@ em, i {
 
 .storey-seven .content-storey-left .content-storey-head > div > a {
     border-color: #9e8a84;
-    background-color: #897b75;
-    color: #fff;
+    /*background-color: #897b75;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-seven .content-storey-right .content-storey-head {
@@ -3189,8 +3247,8 @@ em, i {
 
 .storey-seven .content-storey-right .content-storey-head > div > a {
     border-color: #b48787;
-    background-color: #987171;
-    color: #fff;
+    /*background-color: #987171;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-eight .content-storey-left .content-storey-head {
@@ -3203,8 +3261,8 @@ em, i {
 
 .storey-eight .content-storey-left .content-storey-head > div > a {
     border-color: #9598cd;
-    background-color: #7c80af;
-    color: #fff;
+    /*background-color: #7c80af;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-eight .content-storey-right .content-storey-head {
@@ -3217,8 +3275,8 @@ em, i {
 
 .storey-eight .content-storey-right .content-storey-head > div > a {
     border-color: #82a5bc;
-    background-color: #6c90ab;
-    color: #fff;
+    /*background-color: #6c90ab;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-nine .content-storey-left .content-storey-head {
@@ -3231,8 +3289,8 @@ em, i {
 
 .storey-nine .content-storey-left .content-storey-head > div > a {
     border-color: #78977a;
-    background-color: #758975;
-    color: #fff;
+    /*background-color: #758975;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 .storey-nine .content-storey-right .content-storey-head {
@@ -3245,8 +3303,22 @@ em, i {
 
 .storey-nine .content-storey-right .content-storey-head > div > a {
     border-color: #f9d661;
-    background-color: #edca56;
-    color: #fff
+    /*background-color: #edca56;*/
+    background-color: hsla(0, 0%, 100%, .2);
+}
+
+.storey-ten .content-storey-left-right .content-storey-head {
+    background-color: #e16c46;
+    background-image: -webkit-linear-gradient(90deg, #e16c46, #e85629);
+    background-image: -webkit-linear-gradient(left, #e16c46, #e85629);
+    background-image: -moz-linear-gradient(left, #e16c46, #e85629);
+    background-image: linear-gradient(90deg, #e16c46, #e85629);
+}
+
+.storey-ten .content-storey-left-right .content-storey-head > div > a {
+    border-color: #ef9f81;
+    /*background-color: #e28465;*/
+    background-color: hsla(0, 0%, 100%, .2);
 }
 
 /*-------------------- Index Content End --------------------*/

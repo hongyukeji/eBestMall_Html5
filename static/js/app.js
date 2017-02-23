@@ -545,14 +545,12 @@ $(document).ready(function () {
         storeyTab(".storey-tab-two-left");
         storeyTab(".storey-tab-two-right");
 
-        storeyTab(".storey-tab-three-left");
-        storeyTab(".storey-tab-three-right");
+        storeyTab(".storey-tab-three");
 
         storeyTab(".storey-tab-four-left");
         storeyTab(".storey-tab-four-right");
 
-        storeyTab(".storey-tab-five-left");
-        storeyTab(".storey-tab-five-right");
+        storeyTab(".storey-tab-five");
 
         storeyTab(".storey-tab-six-left");
         storeyTab(".storey-tab-six-right");
@@ -566,16 +564,21 @@ $(document).ready(function () {
         storeyTab(".storey-tab-nine-left");
         storeyTab(".storey-tab-nine-right");
 
-        storeyTab(".storey-tab-ten-left");
-        storeyTab(".storey-tab-ten-right");
+        storeyTab(".storey-tab-ten");
 
         function storeyTab(tabName) {
             var tabBar = $(tabName);
             var tabPage = 1;
             var tabPageNum = 6;
+            if(tabBar.outerWidth(true) > 600) {
+                tabPageNum = 12;
+            }else {
+                tabPageNum = 6;
+            }
             var tabNum = tabBar.find("ul li").length;
             var tabWidth = tabBar.find("li").outerWidth(true) * tabPageNum;
             var tabPageCount = Math.ceil(tabNum / tabPageNum);
+
             tabBar.find("ul").css("width", (tabNum * tabBar.find("li").outerWidth(true)));
             tabBar.find(".next").click(function () {
                 if (tabPage == tabPageCount) {
