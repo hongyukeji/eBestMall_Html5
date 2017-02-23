@@ -1161,6 +1161,9 @@ em, i {
     margin: 0 15px;
     background-color: rgb(196, 0, 0);
 }
+#sideBar .sideBar-cartBar-body-footer-btn-settlement a:hover {
+    background-color: #a91500;
+}
 
 #sideBar .sideBar-cartBar-body-footer-btn-settlement > a > i {
     margin-left: 10px;
