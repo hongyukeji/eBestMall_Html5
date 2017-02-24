@@ -288,7 +288,8 @@ $(document).ready(function () {
             }
 
             /* 首页-楼层导航-滚动 显示/隐藏/焦点事件 */
-            var storeyInitDistance = $('.content-storey-bar').offset().top;
+            var storeyName = $('.content-storey-bar');
+            var storeyInitDistance = storeyName.offset().top;
             var storeyBtn = $('.content-storey-nav .item');
             var storeyHeight = $('.content-storey').outerHeight(true);
             if ($(window).scrollTop() > storeyInitDistance - 150) {
@@ -303,6 +304,9 @@ $(document).ready(function () {
             } else {
                 storeyBtn.removeClass('active');
                 $('.content-storey-nav-bar').fadeOut();
+            }
+            if ($(window).scrollTop() > (storeyInitDistance + storeyName.outerHeight(true) - storeyHeight)) {
+                console.log('ajax加载更多商品');
             }
         });
 
