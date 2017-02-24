@@ -305,8 +305,13 @@ $(document).ready(function () {
                 storeyBtn.removeClass('active');
                 $('.content-storey-nav-bar').fadeOut();
             }
+
+            /* 首页-更多商品ajax数据加载事件 */
             if ($(window).scrollTop() > (storeyInitDistance + storeyName.outerHeight(true) - storeyHeight)) {
+                var moreGoodsName = $('.content-more-goods');
+                var ajaxUrl = moreGoodsName.attr('date-ajax');
                 console.log('ajax加载更多商品');
+                console.log(ajaxUrl);
             }
         });
 
