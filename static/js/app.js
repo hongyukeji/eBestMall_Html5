@@ -509,9 +509,6 @@ $(document).ready(function () {
         var tabTitle = $('.content-focus-right-middle-tab-title li');
         var tabBody = $('.content-focus-right-middle-tab-body ul');
         tabTitle.on('mouseover', function () {
-            if (tabTitle.length != tabBody.length) {
-                return false;
-            }
             var index = tabTitle.index(this);
             tabTitle.eq(index).find('a').addClass('active').parent().siblings().find('a').removeClass('active');
             tabBody.eq(index).show().siblings().hide();
@@ -555,15 +552,11 @@ $(document).ready(function () {
         var tabTitle = $('.content-hot-content-title li');
         var tabBody = $('.content-hot-content-body ul');
         tabTitle.on('mouseover', function () {
-            if (tabTitle.length != tabBody.length) {
-                return false;
-            }
             var index = tabTitle.index(this);
             tabTitle.eq(index).find('a').addClass('active').parent().siblings().find('a').removeClass('active');
             tabBody.eq(index).show().siblings().hide();
         });
     }
-
 
     /* 首页-楼层Tab选项卡-函数 */
     function indexStoreysTab() {
