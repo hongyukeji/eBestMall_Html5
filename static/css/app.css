@@ -2633,14 +2633,15 @@ em, i {
 
 .content-hot-content-title{
     width: 100%;
-    height: 25px;
+    height: 36px;
     float: left;
 }
 
 .content-hot-content-title > ul {
     width: 100%;
-    height: 100%;
+    height: 30px;
     float: left;
+    padding-top: 5px;
     border-bottom: 1px solid #e7e7e7;
     white-space: nowrap;
     overflow: hidden;
@@ -2663,7 +2664,7 @@ em, i {
     text-align: center;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-bottom: 4px;
+    padding-bottom: 9px;
     border-bottom: 2px solid #ffffff;
 }
 .content-hot-content-title > ul > li:hover a {
@@ -2673,61 +2674,27 @@ em, i {
     border-color: #F10215;
 }
 
-
-
-/*
-
-.content-hot-content-title > ul {
-    width: 100%;
-    height: 100%;
-    float: left;
-    font-size: 0;
-    border-bottom: 1px solid #e7e7e7;
-    white-space: nowrap;
-    overflow: hidden;
-    position: relative;
-}
-.content-hot-content-title > ul > li {
-    display:inline;
-    height: 18px;
-    border-left: 1px solid #d2d1d1;
-}
-
-.content-hot-content-title > ul > li > a {
-    float: left;
-    display: inline-block;
-    line-height: 18px;
-    font-size: 14px;
-    min-width: 58px;
-    margin: 0 10px;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding-bottom: 5px;
-    border-bottom: 2px solid #ffffff;
-}
-
-
-*/
-
-
-
-
 .content-hot-content-body{
     width: 100%;
-    height: 337px;
+    height: 333px;
     float: left;
 }
 .content-hot-content-body > ul{
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
     display: none;
 }
 .content-hot-content-body > ul:first-child{
     display: block;
 }
 .content-hot-content-body > ul > li {
+    width: 124px;
+    height: 166px;
     float: left;
 }
-
+.content-hot-content-body > ul > li > a{}
 
 .content-grid {
     width: 100%;
