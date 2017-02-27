@@ -172,6 +172,7 @@ em, i {
     color: #F5F5F5;
     background-color: rgb(45, 45, 45);
     opacity: 0.3;
+    filter: alpha(opacity=30);
 }
 
 .close-event:link {
@@ -994,6 +995,7 @@ em, i {
 #sideBar .item:hover .item-title {
     visibility: visible;
     opacity: 1;
+    filter: alpha(opacity=100);
     right: 35px;
 }
 
@@ -1001,6 +1003,7 @@ em, i {
     position: absolute;
     visibility: hidden;
     opacity: 0;
+    filter: alpha(opacity=0);
     right: 70px;
     width: 90px;
     height: 35px;
@@ -1650,6 +1653,7 @@ em, i {
     top: 50%;
     cursor: pointer;
     opacity: 0;
+    filter: alpha(opacity=0);
     -webkit-transition: all .3s ease;
     font-size: 20px;
 }
@@ -1668,10 +1672,12 @@ em, i {
 
 #sliderBar:hover .slider-next {
     opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 
 #sliderBar:hover .slider-prev {
     opacity: 0.8;
+    filter: alpha(opacity=80);
 }
 
 .slider-control-btn li a.slider-active, .slider-control-btn li.active a {
@@ -2654,6 +2660,7 @@ em, i {
 
 .content-grid > ul > li:hover a > img {
     opacity: .8;
+    filter: alpha(opacity=80);
 }
 
 .content-special {
@@ -2711,6 +2718,7 @@ em, i {
     height: 100%;
     color: #fff;
     opacity: .9;
+    filter: alpha(opacity=90);
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
     backface-visibility: hidden;
@@ -3184,6 +3192,7 @@ content-storey-left-right {
     background: rgba(0, 0, 0, .1);
     z-index: 1;
     opacity: 0.5;
+    filter: alpha(opacity=50);
 }
 
 .content-storey-body-brand .tab .tab-btn .prev {
@@ -3551,7 +3560,9 @@ content-storey-left-right {
 
 .content-more-goods-info-price {
     color: #F10215;
-
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .content-more-goods-info-price > i {
