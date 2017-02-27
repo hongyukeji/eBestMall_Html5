@@ -2624,6 +2624,111 @@ em, i {
     transition: transform .4s ease-out, -webkit-transform .4s ease-out, -moz-transform .4s ease-out
 }
 
+.content-hot-content {
+    width: 100%;
+    height: 100%;
+    float: left;
+    background-color: #f5f5f5;
+}
+
+.content-hot-content-title{
+    width: 100%;
+    height: 25px;
+    float: left;
+}
+
+.content-hot-content-title > ul {
+    width: 100%;
+    height: 100%;
+    float: left;
+    border-bottom: 1px solid #e7e7e7;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-hot-content-title > ul > li {
+    display:inline;
+    height: 18px;
+    border-left: 1px solid #d2d1d1;
+}
+.content-hot-content-title > ul > li:first-child{
+    border-left: none;
+}
+.content-hot-content-title > ul > li > a {
+    line-height: 18px;
+    font-size: 14px;
+    min-width: 58px;
+    margin: 0 10px 0 14px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 4px;
+    border-bottom: 2px solid #ffffff;
+}
+.content-hot-content-title > ul > li:hover a {
+    border-color: #F10215;
+}
+.content-hot-content-title .active {
+    border-color: #F10215;
+}
+
+
+
+/*
+
+.content-hot-content-title > ul {
+    width: 100%;
+    height: 100%;
+    float: left;
+    font-size: 0;
+    border-bottom: 1px solid #e7e7e7;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+}
+.content-hot-content-title > ul > li {
+    display:inline;
+    height: 18px;
+    border-left: 1px solid #d2d1d1;
+}
+
+.content-hot-content-title > ul > li > a {
+    float: left;
+    display: inline-block;
+    line-height: 18px;
+    font-size: 14px;
+    min-width: 58px;
+    margin: 0 10px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ffffff;
+}
+
+
+*/
+
+
+
+
+.content-hot-content-body{
+    width: 100%;
+    height: 337px;
+    float: left;
+}
+.content-hot-content-body > ul{
+    display: none;
+}
+.content-hot-content-body > ul:first-child{
+    display: block;
+}
+.content-hot-content-body > ul > li {
+    float: left;
+}
+
+
 .content-grid {
     width: 100%;
     height: 100px;

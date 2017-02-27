@@ -191,7 +191,6 @@ $(document).ready(function () {
         }
     }
 
-
     /* 全局-侧边栏-函数 */
     function sideBarOverall() {
         $(document).click(function whichButton(event) {
@@ -243,6 +242,7 @@ $(document).ready(function () {
         }
 
     }
+
 });
 
 /* 首页-在DOM加载完成时运行 */
@@ -252,8 +252,8 @@ $(document).ready(function () {
     indexBannerSlider();    // 首页-轮播图
     indexNoticeTab();    // 首页-公告Tab选项卡
     indexSecKill();    // 首页-秒杀
+    indexHotTab();  // 首页-Hot排行榜Tab选项卡
     indexStoreysTab();   // 首页-楼层Tab选项卡
-
     /* 首页-单击事件-函数 */
     function indexClickEvent() {
 
@@ -507,14 +507,14 @@ $(document).ready(function () {
     /* 首页-公告Tab选项卡-函数 */
     function indexNoticeTab() {
         var tabTitle = $('.content-focus-right-middle-tab-title li');
-        var tabContent = $('.content-focus-right-middle-tab-body ul');
+        var tabBody = $('.content-focus-right-middle-tab-body ul');
         tabTitle.on('mouseover', function () {
-            if (tabTitle.length != tabContent.length) {
+            if (tabTitle.length != tabBody.length) {
                 return false;
             }
             var index = tabTitle.index(this);
             tabTitle.eq(index).find('a').addClass('active').parent().siblings().find('a').removeClass('active');
-            tabContent.eq(index).show().siblings().hide();
+            tabBody.eq(index).show().siblings().hide();
         });
     }
 
@@ -549,6 +549,21 @@ $(document).ready(function () {
             }
         });
     }
+
+    /* 首页-Hot排行榜Tab选项卡-函数 */
+    function indexHotTab() {
+        var tabTitle = $('.content-hot-content-title li');
+        var tabBody = $('.content-hot-content-body ul');
+        tabTitle.on('mouseover', function () {
+            if (tabTitle.length != tabBody.length) {
+                return false;
+            }
+            var index = tabTitle.index(this);
+            tabTitle.eq(index).find('a').addClass('active').parent().siblings().find('a').removeClass('active');
+            tabBody.eq(index).show().siblings().hide();
+        });
+    }
+
 
     /* 首页-楼层Tab选项卡-函数 */
     function indexStoreysTab() {
