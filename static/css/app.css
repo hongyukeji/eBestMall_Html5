@@ -300,8 +300,7 @@ em, i {
 }
 
 #header .downTop i {
-    /*vertical-align: -3%;*/
-    color: #6C6C6C;
+    color: #999999;
 }
 
 #header .downTop .down-top-span-cart-number {
@@ -310,6 +309,7 @@ em, i {
 }
 
 #header .downTop .down-top-span-a {
+    color: #999999;
     float: left;
     margin-right: 3px;
     cursor: default;
