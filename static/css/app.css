@@ -1567,6 +1567,10 @@ em, i {
     background-color: #6e6568;
 }
 
+.content-focus-classify-sub-category-left-channel > li > a:hover {
+    background-color: #5c5251;
+}
+
 .content-focus-classify-sub-category-left-channel > li > a > i {
     margin-left: 3px;
 }
