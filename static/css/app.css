@@ -793,11 +793,112 @@ em, i {
     display: none;
 }
 
-#header .header-cart-body .prompt {
+#header .header-cart-body .header-cart-list {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    background: #fff;
+}
+
+#header .header-cart-body .header-cart-list-title {
+    height: 25px;
+    padding: 6px 8px;
+    line-height: 25px;
+}
+
+#header .header-cart-body .header-cart-list-title > h4 {
+    float: left;
+}
+
+.header-cart-list-goods > ul > li {
+    padding: 8px 10px;
+    overflow: hidden;
+    line-height: 17px;
+    vertical-align: bottom;
+}
+
+.header-cart-list-goods > ul > .item {
+    border-top: 1px dotted #ccc;
+}
+
+.header-cart-list-goods > ul > .item:hover {
+    background-color: #f5f5f5;
+}
+
+.header-cart-list-goods > ul > .item:first-child {
+    border-top: none;
+}
+
+.header-cart-list-goods > ul > li > .goods-img {
+    float: left;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+    padding: 0;
+    margin-right: 10px;
+    font-size: 0;
+    overflow: hidden;
+}
+
+.header-cart-list-goods > ul > li > .goods-name {
+    float: left;
+    width: 120px;
+    height: 52px;
+    overflow: hidden;
+}
+
+.header-cart-list-goods > ul > li > .goods-detail {
+    float: right;
+    text-align: right;
+    overflow: hidden;
+}
+
+.header-cart-list-total-money {
+    padding: 8px;
+    background: #f5f5f5;
+    _height: 45px;
+    _padding-top: 15px;
+    _padding-bottom: 0;
+    overflow: hidden;
+    text-align: right;
+}
+
+.header-cart-list-total-money > div {
+    float: left;
+    line-height: 29px;
+    text-align: right;
+}
+
+.header-cart-list-total-money > a {
+    float: right;
+    height: 29px;
+    padding: 0 10px;
+    background-color: #f10215;
+    color: #fff;
+    text-align: center;
+    font-weight: 700;
+    line-height: 29px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.header-cart-list-total-money > a:hover {
+    background-color: #e4393c;
+}
+
+.header-cart-list-goods {
+    background: #fff;
+    height: auto !important;
+    max-height: 358px;
+    overflow-y: auto;
+}
+
+#header .header-cart-body .header-cart-prompt {
     padding: 10px 15px;
 }
 
-#header .header-cart-body .spacer {
+#header .header-cart-body .header-cart-spacer {
     width: 190px;
     height: 1px;
     margin-top: -1px;
