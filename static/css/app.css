@@ -2041,7 +2041,7 @@ em, i {
     padding: 0 20px 0 30px;
     line-height: 55px;
     color: #FFFFFF;
-    background: url(../img/index/seckill_hd.png) no-repeat 0 0;
+    background: url(../img/public/index/seckill_hd.png) no-repeat 0 0;
 }
 
 .content-sec-kill .content-sec-kill-hd-col-left {
@@ -2052,7 +2052,7 @@ em, i {
 .content-sec-kill .content-sec-kill-hd-dec {
     width: 28px;
     height: 28px;
-    background: url(../img/index/sprite_index_icon.png) no-repeat -190px -48px;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat -190px -48px;
     position: absolute;
     left: -4px;
     top: -4px;
@@ -2062,7 +2062,7 @@ em, i {
 .content-sec-kill .content-sec-kill-hd-icon {
     margin-top: 8px;
     margin-right: 8px;
-    background: url(../img/index/sprite_index_icon.png) no-repeat 0 -40px;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat 0 -40px;
     width: 34px;
     height: 40px;
     float: left;
@@ -2099,7 +2099,7 @@ em, i {
     position: absolute;
     right: 0;
     top: 4px;
-    background: url(../img/index/sprite_index_icon.png) no-repeat -154px -40px;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat -154px -40px;
     width: 15px;
     height: 16px
 }
@@ -2194,7 +2194,7 @@ em, i {
     left: 0;
     top: 130px;
     text-align: center;
-    background: url(../img/index/sprite_index_icon.png) no-repeat 0 0;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat 0 0;
     -moz-background-size: 218px 188px;
     background-size: 218px 188px;
 }
@@ -2248,7 +2248,7 @@ em, i {
     top: 0;
     left: 0;
     text-align: center;
-    background: url(../img/index/sprite_index_icon.png) no-repeat -54px -40px;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat -54px -40px;
     -moz-background-size: 218px 188px;
     background-size: 218px 188px;
     width: 30px;
@@ -2392,7 +2392,7 @@ em, i {
     top: 5px;
     width: 15px;
     height: 16px;
-    background: url(../img/index/sprite_index_icon.png) no-repeat -154px -40px;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat -154px -40px;
 
 }
 
@@ -2566,15 +2566,15 @@ em, i {
 }
 
 .content-find-head-dec {
-    background: url(../img/index/sprite_index_icon.png) no-repeat -190px -96px;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat -190px -96px;
 }
 
 .content-brand-head-dec {
-    background: url(../img/index/sprite_index_icon.png) no-repeat 0 -160px;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat 0 -160px;
 }
 
 .content-hot-head-dec {
-    background: url(../img/index/sprite_index_icon.png) no-repeat -190px 0;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat -190px 0;
 
 }
 
@@ -2595,7 +2595,7 @@ em, i {
     position: absolute;
     right: 0;
     top: 4px;
-    background: url(../img/index/sprite_index_icon.png) no-repeat -154px -40px;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat -154px -40px;
 }
 
 .content-find-brand-hot-head-arrow {
@@ -2890,7 +2890,7 @@ em, i {
     line-height: 35px;
     text-align: center;
     font-size: 22px;
-    background: url(../img/index/sprite_index_icon.png) no-repeat -100px -100px;
+    background: url(../img/public/index/sprite_index_icon.png) no-repeat -100px -100px;
     width: 30px;
     height: 40px;
 }
