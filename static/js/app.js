@@ -310,8 +310,8 @@ $(document).ready(function () {
             if ($(window).scrollTop() > (storeyInitDistance + storeyName.outerHeight(true) - storeyHeight)) {
                 var moreGoodsName = $('.content-more-goods');
                 var ajaxUrl = moreGoodsName.attr('date-ajax');
-                console.log('ajax无限加载更多商品');
-                console.log(ajaxUrl);
+                // console.log('ajax无限加载更多商品');
+                // console.log(ajaxUrl);
             }
         });
 
