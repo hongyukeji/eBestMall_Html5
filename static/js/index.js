@@ -334,7 +334,6 @@ $(document).ready(function () {
         });
 
         function storeyTab(tabName, tabBtnName) {
-            console.log(tabName);
             var tabBar = $(tabName);
             var tabPages = 1;
             var tabPageNum = 6;
