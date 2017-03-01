@@ -86,11 +86,11 @@ $(document).ready(function () {
         var searchListBar = $('.header-search-record');
 
         var searchData = [];
-        for(var i = 0; i < searchListBar.find('ul .item').length; i++){
+        for (var i = 0; i < searchListBar.find('ul .item').length; i++) {
             searchData.push(searchListBar.find('ul .item').eq(i).find('.item-left a').text());
         }
 
-        searchInput.keyup(function(){
+        searchInput.keyup(function () {
             var _this = this;
             searchLists(_this);
         });
@@ -103,7 +103,7 @@ $(document).ready(function () {
         });
         searchBar.find('.close .item-left').on('click', function () {
             // 后台待对接post请求-Shadow
-            searchData.splice(0,searchData.length);//清空数组
+            searchData.splice(0, searchData.length);//清空数组
             searchListBar.find('li').remove();
             hideSearchList();
         });
@@ -128,13 +128,13 @@ $(document).ready(function () {
             var searchVal = _this.value;
             var searchMatchedData = [];
 
-            for (var i = 0; i < searchData.length; i++ ){
+            for (var i = 0; i < searchData.length; i++) {
                 if (searchVal.trim().length >= 0 && searchData[i].indexOf(searchVal) > -1) {
                     searchMatchedData.push(searchData[i]);
                 }
             }
 
-            if (searchMatchedData.length > 0){
+            if (searchMatchedData.length > 0) {
                 searchListBar.find('li').remove();
                 showSearchList();
             }
@@ -164,7 +164,7 @@ $(document).ready(function () {
                 ele_div_delete_a.onclick = function () {
                     // 后台待对接post请求-Shadow
                     var arr = searchData.indexOf(this.parentNode.parentNode.firstChild.textContent);
-                    searchData.splice(arr,1);// 删除数组中当前搜索记录的值
+                    searchData.splice(arr, 1);// 删除数组中当前搜索记录的值
                     this.parentNode.parentNode.remove();
                 };
 
@@ -203,6 +203,17 @@ $(document).ready(function () {
         $('#sideBar').click(function (event) {
             event.stopPropagation();
         });
+
+        /* 购物车 goods div 超出显示滚动条*/
+        if ($('.sideBar-cartBar-body-content').height() > ($('.sideBar-cartBar-body').height() - ($('.sideBar-cartBar-body-head').height() + $('.sideBar-cartBar-body-footer').height()))) {
+            var contentHeight = $('.sideBar-cartBar-body').height() - ($('.sideBar-cartBar-body-head').height() + $('.sideBar-cartBar-body-footer').height());
+            $('.sideBar-cartBar-body-content').css({
+                "height": contentHeight,
+                "overflow-y": "scroll",
+                "overflow-x": "hidden"
+            });
+        }
+
         $('.item-btn').click(function () {
             var itemAll = $('.item');
             var thisNow = $(this).parent(itemAll);
@@ -567,23 +578,23 @@ $(document).ready(function () {
             var _this = $(this);
             var tabBtnName = this.className;
             var tabName = _this.parent().parent();
-            storeyTab(tabName,tabBtnName);
+            storeyTab(tabName, tabBtnName);
         });
         tabBtnNext.on('click', function () {
             var _this = $(this);
             var tabBtnName = this.className;
             var tabName = _this.parent().parent();
-            storeyTab(tabName,tabBtnName);
+            storeyTab(tabName, tabBtnName);
         });
 
-        function storeyTab(tabName,tabBtnName) {
+        function storeyTab(tabName, tabBtnName) {
             console.log(tabName);
             var tabBar = $(tabName);
             var tabPages = 1;
             var tabPageNum = 6;
-            if(tabBar.outerWidth(true) > 600) {
+            if (tabBar.outerWidth(true) > 600) {
                 tabPageNum = 12;
-            }else {
+            } else {
                 tabPageNum = 6;
             }
             var tabNum = tabBar.find("ul li").length;
@@ -599,8 +610,8 @@ $(document).ready(function () {
             }
 
             function tabBarNext(tabPages) {
-                if (isNaN(tabBar.attr('data-page')) == true){
-                    tabBar.attr('data-page',tabPages);
+                if (isNaN(tabBar.attr('data-page')) == true) {
+                    tabBar.attr('data-page', tabPages);
                 }
                 var tabPage = tabBar.attr('data-page');
                 if (tabPage == tabPageCount) {
@@ -610,12 +621,12 @@ $(document).ready(function () {
                     tabBar.find("ul").animate({left: '-=' + tabWidth}, 'slow');
                     tabPage++;
                 }
-                tabBar.attr('data-page',tabPage);
+                tabBar.attr('data-page', tabPage);
             }
 
             function tabBarPrev(tabPages) {
-                if (isNaN(tabBar.attr('data-page')) == true){
-                    tabBar.attr('data-page',tabPages);
+                if (isNaN(tabBar.attr('data-page')) == true) {
+                    tabBar.attr('data-page', tabPages);
                 }
                 var tabPage = tabBar.attr('data-page');
                 if (tabPage == 1) {
@@ -626,7 +637,7 @@ $(document).ready(function () {
                     tabBar.find("ul").animate({left: '+=' + tabWidth}, 'slow');
                     tabPage--;
                 }
-                tabBar.attr('data-page',tabPage);
+                tabBar.attr('data-page', tabPage);
             }
 
         }

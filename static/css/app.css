@@ -1075,12 +1075,12 @@ em, i {
     text-align: center;
 }
 
-#sideBar li {
+#sideBar .sideBarContent > ul > li {
     width: 100%;
     float: left;
 }
 
-.sideBarContent li {
+.sideBarContent > ul > li {
     margin: 3px auto;
 }
 
@@ -1237,6 +1237,68 @@ em, i {
     color: gray;
 }
 
+#sideBar .sideBar-cartBar-body-content {
+    width: 100%;
+    float: left;
+    /*overflow: scroll;*/
+}
+
+#sideBar .sideBar-cartBar-body-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+#sideBar .sideBar-cartBar-body-content::-webkit-scrollbar-track {
+    /*background-color: #bee1eb;*/
+}
+
+#sideBar .sideBar-cartBar-body-content::-webkit-scrollbar-thumb {
+    background-color: #616161;
+}
+
+#sideBar .sideBar-cartBar-body-content::-webkit-scrollbar-thumb:hover {
+    /*background-color: #9c3*/
+}
+
+#sideBar .sideBar-cartBar-body-content::-webkit-scrollbar-thumb:active {
+    /*background-color: #00aff0*/
+}
+
+#sideBar .sideBar-cartBar-body-content > .sideBar-cartBar-body-content-list {
+    width: 100%;
+    float: left;
+}
+.sideBar-cartBar-body-content-list > ul {
+    width: 100%;
+    float: left;
+}
+.sideBar-cartBar-body-content-list > ul > li{
+    width: 100%;
+    float: left;
+    cursor: default;
+    margin-top: 15px;
+    padding-left: 8px;
+    color: grey;
+    background-color: #fff;
+}
+.sideBar-cartBar-body-content-list-title {
+    float: left;
+    width: 100%;
+    height: 29px;
+    line-height: 18px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.sideBar-cartBar-body-content-list-content{
+    width: 100%;
+    float: left;
+}
+
+
+
+
+
+
 #sideBar .sideBar-cartBar-body-footer {
     width: 100%;
     height: 70px;
@@ -1255,19 +1317,19 @@ em, i {
     margin: 0 15px;
 }
 
-.sideBar-cartBar-body-footer-number {
+#sideBar .sideBar-cartBar-body-footer-number {
     width: 100px;
     float: left;
     text-align: left;
 }
 
-.sideBar-cartBar-body-footer-money {
+#sideBar .sideBar-cartBar-body-footer-money {
     width: 138px;
     float: left;
     text-align: right;
 }
 
-.sideBar-cartBar-body-footer-money > span > strong {
+#sideBar .sideBar-cartBar-body-footer-money > span > strong {
     font-weight: 400;
     color: rgb(196, 0, 0);
 }
