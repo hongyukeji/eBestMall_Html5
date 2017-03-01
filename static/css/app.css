@@ -1175,6 +1175,7 @@ em, i {
 }
 
 #sideBar .item .item-cart {
+    float: left;
     white-space: pre-wrap;
 }
 
@@ -1184,7 +1185,7 @@ em, i {
     border-bottom: 1px solid #444444;
 }
 
-#sideBar .item .item-cart div {
+#sideBar .item-cartBar .item-cart > div {
     float: left;
     width: 1em;
     height: 56px;
@@ -1192,6 +1193,12 @@ em, i {
     margin-top: 5px;
     margin-left: 12px;
     color: #FFFFFF;
+}
+
+#sideBar .sideBarContent > ul > .item-cartBar > .item-btn > a > i {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
 }
 
 #sideBar .item .item-cart span {
