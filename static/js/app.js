@@ -205,7 +205,7 @@ $(document).ready(function () {
             event.stopPropagation();
         });
 
-        $('#sideBar .item .item-body .item-body-head-close a').click(function () {
+        $('#sideBar .item .item-body .item-body-head-close a').on('click', function () {
             sideBarClose();
         });
 
@@ -219,7 +219,7 @@ $(document).ready(function () {
             });
         }
 
-        $('#sideBar .item-btn').click(function () {
+        $('#sideBar .item-btn').on('click', function () {
             var itemAll = $('.item');
             var thisNow = $(this).parent(itemAll);
             var sideBarRight = $('#sideBar').css("right");
@@ -258,6 +258,5 @@ $(document).ready(function () {
             thisNow.css({"background-color": itemBg}).find('.item-body').animate({"right": itemBodyOpen}, "fast");
         }
     }
-
 });
 
