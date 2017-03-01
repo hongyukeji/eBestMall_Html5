@@ -1180,7 +1180,7 @@ em, i {
 }
 
 #sideBar .item-cartBar {
-    padding: 6px 0;
+    padding: 15px 0;
     border-top: 1px solid #444444;
     border-bottom: 1px solid #444444;
 }
@@ -1202,10 +1202,10 @@ em, i {
 }
 
 #sideBar .item .item-cart span {
-    float: left;
     width: 20px;
     height: 20px;
     line-height: 20px;
+    float: left;
     display: block;
     overflow: hidden;
     text-align: center;
@@ -1213,7 +1213,6 @@ em, i {
     margin-left: calc(50% - 10px);
     background-color: #C81623;
     border-radius: 10px;
-    margin-bottom: 8px;
 }
 
 #sideBar .item-body {
