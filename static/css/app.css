@@ -856,9 +856,6 @@ em, i {
 .header-cart-list-total-money {
     padding: 8px;
     background: #f5f5f5;
-    _height: 45px;
-    _padding-top: 15px;
-    _padding-bottom: 0;
     overflow: hidden;
     text-align: right;
 }
@@ -1252,7 +1249,9 @@ em, i {
 
 #sideBar .sideBar-cartBar-body-content {
     width: 100%;
+    min-height: 100%;
     float: left;
+    position: relative;
 }
 
 #sideBar .sideBar-cartBar-body-content::-webkit-scrollbar {
@@ -1275,8 +1274,40 @@ em, i {
     /*background-color: #00aff0*/
 }
 
+#sideBar .sideBar-cartBar-body-content > .sideBar-cartBar-body-content-empty {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -108px;
+    text-align: center;
+}
+
+.sideBar-cartBar-body-content-empty-inner {
+    text-align: center;
+}
+
+.sideBar-cartBar-body-content-empty-inner > i {
+    overflow: hidden;
+    width: 113px;
+    height: 35px;
+    display: inline-block;
+    background: url("../img/public/sidebar-cartbar-toolbar-face.png") no-repeat 0 0;
+    font-style: normal;
+}
+
+.sideBar-cartBar-body-content-empty-inner > div {
+    line-height: 20px;
+    text-align: center;
+}
+
+.sideBar-cartBar-body-content-empty-inner > div > a {
+    color: #c81623;
+}
+
 #sideBar .sideBar-cartBar-body-content > .sideBar-cartBar-body-content-list {
     width: 100%;
+    /*height: 1000px;*/
     float: left;
 }
 
