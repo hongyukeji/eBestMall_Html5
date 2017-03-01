@@ -199,9 +199,14 @@ $(document).ready(function () {
                 sideBarClose(); // 关闭侧边栏
             }
         });
+
         /* 阻止侧边栏冒泡事件 */
         $('#sideBar').click(function (event) {
             event.stopPropagation();
+        });
+
+        $('#sideBar .item .item-body .item-body-head-close a').click(function () {
+            sideBarClose();
         });
 
         /* 购物车 goods div 超出显示滚动条*/
@@ -214,7 +219,7 @@ $(document).ready(function () {
             });
         }
 
-        $('.item-btn').click(function () {
+        $('#sideBar .item-btn').click(function () {
             var itemAll = $('.item');
             var thisNow = $(this).parent(itemAll);
             var sideBarRight = $('#sideBar').css("right");
@@ -228,6 +233,7 @@ $(document).ready(function () {
                 sideBarChange(thisNow, itemAll);
             }
         });
+
         function sideBarOpen(thisNow) {
             var sideBar = $('#sideBar');
             var sideBarOpen = "270px";
@@ -251,7 +257,6 @@ $(document).ready(function () {
             thisAll.css({"background-color": ""}).find('.item-body').animate({"right": itemBodyClose}, "fast");
             thisNow.css({"background-color": itemBg}).find('.item-body').animate({"right": itemBodyOpen}, "fast");
         }
-
     }
 
 });
