@@ -1084,7 +1084,7 @@ em, i {
     margin: 3px auto;
 }
 
-#sideBar .item a {
+#sideBar .item > .item-btn > a {
     width: 100%;
     float: left;
     color: #FFFFFF;
@@ -1092,13 +1092,21 @@ em, i {
     white-space: nowrap;
 }
 
-#sideBar .item a i {
+#sideBar .item > .item-btn > .item-title > a {
+    width: 100%;
+    float: left;
+    color: #FFFFFF;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#sideBar .item > .item-btn > a > i {
     font-size: 18px;
     height: 35px;
     line-height: 35px;
 }
 
-#sideBar .item a img {
+#sideBar .item > .item-btn > a > img {
     width: 25px;
     height: 25px;
     line-height: 25px;
@@ -1108,7 +1116,7 @@ em, i {
     overflow: hidden;
 }
 
-#sideBar .item:hover {
+#sideBar .sideBarContent > ul > .item:hover {
     background-color: #C40000;
 }
 
@@ -1220,6 +1228,7 @@ em, i {
     padding-left: 8px;
     float: left;
     color: gray;
+    cursor: default;
 }
 
 #sideBar .sideBar-cartBar-body-head-left input[type="checkbox"] {
@@ -1237,10 +1246,13 @@ em, i {
     color: gray;
 }
 
+#sideBar .sideBar-cartBar-body-head-right a:hover {
+    color: #c81623;
+}
+
 #sideBar .sideBar-cartBar-body-content {
     width: 100%;
     float: left;
-    /*overflow: scroll;*/
 }
 
 #sideBar .sideBar-cartBar-body-content::-webkit-scrollbar {
@@ -1265,39 +1277,185 @@ em, i {
 
 #sideBar .sideBar-cartBar-body-content > .sideBar-cartBar-body-content-list {
     width: 100%;
+    /*height: 1000px;*/
     float: left;
 }
-.sideBar-cartBar-body-content-list > ul {
+
+#sideBar .sideBar-cartBar-body-content-list > ul {
     width: 100%;
     float: left;
 }
-.sideBar-cartBar-body-content-list > ul > li{
-    width: 100%;
+
+#sideBar .sideBar-cartBar-body-content-list > ul > li {
+    width: 254px;
+    padding: 0 8px;
     float: left;
     cursor: default;
     margin-top: 15px;
-    padding-left: 8px;
     color: grey;
     background-color: #fff;
 }
-.sideBar-cartBar-body-content-list-title {
-    float: left;
+
+#sideBar .sideBar-cartBar-body-content-list > ul > li:first-child {
+    margin-top: 0;
+}
+
+#sideBar .sideBar-cartBar-body-content-list-title {
     width: 100%;
-    height: 29px;
+    height: 18px;
     line-height: 18px;
+    float: left;
     overflow: hidden;
-    background-color: #fff;
+    background-color: #ffffff;
+    padding: 5px 0;
+    border-bottom: 1px solid #e6e6e6;
 }
 
-.sideBar-cartBar-body-content-list-content{
+#sideBar .sideBar-cartBar-body-content-list-title-click {
+    width: 18px;
+    padding-top: 2px;
+    float: left;
+}
+
+#sideBar .sideBar-cartBar-body-content-list-title-click > input[type="checkbox"] {
+    float: left;
+}
+
+#sideBar .sideBar-cartBar-body-content-list-title-shop-name {
+    width: 158px;
+    float: left;
+    text-align: left;
+}
+
+#sideBar .sideBar-cartBar-body-content-list-title-shop-name > a {
+    width: 100%;
+    line-height: 18px;
+    float: left;
+    color: #333333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#sideBar .sideBar-cartBar-body-content-list-title-shop-name > a:hover {
+    color: #C81623;
+}
+
+#sideBar .sideBar-cartBar-body-content-list-title-amount {
+    width: 73px;
+    text-align: right;
+    float: right;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#sideBar .sideBar-cartBar-body-content-list-title-amount > strong {
+    width: 100%;
+    float: left;
+    font-weight: 400;
+    color: #999999;
+}
+
+#sideBar .sideBar-cartBar-body-content-list-content {
     width: 100%;
     float: left;
 }
 
+#sideBar .sideBar-cartBar-goods-content-head {
+    width: 100%;
+    float: left;
+}
 
+#sideBar .sideBar-cartBar-goods-content-main {
+    width: 100%;
+    min-height: 60px;
+    float: left;
+}
 
+#sideBar .sideBar-cartBar-goods-content-main-click {
+    width: 18px;
+    float: left;
+    padding-top: 20px;
+}
 
+#sideBar .sideBar-cartBar-goods-content-main-click > input[type="checkbox"] {
+    float: left;
+}
 
+#sideBar .sideBar-cartBar-goods-content-main-img {
+    width: 50px;
+    float: left;
+    padding-right: 5px;
+}
+
+#sideBar .sideBar-cartBar-goods-content-main-img > a {
+    width: 100%;
+    height: 50px;
+    float: left;
+    margin: 5px 0;
+}
+
+#sideBar .sideBar-cartBar-goods-content-main-img > a > img {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+#sideBar .sideBar-cartBar-goods-content-main-title {
+    width: 60px;
+    float: left;
+}
+
+#sideBar .sideBar-cartBar-goods-content-main-title > p {
+    width: 100%;
+    color: #999999;
+    padding-top: 10px;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#sideBar .sideBar-cartBar-goods-content-main-number {
+    width: 60px;
+    height: 60px;
+    float: left;
+    text-align: center;
+}
+
+#sideBar .sideBar-cartBar-goods-content-main-number > span {
+    width: 50px;
+    height: 14px;
+    line-height: 14px;
+    float: left;
+    color: #999999;
+    margin: 23px 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+
+#sideBar .sideBar-cartBar-goods-content-main-sum {
+    width: 61px;
+    height: 60px;
+    float: left;
+    text-align: right;
+}
+
+#sideBar .sideBar-cartBar-goods-content-main-sum > strong {
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    margin: 21px 0;
+    font-weight: 400;
+    color: #666666;
+    text-align: right;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 #sideBar .sideBar-cartBar-body-footer {
     width: 100%;
@@ -1343,6 +1501,7 @@ em, i {
     width: 238px;
     height: 40px;
     line-height: 40px;
+    color: #FFFFFF;
     float: left;
     margin: 0 15px;
     background-color: rgb(196, 0, 0);
@@ -1353,6 +1512,9 @@ em, i {
 }
 
 #sideBar .sideBar-cartBar-body-footer-btn-settlement > a > i {
+    font-size: 18px;
+    height: 35px;
+    line-height: 35px;
     margin-left: 10px;
     vertical-align: -3px;
 }
@@ -1365,6 +1527,33 @@ em, i {
     vertical-align: middle;
     display: table-cell;
     text-align: center;
+}
+
+#sideBar .sideBarDown > ul > .item {
+    width: 100%;
+    float: left;
+}
+
+#sideBar .sideBarDown > ul > .item:hover {
+    background-color: #C40000;
+}
+
+#sideBar .sideBarDown > ul > .item > .item-title > a {
+    color: #FFFFFF;
+}
+
+#sideBar .sideBarDown > ul > .item > a {
+    width: 100%;
+    float: left;
+    color: #FFFFFF;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#sideBar .sideBarDown > ul > .item > a > i {
+    font-size: 18px;
+    height: 35px;
+    line-height: 35px;
 }
 
 #sideBar .returnTop {
