@@ -1764,14 +1764,13 @@ em, i {
 
 #footer .footer-service {
     width: 100%;
-    height: 55px;
     float: left;
     padding: 20px 0;
     background-color: #F5F5F5;
 }
 
 #footer .footer-service > ul {
-    height: 100%;
+    height: 55px;
 }
 
 #footer .footer-service > ul > li {
