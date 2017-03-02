@@ -1370,7 +1370,6 @@ em, i {
 }
 
 .sideBarContent-user-container-personal-info .user-info > .user-rank > a > i {
-    font-size: 15px;
     margin-right: 2px;
     float: left;
 }
@@ -1380,7 +1379,35 @@ em, i {
     height: 40px;
     margin-top: 10px;
     float: left;
-    background-color: #3aaba9;
+}
+
+.sideBarContent-user-container-shortcut > ul {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+}
+
+.sideBarContent-user-container-shortcut > ul > li {
+    width: 83px;
+    height: 100%;
+    float: left;
+}
+
+.sideBarContent-user-container-shortcut > ul > li > strong {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+    font-weight: 400;
+}
+
+.sideBarContent-user-container-shortcut > ul > li > a {
+    width: 100%;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+    text-align: center;
 }
 
 #sideBar .sideBar-cartBar-body {
