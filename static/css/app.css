@@ -1279,6 +1279,92 @@ em, i {
     font-size: 16px;
 }
 
+#sideBar .sideBarContent .item > .item-body > .item-body-content {
+    width: 100%;
+    float: left;
+}
+
+.sideBarContent-user-container {
+    color: #333333;
+    padding: 10px;
+    background-color: #FFF;
+    float: left;
+}
+
+.sideBarContent-user-container-personal-info {
+    width: 250px;
+    height: 72px;
+    float: left;
+    overflow: hidden;
+}
+
+.sideBarContent-user-container-personal-info .avatar {
+    width: 65px;
+    height: 65px;
+    float: left;
+    overflow: hidden;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+}
+
+.sideBarContent-user-container-personal-info .avatar > a {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.sideBarContent-user-container-personal-info .avatar > a > img {
+    width: 100%;
+    height: 100%;
+}
+
+.sideBarContent-user-container-personal-info .user-info {
+    width: 170px;
+    height: 42px;
+    float: left;
+    margin: 15px 0 15px 15px;
+}
+
+.sideBarContent-user-container-personal-info .user-info > .user-name {
+    width: 100%;
+    float: left;
+}
+
+.sideBarContent-user-container-personal-info .user-info > .user-name > a {
+    width: 100%;
+    font-size: 14px;
+    line-height: 20px;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sideBarContent-user-container-personal-info .user-info > .user-rank {
+    width: 100%;
+    float: left;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.sideBarContent-user-container-personal-info .user-info > .user-rank > a {
+    width: 100%;
+    height: 15px;
+    float: left;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.sideBarContent-user-container-personal-info .user-info > .user-rank > a > i {
+    font-size: 15px;
+    margin-right: 2px;
+    float: left;
+}
+
 #sideBar .sideBar-cartBar-body {
     width: 100%;
     height: 100%;
