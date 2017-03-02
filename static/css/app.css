@@ -924,9 +924,11 @@ em, i {
     float: left;
     overflow: hidden;
 }
+
 #header .header-nav-bar > ul {
     float: left;
 }
+
 #header .header-nav-bar .item {
     margin-left: 30px;
     float: left;
@@ -977,6 +979,12 @@ em, i {
 #content {
     width: 100%;
     float: left;
+    position: relative;
+}
+
+.content {
+    width: 1210px;
+    margin: 0 auto;
     position: relative;
 }
 
