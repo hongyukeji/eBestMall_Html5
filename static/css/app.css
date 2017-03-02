@@ -1293,7 +1293,6 @@ em, i {
 
 .sideBarContent-user-container-personal-info {
     width: 250px;
-    height: 72px;
     float: left;
     overflow: hidden;
 }
@@ -1320,10 +1319,10 @@ em, i {
 }
 
 .sideBarContent-user-container-personal-info .user-info {
-    width: 170px;
+    width: 173px;
     height: 42px;
     float: left;
-    margin: 15px 0 15px 15px;
+    margin: 12px 0 0 12px;
 }
 
 .sideBarContent-user-container-personal-info .user-info > .user-name {
@@ -1363,6 +1362,14 @@ em, i {
     font-size: 15px;
     margin-right: 2px;
     float: left;
+}
+
+.sideBarContent-user-container-shortcut {
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    float: left;
+    background-color: #3aaba9;
 }
 
 #sideBar .sideBar-cartBar-body {
