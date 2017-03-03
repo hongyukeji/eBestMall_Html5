@@ -1,0 +1,24 @@
+{
+  "name":             "hongyukeji/ebestmall-html",
+  "description":      "eBestMall Project html file",
+  "keywords":         ["ebestmall"],
+  "homepage":         "http://www.ebestmall.com ",
+  "time":             "2017-02-08",
+  "license":          "MIT",
+  "authors": [{
+    "name":         "Shadow",
+    "email":        "admin@hongyuvip.com",
+    "homepage":     "http://www.ebestmall.com",
+    "role":         "Engineer"
+  }],
+  "minimum-stability": "stable",
+  "require":{"php": ">=5.3.0"},
+  "require-dev": {
+    "hongyukeji/ebestmall-html": "*"
+  },
+  "autoload":{
+    "psr-4":{
+      "Silk\\":"lib"
+    }
+  }
+}
