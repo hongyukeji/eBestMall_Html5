@@ -3,25 +3,6 @@ $(function () {
     // console.log();
 });
 
-/* VueJs */
-$(function () {
-    var vm = new Vue({
-        el: "#searchBar",
-        data: {
-            title: "Hello Vue"
-        },
-        mounted: function () {
-            // console.log('Title is: ' + this.title);
-            this.edit();
-        },
-        methods: {
-            edit: function () {
-                this.title = "Hello eBestMall";
-            }
-        }
-    });
-});
-
 /* 全局-在DOM加载完成时运行 */
 $(document).ready(function () {
     clickEventOverall();    // 全局-页面鼠标点击-事件
@@ -259,4 +240,3 @@ $(document).ready(function () {
         }
     }
 });
-
