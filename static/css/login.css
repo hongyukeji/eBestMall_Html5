@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+.header-login {
+    width: 100%;
+    float: left;
+    padding: 10px 0;
+}
+
+.header-login > .w > .logo {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-login > .w > .logo > a {
+    max-width: 100%;
+    height: 100%;
+    float: left;
+    margin-right: 30px;
+}
+
+.header-login > .w > .logo > a > img {
+    height: 100%;
+    float: left;
+}
+
+.header-login > .w > .logo > .logo-salutatory {
+    height: 60px;
+    color: #333333;
+    font: 400 24px/60px "Microsoft YaHei", "Hiragino Sans GB";
+    float: left;
+    cursor: default;
+}
+
+.header-login > .w > .logo > .logo-link {
+    width: auto;
+    height: 100%;
+    float: right;
+}
+
+.header-login > .w > .logo > .logo-link > a {
+    color: #999999;
+}
+
+.header-login > .w > .logo > .logo-link > a:hover {
+    color: #E4393C;
+}
+
+.header-login > .w > .logo > .logo-link > a > i {
+    vertical-align: -2px;
+    font-size: 14px;
+    color: #E4393C;
+    margin-right: 5px;
+}
+
+.content-login {
+    width: 100%;
+    height: 500px;
+    float: left;
+    background-color: #e93854;
+}
+
+.footer-login {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.footer-login > .w > ul {
+    margin-top: 25px;
+    display: inline-block;
+}
+
+.footer-login > .w > ul > li {
+    float: left;
+}
+
+.footer-login > .w > ul > li > span {
+    font-size: 12px;
+    float: left;
+    line-height: 16px;
+    cursor: default;
+}
+
+.footer-login > .w > ul > li:first-child > span {
+    display: none;
+}
+
+.footer-login > .w > ul > li > a {
+    margin: 0 15px;
+    float: left;
+}
+
+.footer-login > .w > p {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
