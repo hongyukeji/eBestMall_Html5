@@ -1,9 +1,7 @@
 {
   "name": "hongyukeji/ebestmall-html",
   "description": "eBestMall Project html file",
-  "keywords": [
-    "ebestmall"
-  ],
+  "keywords": ["ebestmall"],
   "homepage": "http://www.ebestmall.com ",
   "time": "2017-02-08",
   "license": "MIT",
