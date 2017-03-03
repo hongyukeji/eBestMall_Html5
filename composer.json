@@ -19,6 +19,9 @@
   "require": {
     "php": ">=5.3.0"
   },
+  "require-dev": {
+    "hongyukeji/ebestmall-html": "*"
+  },
   "autoload": {
     "psr-4": {
       "Silk\\": "lib"
