@@ -11,12 +11,20 @@ class ComposerStaticInite1ba99c270baf2d271cf55ccfda22b3a
         array (
             'ebestmall\\' => 10,
         ),
+        'S' => 
+        array (
+            'Silk\\' => 5,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
         'ebestmall\\' => 
         array (
             0 => __DIR__ . '/../..' . '/',
+        ),
+        'Silk\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/hongyukeji/hplus/lib',
         ),
     );
 

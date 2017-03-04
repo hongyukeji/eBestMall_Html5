@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'ebestmall\\' => array($baseDir . '/'),
+    'Silk\\' => array($vendorDir . '/hongyukeji/hplus/lib'),
 );
