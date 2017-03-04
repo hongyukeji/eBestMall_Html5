@@ -4,16 +4,12 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInite1ba99c270baf2d271cf55ccfda22b3a
+class ComposerStaticInite45cf8ec527d0f855f4fcfd3298f2770
 {
     public static $prefixLengthsPsr4 = array (
         'e' => 
         array (
             'ebestmall\\' => 10,
-        ),
-        'S' => 
-        array (
-            'Silk\\' => 5,
         ),
     );
 
@@ -22,17 +18,13 @@ class ComposerStaticInite1ba99c270baf2d271cf55ccfda22b3a
         array (
             0 => __DIR__ . '/../..' . '/',
         ),
-        'Silk\\' => 
-        array (
-            0 => __DIR__ . '/..' . '/hongyukeji/hplus/lib',
-        ),
     );
 
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInite1ba99c270baf2d271cf55ccfda22b3a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInite1ba99c270baf2d271cf55ccfda22b3a::$prefixDirsPsr4;
+            $loader->prefixLengthsPsr4 = ComposerStaticInite45cf8ec527d0f855f4fcfd3298f2770::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInite45cf8ec527d0f855f4fcfd3298f2770::$prefixDirsPsr4;
 
         }, null, ClassLoader::class);
     }
