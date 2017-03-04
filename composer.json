@@ -19,7 +19,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Silk\\": "lib"
+      "ebestmall\\": ""
     }
   }
 }
