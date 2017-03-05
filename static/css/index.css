@@ -5,16 +5,7 @@
     display: block;
 }
 
-.content {
-    width: 100%;
-    float: left;
-    position: relative;
-    background-color: #F6F6F6;
-    padding-bottom: 30px;
-    margin-bottom: 30px;
-}
-
-.content-index {
+#content .content {
     width: 100%;
     float: left;
     position: relative;
