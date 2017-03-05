@@ -1882,9 +1882,7 @@ em, i {
 #content .breadcrumb {
     width: 100%;
     float: left;
-    padding: 10px 15px;
-    margin-bottom: 20px;
-    background-color: #f5f5f5;
+    padding: 12px 0;
 }
 
 #content .breadcrumb > li {
