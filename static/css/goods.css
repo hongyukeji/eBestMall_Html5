@@ -114,7 +114,6 @@
 
 .product-info-wrap {
     width: 558px;
-    min-height: 500px;
     float: left;
     margin: 0 20px;
 }
@@ -191,11 +190,6 @@
     line-height: 15px;
 }
 
-.product-info-choose-attr {
-    width: 100%;
-    float: left;
-}
-
 .product-info-price {
     width: 100%;
     float: left;
@@ -220,6 +214,102 @@
     color: #999999;
     line-height: 22px;
     text-decoration: line-through;
+}
+
+.product-info-choose-attr {
+    margin-top: 10px;
+    width: 100%;
+    float: left;
+}
+
+.product-info-choose-attr > ul {
+    width: 100%;
+    float: left;
+}
+
+.product-info-choose-attr > ul > li {
+    width: 100%;
+    height: 40px;
+    line-height: 50px;
+    float: left;
+}
+
+.product-info-choose-attr > ul > li > .dt {
+    line-height: 40px;
+}
+
+.product-info-strip {
+    width: 100%;
+    float: left;
+    margin-top: 15px;
+    border-bottom: 1px dotted #dfdfdf;
+}
+
+.product-info-choose-amount-wrap {
+    width: 100%;
+    margin: 15px 0;
+    float: left;
+}
+
+.product-info-choose-amount {
+    /*width: 49px;*/
+    height: 45px;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.product-info-choose-amount > input[type="text"] {
+    width: 40px;
+    height: 100%;
+    float: left;
+    line-height: 45px;
+    border: none;
+    border: 0;
+    text-align: center;
+}
+
+.product-info-choose-amount-btn {
+    width: 18px;
+    height: 100%;
+    float: left;
+    border-left: 1px solid #ccc;
+}
+
+.product-info-choose-amount-btn > a {
+    width: 100%;
+    height: 22px;
+    line-height: 22px;
+    font-size: 15px;
+    color: #666;
+    float: left;
+    background: #f1f1f1;
+    text-align: center;
+}
+
+.product-info-choose-amount-btn > .item {
+    border-bottom: 1px solid #ccc;
+}
+
+.product-info-choose-amount-btn > a:hover {
+    background: rgba(0, 0, 0, .1);
+}
+
+.product-info-choose-btn {
+    float: left;
+}
+
+.product-info-choose-btn > a {
+    height: 47px;
+    padding: 0 26px;
+    font: bold 18px/47px "Microsoft YaHei";
+    background-color: #df3033;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    float: left;
 }
 
 .shop-info-wrap {

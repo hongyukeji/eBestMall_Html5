@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?cnv84x');
-  src:  url('fonts/icomoon.eot?cnv84x#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?cnv84x') format('truetype'),
-    url('fonts/icomoon.woff?cnv84x') format('woff'),
-    url('fonts/icomoon.svg?cnv84x#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?xue69r');
+  src:  url('fonts/icomoon.eot?xue69r#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?xue69r') format('truetype'),
+    url('fonts/icomoon.woff?xue69r') format('woff'),
+    url('fonts/icomoon.svg?xue69r#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-add2:before {
+  content: "\e145";
+}
+.icon-remove:before {
+  content: "\e15b";
+}
+.icon-error:before {
+  content: "\e90a";
+}
 .icon-lock:before {
   content: "\f023";
 }
@@ -83,6 +92,9 @@
 }
 .icon-creditcard:before {
   content: "\e916";
+}
+.icon-keyboard_arrow_right:before {
+  content: "\e930";
 }
 .icon-jump-up:before {
   content: "\e90e";
@@ -164,9 +176,6 @@
 }
 .icon-chevron-circle-right:before {
   content: "\e910";
-}
-.icon-error:before {
-  content: "\e90a";
 }
 .icon-close:before {
   content: "\e900";
