@@ -287,7 +287,7 @@
                     </div>
                     <div class="product-preview-thumbnail-wrap">
                         <ul class="product-preview-thumbnail-list">
-                            <li><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
+                            <li class="active"><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
                             <li><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
                             <li><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
                             <li><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
@@ -322,10 +322,31 @@
                 </div>
                 <div class="product-info-strip"></div>
                 <div class="product-info-choose-attr">
+                    <!-- @a class active disabled -->
                     <ul>
-                        <li><div class="dt">选择颜色</div><a href="javascript:;"></a></li>
-                        <li><div class="dt">选择版本</div><a href="javascript:;"></a></li>
-                        <li><div class="dt">套　　装</div><a href="javascript:;"></a></li>
+                        <li>
+                            <div class="dt">选择颜色</div>
+                            <div class="dd">
+                                <a href="javascript:;">红色</a>
+                                <a class="active" href="javascript:;">金色</a>
+                                <a href="javascript:;">白色</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dt">选择版本</div>
+                            <div class="dd">
+                                <a class="active" href="javascript:;">公开版</a>
+                                <a href="javascript:;">双网通</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dt">套　　装</div>
+                            <div class="dd">
+                                <a class="active" href="javascript:;">优惠套装1</a>
+                                <a href="javascript:;">优惠套装2</a>
+                                <a class="disabled" href="javascript:;">优惠套装3</a>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <div class="product-info-strip"></div>
@@ -340,7 +361,16 @@
                     <div class="product-info-choose-btn"><a href="javascript:;">加入购物车</a></div>
                 </div>
             </div>
-            <div class="shop-info-wrap"></div>
+            <div class="shop-info-wrap bg-gray"></div>
+        </div>
+        <div class="product-recommend-wrap">
+            <div class="w">
+                <div class="product-recommend bg-info"></div>
+            </div>
+        </div>
+        <div class="product-detail-wrap">
+            <div class="product-detail-aside bg-success"></div>
+            <div class="product-detail bg-danger"></div>
         </div>
     </div>
 
