@@ -183,10 +183,14 @@
     position: relative;
 }
 
-.product-info-price-wrap-comment-count {
+.product-info-price-wrap-statistics {
     position: absolute;
     right: 10px;
     top: 20px;
+}
+
+.product-info-price-wrap-statistics > div {
+    float: left;
     color: #999;
     border-left: solid 1px #e6e6e6;
     text-align: center;
@@ -346,12 +350,13 @@
     float: left;
 }
 
-.product-recommend-wrap{
+.product-recommend-wrap {
     width: 100%;
     float: left;
     margin-top: 15px;
 }
-.product-recommend{
+
+.product-recommend {
     width: 100%;
     min-height: 256px;
     float: left;
