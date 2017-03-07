@@ -13,6 +13,11 @@ Composer Install
 -------------------
 ```
 composer require hongyukeji/ebestmall-html
+
+or
+
+composer require hongyukeji/ebestmall-html dev-master
+
 ```
 
 项目开发
