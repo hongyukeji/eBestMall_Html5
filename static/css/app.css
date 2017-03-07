@@ -1193,9 +1193,12 @@ em, i {
 }
 
 #sideBar .item-cartBar {
-    padding: 15px 0;
     border-top: 1px solid #444444;
     border-bottom: 1px solid #444444;
+}
+
+#sideBar .item-cartBar > .item-btn > a {
+    padding: 15px 0;
 }
 
 #sideBar .item-cartBar .item-cart > div {
