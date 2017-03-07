@@ -1,24 +1,51 @@
+<?php
+/**
+ * ============================================================================
+ * Copyright © 2016-2017 HongYuKeJi.Co.Ltd. All rights reserved.
+ * Http://www.hongyuvip.com
+ * ----------------------------------------------------------------------------
+ * 仅供学习交流使用，如需商用请购买商用版权。
+ * 堂堂正正做人，踏踏实实做事。
+ * ----------------------------------------------------------------------------
+ * Author: Shadow  QQ: 1527200768  Time: 2017/3/3 0:15
+ * E-mail: admin@hongyuvip.com
+ * ============================================================================
+ */
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\widgets\Breadcrumbs;
+use common\widgets\Alert;
+
+//use frontend\assets\AppAsset;
+//AppAsset::register($this);
+
+use ebestmall\web\EbmAsset;   // 引入 EbmAsset 资源包
+EbmAsset::register($this);  // 在本视图注册此资源包
+$baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;   // 获取发布后资源包对应的临时目录
+//$this->registerCssFile($baseUrl .'/css/demo.css', ['depends' => EbmAsset::className()]); // 视图引用单独文件示例
+
+?>
+<?php $this->beginPage() ?>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="<?= Yii::$app->language ?>">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
-    <title>eBestMall - B2B2C商城系统</title>
-    <meta name="description" content="eBestMall是国内电子商务系统及服务解决方案新创品牌。为传统企业及创业者提供零售网店系统、网上商城系统、分销系统、B2B2C商城系统、微信分销系统、行业ERP等产品和解决方案。" />
-    <meta name="keyword" content="eBestMall,鸿宇商城,鸿宇分销,网店系统,网上商城系统,分销系统,B2B2C商城系统,微信分销系统" />
-    <link rel="stylesheet" href="static/css/app.css" />
-    <link rel="stylesheet" href="static/css/goods.css" />
+    <?= Html::csrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
 </head>
 <body>
+<?php $this->beginBody() ?>
 
 <!-- 公共页眉 -->
 <div id="header">
     <!-- 公共页眉-顶部广告 -->
     <div class="header-event">
         <div class="w">
-            <a class="header-event-bar" href="javascript:;"><img src="static/img/temp/header-top.jpg" /> </a>
+            <a class="header-event-bar" href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/header-top.jpg" /> </a>
             <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
         </div>
     </div>
@@ -43,8 +70,8 @@
                 </li>
             </ul>
             <ul class="menuTop fr">
-                <li><div><a href="javascript:;">您好，请登录</a></div></li>
-                <li><div><a class="active" href="javascript:;">免费注册</a></div></li><li class="spacer"></li>
+                <li><div><a href="<?= Url::to(['site/login']) ?>">您好，请登录</a></div></li>
+                <li><div><a class="active" href="<?= Url::to(['site/register']) ?>">免费注册</a></div></li><li class="spacer"></li>
                 <li class="downTop">
                     <div><a href="javascript:;">会员中心</a><div class="effectTop"><i class="icon-chevron-down"></i></div></div>
                     <div class="listTop">
@@ -151,7 +178,7 @@
     <div class="headerMain">
         <div class="w">
             <div class="logo">
-                <h1><a href="javascript:;">eBestMall<img src="static/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
+                <h1><a href="<?= Yii::$app->homeUrl ?>">eBestMall<img src="<?= Html::encode($baseUrl) ?>/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
             </div>
             <!-- 公共页眉-搜索框-购物车-导航 -->
             <div class="header-main-right">
@@ -219,7 +246,7 @@
                                             <li class="item">
                                                 <div class="goods-img">
                                                     <a href="javascript:;" target="_blank">
-                                                        <img src="static/img/temp/temp-goods_img_small_001.jpg" width="50" height="50" alt="">
+                                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_001.jpg" width="50" height="50" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="goods-name">
@@ -260,7 +287,7 @@
                         <li class="item"><a href="javascript:;">全球购</a></li>
                     </ul>
                 </div>
-                <div class="header-activity-bar"><a href="javascript:;"><img src="static/img/temp/activity.png" alt="新年红包抢不停"/></a></div>
+                <div class="header-activity-bar"><a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/activity.png" alt="新年红包抢不停"/></a></div>
             </div>
         </div>
     </div>
@@ -271,113 +298,11 @@
 
     <!-- Content-内容 -->
     <div class="content">
-        <ul class="breadcrumb">
-            <li><a href="javascript:;">首页</a></li>
-            <li><a href="javascript:;">商品详情</a></li>
-            <li class="active">联想笔记本</li>
-        </ul>
-        <div class="product-intro">
-            <div class="product-preview-wrap">
-                <div class="product-preview">
-                    <div class="product-preview-main-img">
-                        <a href="javascript:;"><img src="static/img/temp/temp-goods_003.jpg" alt=""></a>
-                        <div class="product-preview-main-img-big">
-                            <img src="static/img/temp/temp-goods_003.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="product-preview-thumbnail-wrap">
-                        <ul class="product-preview-thumbnail-list">
-                            <li class="active"><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
-                            <li><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
-                            <li><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
-                            <li><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
-                            <li><a href="javascript:;"><img src="static/img/temp/temp-goods_img_small_001.jpg" alt=""></a></li>
-                        </ul>
-                        <a class="prev" href="javascript:;"><i class="icon-navigate_before"></i></a>
-                        <a class="next" href="javascript:;"><i class="icon-navigate_next"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="product-info-wrap">
-                <div class="product-info-name">Apple iPhone 7 (A1660) 128G 金色 移动联通电信4G手机</div>
-                <div class="product-info-describe">暖春开学季，就要“焕”新装！领券可享12期白条免息！<a href="#" title="量免息券，领券戳这里！ ">量免息券，领券戳这里！</a> <br>推荐选择下方的移动、联通、电信优惠购，套餐有优惠，还有话费返还。</div>
-                <div class="product-info-price-wrap">
-                    <div class="product-info-price-wrap-statistics">
-                        <div class="product-info-price-wrap-comment-count">
-                            <p>累计评价</p>
-                            <a class="notice" href="javascript:;">2万+</a>
-                        </div>
-                        <div class="product-info-price-wrap-comment-count">
-                            <p>累计销量</p>
-                            <a class="notice" href="javascript:;">3万+</a>
-                        </div>
-                    </div>
-                    <div class="product-info-price">
-                        <div class="dt">价　　格</div>
-                        <div class="dd">
-                            <span class="p-price"><span>￥</span><span class="price">5888.00</span></span>
-                            <a class="notice" href="javascript:;" >降价通知</a>
-                        </div>
-                    </div>
-                    <div class="product-info-market-price">
-                        <div class="dt">市 场 价</div>
-                        <div class="dd">
-                            <span class="p-price"><span>￥</span><span class="price">6888.00</span></span>
-                        </div>
-                    </div>
-                </div>
-                <div class="product-info-strip"></div>
-                <div class="product-info-choose-attr">
-                    <!-- @a class active disabled -->
-                    <ul>
-                        <li>
-                            <div class="dt">选择颜色</div>
-                            <div class="dd">
-                                <a href="javascript:;">红色</a>
-                                <a class="active" href="javascript:;">金色</a>
-                                <a href="javascript:;">白色</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dt">选择版本</div>
-                            <div class="dd">
-                                <a class="active" href="javascript:;">公开版</a>
-                                <a href="javascript:;">双网通</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="dt">套　　装</div>
-                            <div class="dd">
-                                <a class="active" href="javascript:;">优惠套装1</a>
-                                <a href="javascript:;">优惠套装2</a>
-                                <a class="disabled" href="javascript:;">优惠套装3</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="product-info-strip"></div>
-                <div class="product-info-choose-amount-wrap">
-                    <div class="product-info-choose-amount">
-                        <input type="text" value="1">
-                        <div class="product-info-choose-amount-btn">
-                            <a href="javascript:;" class="item"><i class="icon-add2"></i></a>
-                            <a href="javascript:;"><i class="icon-remove"></i></a>
-                        </div>
-                    </div>
-                    <div class="product-info-choose-btn"><a href="javascript:;">加入购物车</a></div>
-                </div>
-            </div>
-            <div class="shop-info-wrap bg-gray">shop name</div>
-        </div>
-        <div class="product-recommend-wrap">
-            <div class="w">
-                <div class="product-recommend bg-info"></div>
-            </div>
-        </div>
-        <div class="product-detail-wrap">
-            <div class="product-detail-aside bg-success"></div>
-            <div class="product-detail bg-danger"></div>
-        </div>
+        <?= Breadcrumbs::widget([
+            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
+        ]) ?>
+        <?= Alert::widget() ?>
+        <?= $content ?>
     </div>
 
 </div>
@@ -464,7 +389,7 @@
 <div id="searchBar">
     <div class="w">
         <div class="searchBar-logo">
-            <a href="javascript:;"><img src="static/img/public/logo_small.png" alt=""></a>
+            <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/logo_small.png" alt=""></a>
         </div>
         <div class="searchBar-search">
             <form class="searchBar-search-form" action="javascript:;" method="get">
@@ -484,7 +409,7 @@
             <li class="item">
                 <div class="item-btn">
                     <!--登陆后显示用户头像-->
-                    <!--<a href="javascript:;"><img src="static/img/public/user/getAvatar.jpg" /></a>-->
+                    <!--<a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/getAvatar.jpg" /></a>-->
                     <a href="javascript:;"><i class="icon-user-o"></i></a>
                     <div class="item-title"><a href="javascript:;">会员中心<span>◆</span></a></div>
                 </div>
@@ -497,10 +422,10 @@
                         <div class="sideBarContent-user-container">
                             <div class="sideBarContent-user-container-personal-info">
                                 <div class="avatar">
-                                    <a href="javascript:;"><img src="static/img/public/user/no_login_default_avatar.jpg" alt=""></a>
+                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/no_login_default_avatar.jpg" alt=""></a>
                                 </div>
                                 <div class="user-info">
-                                    <div class="user-name"><a href="" title="eBestMall">eBestMall</a></div>
+                                    <div class="user-name"><a href="javascript:;" title="eBestMall">eBestMall</a></div>
                                     <div class="user-rank">
                                         <a href="javascript:;" title="尊贵五星钻石VIP">
                                             <i class="icon-diamond"></i>
@@ -566,7 +491,7 @@
                                                 <div class="sideBar-cartBar-goods-content-main-click"><input type="checkbox"></div>
                                                 <div class="sideBar-cartBar-goods-content-main-img">
                                                     <a href="javascript:;" title="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
-                                                        <img src="static/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
+                                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
                                                     </a>
                                                 </div>
                                                 <div class="sideBar-cartBar-goods-content-main-title">
@@ -590,7 +515,7 @@
                                                 <div class="sideBar-cartBar-goods-content-main-click"><input type="checkbox"></div>
                                                 <div class="sideBar-cartBar-goods-content-main-img">
                                                     <a href="javascript:;" title="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
-                                                        <img src="static/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
+                                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_002.jpg" alt="Apple/苹果 iPhone 7 Plus 32G 全网通4G智能手机">
                                                     </a>
                                                 </div>
                                                 <div class="sideBar-cartBar-goods-content-main-title">
@@ -658,9 +583,8 @@
     </div>
 </div>
 
-<script type="text/javascript" src="static/js/jquery.min.js"></script>
-<script type="text/javascript" src="static/js/app.js"></script>
-<script type="text/javascript" src="static/js/goods.js"></script>
-
+<?php $this->endBody() ?>
 </body>
 </html>
+<?php $this->endPage() ?>
+
