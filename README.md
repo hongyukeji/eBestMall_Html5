@@ -9,6 +9,12 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 * Author: Shadow
 * Http: www.ebestmall.com
 
+Composer Install
+-------------------
+```
+composer require hongyukeji/ebestmall-html
+```
+
 项目开发
 -------------------
 
