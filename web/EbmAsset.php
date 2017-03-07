@@ -7,7 +7,7 @@ use yii\web\AssetBundle;
 /**
  * Main frontend application asset bundle.
  */
-class EAsset extends AssetBundle
+class EbmAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/hongyukeji/ebestmall-html/static';
     public $css = [
