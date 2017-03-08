@@ -19,8 +19,9 @@ $(document).ready(function () {
     });
     magnifierImgBox.on('mousemove', function (ev) {
         var _event = ev || window.event;
-        var left = _event.clientX - magnifierImgBox.offset().left - magnifierImgMagnifier.outerWidth() / 2;
-        var top = _event.clientY - magnifierImgBox.offset().top - magnifierImgMagnifier.outerHeight() / 2;
+
+        var left = _event.clientX + document.body.scrollLeft - magnifierImgBox.offset().left - magnifierImgMagnifier.outerWidth() / 2;
+        var top = _event.clientY + document.body.scrollTop - magnifierImgBox.offset().top - magnifierImgMagnifier.outerHeight() / 2;
 
         if (left < 0) {
             left = 0;
@@ -36,11 +37,11 @@ $(document).ready(function () {
 
         magnifierImgMagnifier.css({left: left, top: top});
 
-        var percentX = left / (magnifierImgBox.outerWidth(true) - magnifierImgMagnifier.outerWidth(true));
-        var percentY = top / (magnifierImgBox.outerHeight(true) - magnifierImgMagnifier.outerHeight(true));
+        var percentX = left / (magnifierImgBox.outerWidth() - magnifierImgMagnifier.outerWidth());
+        var percentY = top / (magnifierImgBox.outerHeight() - magnifierImgMagnifier.outerHeight());
         magnifierBigImg.css({
-            "left": -percentX * (magnifierBigImg.outerWidth(true) - magnifierBigImgBox.outerWidth(true)) + 'px',
-            "top": -percentY * (magnifierBigImg.outerHeight(true) - magnifierBigImgBox.outerHeight(true)) + 'px'
+            "left": -percentX * (magnifierBigImg.outerWidth() - magnifierBigImgBox.outerWidth()) + 'px',
+            "top": -percentY * (magnifierBigImg.outerHeight() - magnifierBigImgBox.outerHeight()) + 'px'
         });
     });
 });
