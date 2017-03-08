@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?8iqtli');
-  src:  url('fonts/icomoon.eot?8iqtli#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?8iqtli') format('truetype'),
-    url('fonts/icomoon.woff?8iqtli') format('woff'),
-    url('fonts/icomoon.svg?8iqtli#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?551n30');
+  src:  url('fonts/icomoon.eot?551n30#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?551n30') format('truetype'),
+    url('fonts/icomoon.woff?551n30') format('woff'),
+    url('fonts/icomoon.svg?551n30#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -90,7 +90,7 @@
 .icon-chat:before {
   content: "\e92d";
 }
-.icon-home3:before {
+.icon-home:before {
   content: "\e911";
 }
 .icon-office:before {
