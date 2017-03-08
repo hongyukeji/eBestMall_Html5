@@ -75,6 +75,7 @@
     position: relative;
     overflow: hidden;
 }
+
 .product-preview-thumbnail-list {
     width: 375px;
     height: 63px;
@@ -82,6 +83,7 @@
     overflow: hidden;
     position: relative;
 }
+
 .product-preview-thumbnail-wrap > a {
     width: 15px;
     height: 55px;
