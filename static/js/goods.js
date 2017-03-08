@@ -16,8 +16,8 @@ $(document).ready(function () {
     magnifierImgBox.on('mousemove', function (ev) {
         var _event = ev || window.event;
 
-        var left = _event.clientX + document.body.scrollLeft - magnifierImgBox.offset().left - magnifierImgMagnifier.outerWidth() / 2;
-        var top = _event.clientY + document.body.scrollTop - magnifierImgBox.offset().top - magnifierImgMagnifier.outerHeight() / 2;
+        var left = _event.clientX + $(document).scrollLeft() - magnifierImgBox.offset().left - magnifierImgMagnifier.outerWidth() / 2;
+        var top = _event.clientY + $(document).scrollTop() - magnifierImgBox.offset().top - magnifierImgMagnifier.outerHeight() / 2;
 
         if (left < 0) {
             left = 0;
