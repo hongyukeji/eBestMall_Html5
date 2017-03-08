@@ -1,9 +1,5 @@
-/**
- * Created by Shadow on 2017/3/5.
- */
-
-/* Magnifier */
 $(document).ready(function () {
+    /* Magnifier Start*/
     var magnifierImgBox = $('.product-preview-main-img-box');   //中图片容器
     var magnifierImgMagnifier = $('.product-preview-main-img-box-magnifier');   //放大镜容器
     var magnifierBigImgBox = $('.product-preview-main-img-big-box');   //大图片容器
@@ -44,11 +40,9 @@ $(document).ready(function () {
             "top": -percentY * (magnifierBigImg.outerHeight() - magnifierBigImgBox.outerHeight()) + 'px'
         });
     });
-});
+    /* Magnifier End*/
 
-/* Product preview tab */
-$(document).ready(function () {
-
+    /* Product preview tab Start*/
     var productPreviewWrap = $('.product-preview');
     var tabBtnPrev = $('.product-preview-thumbnail-wrap .prev');
     var tabBtnNext = $('.product-preview-thumbnail-wrap .next');
@@ -67,8 +61,8 @@ $(document).ready(function () {
         _this.addClass('active').siblings().removeClass('active');
         var previewImg = _this.find('a img').attr('data-img');
         var previewImgBig = _this.find('a img').attr('data-img-big');
-        $('.product-preview').find('.product-preview-main-img-box img').attr({'src': previewImg});
-        $('.product-preview').find('.product-preview-main-img-big-box img').attr({'src': previewImgBig});
+        productPreviewWrap.find('.product-preview-main-img-box img').attr({'src': previewImg});
+        productPreviewWrap.find('.product-preview-main-img-big-box img').attr({'src': previewImgBig});
     });
 
     tabBtnPrev.on('click', function () {
@@ -90,4 +84,5 @@ $(document).ready(function () {
             tabPage++;
         }
     });
+    /* Product preview tab End*/
 });
