@@ -442,7 +442,6 @@
 .shop-info > .item > dl > dd {
     margin-left: 5px;
     float: left;
-    max-width: 125px;
     height: 25px;
     overflow: hidden;
     white-space: nowrap;
@@ -451,7 +450,7 @@
 }
 
 .shop-info > .item > dl > dd > a {
-    width: 140px;
+    max-width: 130px;
     height: 25px;
     line-height: 25px;
     float: left;
