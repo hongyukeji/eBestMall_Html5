@@ -385,10 +385,26 @@
     background-color: #df3033;
 }
 
+.guess-you-like-wrap {
+    width: 179px;
+    padding-left: 20px;
+    min-height: 490px;
+    float: left;
+    border-left: 1px solid #eeeeee;
+    background-color: #ffffff;
+}
+
+.guess-you-like {
+    width: 100%;
+    height: 490px;
+    float: left;
+}
+
 .shop-info-wrap {
-    width: 198px;
+    width: 208px;
     float: left;
     border: 1px solid #eeeeee;
+    background-color: #ffffff;
 }
 
 .shop-info-name {
@@ -514,7 +530,7 @@
 .product-recommend-wrap {
     width: 100%;
     float: left;
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .product-recommend {
@@ -531,7 +547,6 @@
 
 .product-detail-aside {
     width: 210px;
-    min-height: 500px;
     float: left;
 }
 
@@ -540,3 +555,4 @@
     min-height: 900px;
     float: right;
 }
+
