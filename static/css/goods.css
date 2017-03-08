@@ -375,8 +375,11 @@
     background-color: #f7f7f7;
     text-align: center;
     border-bottom: 1px solid #eeeeee;
+    overflow: hidden;
 }
-
+.shop-info-name > h3 {
+    padding: 0 10px;
+}
 .shop-info {
     width: 178px;
     padding: 10px;
