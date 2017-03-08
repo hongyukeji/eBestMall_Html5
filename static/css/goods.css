@@ -423,7 +423,7 @@
 }
 
 .shop-info {
-    width: 178px;
+    width: 188px;
     padding: 10px;
     float: left;
     overflow: hidden;
@@ -451,7 +451,9 @@
 }
 
 .shop-info > .item > dl > dd > a {
-    max-width: 125px;
+    width: 140px;
+    height: 25px;
+    line-height: 25px;
     float: left;
     margin-right: 5px;
     overflow: hidden;
@@ -474,8 +476,7 @@
 }
 
 .shop-info > .shop-rate-wrap > .shop-rate {
-    /*width: 100%;*/
-    width: 208px;
+    width: 218px;
     float: left;
     margin-left: -15px;
     min-height: 35px;
