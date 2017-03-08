@@ -22,9 +22,6 @@ composer require hongyukeji/ebestmall-html dev-master
 update
 composer update hongyukeji/ebestmall-html
 
-or update dev
-composer update hongyukeji/ebestmall-html dev-master
-
 ```
 
 项目开发
