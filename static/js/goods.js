@@ -67,8 +67,8 @@ $(document).ready(function () {
         _this.addClass('active').siblings().removeClass('active');
         var previewImg = _this.find('a img').attr('data-img');
         var previewImgBig = _this.find('a img').attr('data-img-big');
-        $('.product-preview').find('.product-preview-main-img-box img').attr({'src':previewImg});
-        $('.product-preview').find('.product-preview-main-img-big-box img').attr({'src':previewImgBig});
+        $('.product-preview').find('.product-preview-main-img-box img').attr({'src': previewImg});
+        $('.product-preview').find('.product-preview-main-img-big-box img').attr({'src': previewImgBig});
     });
 
     tabBtnPrev.on('click', function () {
