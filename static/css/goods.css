@@ -285,7 +285,7 @@
 }
 
 .product-info-choose-amount {
-    height: 45px;
+    height: 43px;
     float: left;
     margin-right: 10px;
     border: 1px solid #ccc;
@@ -298,7 +298,6 @@
     float: left;
     line-height: 45px;
     border: none;
-    border: 0;
     text-align: center;
 }
 
@@ -311,9 +310,9 @@
 
 .product-info-choose-amount-btn > a {
     width: 100%;
-    height: 22px;
-    line-height: 22px;
-    font-size: 15px;
+    height: 21px;
+    line-height: 21px;
+    font-size: 14px;
     color: #666;
     float: left;
     background: #f1f1f1;
@@ -329,13 +328,14 @@
 }
 
 .product-info-choose-btn {
+    margin-right: 10px;
     float: left;
 }
 
 .product-info-choose-btn > a {
-    height: 47px;
-    padding: 0 26px;
-    font: bold 18px/47px "Microsoft YaHei";
+    height: 45px;
+    padding: 0 25px;
+    font: bold 18px/45px "Microsoft YaHei";
     background-color: #df3033;
     color: #ffffff;
     text-align: center;
@@ -344,10 +344,140 @@
     float: left;
 }
 
+.product-info-choose-btn-buy > a {
+    background-color: rgb(260, 128, 0);
+}
+
+.product-info-choose-btn-buy > a:hover {
+    background-color: rgb(250, 118, 10);
+}
+
+.product-info-choose-btn-add > a {
+    background-color: #F22D00;
+
+}
+
+.product-info-choose-btn-add > a:hover {
+    background-color: #df3033;
+}
+
 .shop-info-wrap {
-    width: 200px;
-    min-height: 300px;
+    width: 198px;
     float: left;
+    border: 1px solid #eeeeee;
+}
+
+.shop-info-name {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    background-color: #f7f7f7;
+    text-align: center;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.shop-info {
+    width: 178px;
+    padding: 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.shop-info > .item {
+    width: 100%;
+    float: left;
+    line-height: 25px;
+}
+
+.shop-info > .item > dl > dt {
+    float: left;
+}
+
+.shop-info > .item > dl > dd {
+    margin-left: 5px;
+    float: left;
+    max-width: 125px;
+    height: 25px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #3C3C3C;
+}
+.shop-info > .item > dl > dd > a {
+    max-width: 125px;
+    float: left;
+    margin-right: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.shop-info > .item > dl > dd > a > i {
+    margin-right: 2px;
+    float: left;
+    line-height: 25px;
+}
+
+.shop-info > .shop-rate-wrap {
+    width: 100%;
+    border-top: dotted 1px #E1E1E1;
+    margin-top: 8px;
+    padding-top: 8px;
+    overflow: hidden;
+}
+
+.shop-info > .shop-rate-wrap > .shop-rate {
+    /*width: 100%;*/
+    width: 208px;
+    float: left;
+    margin-left: -15px;
+    min-height: 35px;
+}
+
+.shop-info > .shop-rate-wrap > .shop-rate > dl {
+    width: 68px;
+    line-height: 20px;
+    float: left;
+    text-align: center;
+    border-left: 1px solid #ebebeb;
+}
+
+.shop-info > .shop-rate-wrap > .shop-rate > dl:first-child {
+    border-left: 1px solid #ffffff;
+}
+
+.shop-info > .shop-rate-wrap > .shop-rate > dl > dd > a {
+    color: #00BA97;
+    margin-left: 5px;
+}
+
+.shop-info-footer {
+    width: 100%;
+    float: left;
+    border-top: 1px solid #eeeeee;
+    text-align: center;
+}
+
+.shop-info-footer-btn {
+    width: 100%;
+    padding: 10px 0;
+    float: left;
+    text-align: center;
+}
+
+.shop-info-footer-btn > a {
+    line-height: 30px;
+    padding: 0 10px;
+    margin: 0 3px;
+    font-size: 12px;
+    border: 1px solid #dddddd;
+    background-color: #f8f8f8;
+    display: inline-block;
+}
+
+.shop-info-footer-btn > a > i {
+    color: #e4393c;
+    margin-right: 2px;
 }
 
 .product-recommend-wrap {
