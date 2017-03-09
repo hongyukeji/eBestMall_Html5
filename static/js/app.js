@@ -52,6 +52,10 @@ $(document).ready(function () {
     function scrollOverall() {
         /* 鼠标滚动监听事件 */
         $(window).on('scroll', function () {
+            /* 搜索历史列表隐藏事件 */
+            var searchListBar = $('.header-search-record');
+            searchListBar.css('visibility', 'hidden');
+
             /* 侧边栏-返回顶部按钮 显示/隐藏事件 */
             var sideBarReturnTop = $('#sideBar .returnTop');
             if ($(window).scrollTop() > $(window).height()) {
