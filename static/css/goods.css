@@ -593,7 +593,6 @@
     width: 218px;
     float: left;
     margin-left: -15px;
-    min-height: 35px;
 }
 
 .shop-info > .shop-rate-wrap > .shop-rate > dl {
@@ -650,14 +649,131 @@
 
 .product-recommend {
     width: 100%;
-    min-height: 256px;
     float: left;
+}
+
+.product-recommend-header {
+    position: relative;
+    background-color: #f7f7f7;
+    border: 1px solid #eeeeee;
+}
+
+.product-recommend-header > ul {
+    margin-top: -1px;
+    border-bottom: 1px solid #e4393c;
+}
+
+.product-recommend-header > ul > li {
+    padding: 8px 25px;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.product-recommend-header > ul > li:hover {
+    color: #e4393c;
+}
+
+.product-recommend-header > ul > .active {
+    cursor: default;
+    color: #ffffff;
+    background-color: #e4393c;
+}
+
+.product-recommend-header > ul > .active:hover {
+    color: #ffffff;
+    background-color: #e4393c;
+}
+
+.product-recommend-content {
+    padding: 10px 0;
+}
+
+.product-recommend-content-list {
+}
+
+.product-recommend-content-list > ul {
+    height: 210px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.product-recommend-content-list > ul > li {
+    width: 160px;
+    float: left;
+    margin: 10px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-recommend-content-list > ul > li > a {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.product-recommend-content-list-up {
+    width: 100%;
+    height: 160px;
+    float: left;
+    margin-bottom: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-recommend-content-list-up > img {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.product-recommend-content-list-up > p {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -40px;
+    padding: 2px 7px;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    color: #ffffff;
+    background: rgba(0, 0, 0, .7);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#B2000000, endcolorstr=#B2000000);
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.product-recommend-content-list > ul > li > a:hover .product-recommend-content-list-up > p {
+    bottom: 0;
+}
+
+.product-recommend-content-list-dn {
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+
+.product-recommend-content-list-dn > strong {
+    width: 100%;
+    float: left;
+    height: 18px;
+    line-height: 18px;
+    color: #e4393c;
+    font-size: 14px;
+    font-family: Verdana;
+    font-weight: bold;
+    text-align: center;
+
 }
 
 .product-detail-wrap {
     width: 100%;
     float: left;
-    margin-top: 10px;
 }
 
 .product-detail-aside {
@@ -671,3 +787,64 @@
     float: right;
 }
 
+.product-detail-header {
+    width: 988px;
+    float: left;
+    position: relative;
+    background-color: #f7f7f7;
+    border: 1px solid #eeeeee;
+}
+
+.product-detail-header > ul {
+    margin-top: -1px;
+    border-bottom: 1px solid #e4393c;
+}
+
+.product-detail-header > ul > li {
+    padding: 8px 25px;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.product-detail-header > ul > li:hover {
+    color: #e4393c;
+}
+
+.product-detail-header > ul > .active {
+    cursor: default;
+    color: #ffffff;
+    background-color: #e4393c;
+}
+
+.product-detail-header > ul > .active:hover {
+    color: #ffffff;
+    background-color: #e4393c;
+}
+
+.product-recommend-header-btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.product-recommend-header-btn > a {
+    height: 27px;
+    line-height: 27px;
+    padding: 0 15px;
+    margin: 5px;
+    background-color: #df3033;
+    color: #ffffff;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.product-detail-content {
+    width: 100%;
+    float: left;
+    min-height: 800px;
+}
