@@ -139,10 +139,10 @@
     border: 1px solid #f7f7f7;
     box-shadow: 2px 0 5px rgba(0, 0, 0, .3);
     -webkit-transition: top .25s ease;
-    -moz-transition: top .25s ease ;
-    -ms-transition: top .25s ease ;
-    -o-transition: top .25s ease ;
-    transition: top .25s ease ;
+    -moz-transition: top .25s ease;
+    -ms-transition: top .25s ease;
+    -o-transition: top .25s ease;
+    transition: top .25s ease;
     z-index: 3;
     display: none;
 }
@@ -397,10 +397,10 @@
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transition: all .3s ease;
-    -moz-transition: all .3s ease ;
-    -ms-transition: all .3s ease ;
-    -o-transition: all .3s ease ;
-    transition: all .3s ease ;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+    transition: all .3s ease;
     font-size: 20px;
 }
 
