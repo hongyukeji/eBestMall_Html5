@@ -4,7 +4,6 @@ $(document).ready(function () {
     var magnifierImgMagnifier = $('.product-preview-main-img-box-magnifier');   //放大镜容器
     var magnifierBigImgBox = $('.product-preview-main-img-big-box');   //大图片容器
     var magnifierBigImg = $('.product-preview-main-img-big-box img');   //大图片
-
     magnifierImgBox.on('mouseover', function () {
         magnifierImgMagnifier.css({"display": "block"});
         magnifierBigImgBox.css({"display": "block"});
@@ -46,16 +45,13 @@ $(document).ready(function () {
     var productPreviewWrap = $('.product-preview');
     var tabBtnPrev = $('.product-preview-thumbnail-wrap .prev');
     var tabBtnNext = $('.product-preview-thumbnail-wrap .next');
-
     var tabWrap = $('.product-preview-thumbnail-list ul');
     var tabPage = 1;
     var tabPageNum = 5;
     var tabNum = tabWrap.find("li").length;
     var tabWidth = tabWrap.find("li").outerWidth(true) * tabPageNum;
     var tabPageCount = Math.ceil(tabNum / tabPageNum);
-
     tabWrap.css("width", (tabNum * tabWrap.find("li").outerWidth(true)));
-
     $('.product-preview-thumbnail-list ul li').on('mouseover', function () {
         var _this = $(this);
         _this.addClass('active').siblings().removeClass('active');
@@ -64,7 +60,6 @@ $(document).ready(function () {
         productPreviewWrap.find('.product-preview-main-img-box img').attr({'src': previewImg});
         productPreviewWrap.find('.product-preview-main-img-big-box img').attr({'src': previewImgBig});
     });
-
     tabBtnPrev.on('click', function () {
         if (tabPage == 1) {
             var tabPageEnd = tabWidth * tabPageCount - tabWidth;
