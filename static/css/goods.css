@@ -845,5 +845,107 @@
 .product-detail-content {
     width: 100%;
     float: left;
-    min-height: 800px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.product-detail-content-parameter {
+    padding: 0 10px 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.product-detail-content-parameter-title {
+    padding: 20px 42px;
+    height: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.product-detail-content-parameter-title > span {
+    height: 100%;
+    float: left;
+    margin-right: 5px;
+}
+
+.product-detail-content-parameter-title > .parameter-brand-name {
+    max-width: 768px;
+    height: 100%;
+    float: left;
+    color: #5e69ad;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.product-detail-content-parameter-title > .parameter-brand-name:hover {
+    color: #e4393c;
+}
+
+.product-detail-content-parameter-title > .parameter-btn-follow {
+    margin-left: 15px;
+    float: left;
+    line-height: 28px;
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    color: #666666;
+    padding: 0 10px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.product-detail-content-parameter-title > .parameter-btn-follow:hover {
+    color: #666666;
+}
+
+.product-detail-content-parameter-title > .parameter-btn-follow > i {
+    color: #e4393c;
+    margin-right: 3px;
+}
+
+.product-detail-content-parameter-list {
+    padding: 0 0 15px 0;
+    overflow: hidden;
+}
+
+.product-detail-content-parameter-list > ul > li {
+    width: 200px;
+    padding-left: 42px;
+    float: left;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.product-detail-content-parameter-list > ul > li > a {
+    color: #5e69ad;
+}
+
+.product-detail-content-parameter-list > ul > li > a:hover {
+    color: #e4393c;
+}
+
+.more-parameter {
+    padding-right: 20px;
+    margin-top: -5px;
+    text-align: right;
+}
+
+.more-parameter > a {
+    color: #005aa0;
+}
+
+.more-parameter > a:hover {
+    color: #e4393c;
+}
+
+.product-detail-content-main {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 }
