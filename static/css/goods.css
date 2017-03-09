@@ -388,7 +388,6 @@
 .guess-you-like-wrap {
     width: 179px;
     padding-left: 20px;
-    min-height: 490px;
     float: left;
     border-left: 1px solid #eeeeee;
     background-color: #ffffff;
@@ -396,8 +395,111 @@
 
 .guess-you-like {
     width: 100%;
-    height: 490px;
     float: left;
+}
+
+.guess-you-like-header {
+    position: relative;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+
+.guess-you-like-header > i {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 0;
+    border-top: 1px dotted #c9c9c9;
+    text-decoration: none;
+}
+
+.guess-you-like-header > span {
+    position: relative;
+    padding: 0 15px;
+    color: #999;
+    background-color: #ffffff;
+}
+
+.guess-you-like-content {
+    position: relative;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+}
+
+.guess-you-like-content > ul {
+    width: 100%;
+    height: 465px;
+    float: left;
+    overflow: hidden;
+}
+
+.guess-you-like-content > ul > li {
+    width: 100%;
+    height: 145px;
+    float: left;
+    margin-top: 10px;
+}
+
+.guess-you-like-content-up {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.guess-you-like-content-up > img {
+    width: 120px;
+    height: 120px;
+    float: left;
+}
+
+.guess-you-like-content-up > p {
+    width: 100%;
+    height: 18px;
+    line-height: 18px;
+    color: #404040;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, .8);
+    filter: progid:DXImageTransform.Microsoft.gradient(startcolorstr=#9FFFFFFF, endcolorstr=#9FFFFFFF);
+}
+
+.guess-you-like-content-dn {
+    width: 159px;
+    padding: 0 10px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+}
+
+.guess-you-like-content-dn > p {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.guess-you-like-content > ul > li > a {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.guess-you-like-content-footer {
+    position: relative;
+    width: 100%;
+    height: 30px;
+    float: left;
+    overflow: hidden;
+    text-align: center;
+    margin: 10px auto;
 }
 
 .shop-info-wrap {
