@@ -520,6 +520,7 @@
     float: left;
     border: 1px solid #eeeeee;
     background-color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .shop-info-name {
@@ -753,6 +754,8 @@
 
 .product-recommend-content-list-dn {
     width: 100%;
+    height: 18px;
+    line-height: 18px;
     float: left;
     overflow: hidden;
     text-align: center;
@@ -955,6 +958,7 @@
     float: left;
     border: 1px solid #eeeeee;
     background-color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .product-detail-aside-item-header {
@@ -977,10 +981,6 @@
     padding: 10px;
     float: left;
     overflow: hidden;
-}
-
-.shop-info-search {
-    margin: 10px 0;
 }
 
 .shop-info-search-content p {
@@ -1028,4 +1028,84 @@
 
 .shop-info-search-content .sp-form-item3 > span {
     display: inline-block;
+}
+
+.product-detail-aside-tab-header {
+    width: 100%;
+    float: left;
+    position: relative;
+    background-color: #f7f7f7;
+}
+
+.product-detail-aside-tab-header > ul {
+    width: 100%;
+    float: left;
+    margin-top: -1px;
+    border-bottom: 1px solid #e4393c;
+}
+
+.product-detail-aside-tab-header > ul > li {
+    padding: 8px 23px;
+    font-size: 14px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.product-detail-aside-tab-header > ul > li:hover {
+    color: #e4393c;
+}
+
+.product-detail-aside-tab-header > ul > .active {
+    cursor: default;
+    color: #ffffff;
+    background-color: #e4393c;
+}
+
+.product-detail-aside-tab-header > ul > .active:hover {
+    color: #ffffff;
+    background-color: #e4393c;
+}
+
+.product-detail-aside-host-content > ul {
+    height: 1218px;
+}
+
+.product-detail-aside-host-content > ul > li {
+    width: 188px;
+    margin: 10px 0;
+}
+
+.product-detail-aside-host-content .product-recommend-content-list-up {
+    width: 160px;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.product-detail-aside-host-content .product-recommend-content-list-dn > strong {
+    width: auto;
+    float: right;
+}
+
+.product-detail-aside-host-content .product-recommend-content-list-dn > span {
+    color: #999999;
+    float: left;
+}
+
+.product-detail-aside-host-content .product-recommend-content-list-dn > span > i {
+    width: 18px;
+    height: 18px;
+    color: #ffffff;
+    display: inline-block;
+    background-color: #E4393C;
+    border-radius: 10px;
+    margin-right: 3px;
+}
+
+.shop-new-product > ul {
+    height: 1218px;
+}
+
+.shop-new-product > ul > li {
+    margin: 10px 14px;
 }
