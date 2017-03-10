@@ -1012,7 +1012,7 @@
     cursor: pointer;
     background-color: #ffffff;
     border: 1px solid #cccccc;
-    font: 13.3333px Arial;
+    font: 12px Arial;
 }
 
 .shop-info-search-content .sp-form-item3 > span > input[type="submit"]:hover {
