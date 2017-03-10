@@ -528,7 +528,7 @@
     line-height: 35px;
     float: left;
     background-color: #f7f7f7;
-    text-align: center;
+    text-align: left;
     border-bottom: 1px solid #eeeeee;
     overflow: hidden;
 }
@@ -948,4 +948,84 @@
     width: 100%;
     position: relative;
     overflow: hidden;
+}
+
+.product-detail-aside-item-wrap {
+    width: 208px;
+    float: left;
+    border: 1px solid #eeeeee;
+    background-color: #ffffff;
+}
+
+.product-detail-aside-item-header {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    background-color: #f7f7f7;
+    text-align: left;
+    border-bottom: 1px solid #eeeeee;
+    overflow: hidden;
+}
+
+.product-detail-aside-item-header > h3 {
+    padding: 0 10px;
+}
+
+.product-detail-aside-item-content {
+    width: 188px;
+    padding: 10px;
+    float: left;
+    overflow: hidden;
+}
+
+.shop-info-search {
+    margin: 10px 0;
+}
+
+.shop-info-search-content p {
+    overflow: hidden;
+    padding: 5px;
+}
+
+.shop-info-search-content p > span > input[type="text"] {
+    width: 104px;
+    border: 1px solid #cccccc;
+    padding: 2px;
+    font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+    color: #666666;
+}
+
+.shop-info-search-content .sp-form-item1 > span > input[type="text"] {
+    width: 104px;
+}
+
+.shop-info-search-content .sp-form-item2 > span > input[type="text"] {
+    width: 39px;
+}
+
+.shop-info-search-content .sp-form-item3 > span > input[type="submit"] {
+    margin-left: -1px;
+    color: #666666;
+    padding: 3px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    font: 13.3333px Arial;
+}
+
+.shop-info-search-content .sp-form-item3 > span > input[type="submit"]:hover {
+    background-color: #f8f8f8;
+}
+
+.shop-info-search-content .sp-form-item3 > label {
+    width: 48px;
+    text-align: right;
+    display: inline-block;
+    cursor: default;
+}
+
+.shop-info-search-content .sp-form-item3 > span {
+    display: inline-block;
 }
