@@ -12,14 +12,16 @@ eBestMall是国内电子商务系统及服务解决方案新创品牌。为传�
 Composer Install
 -------------------
 ```
-install
+Install
 composer require hongyukeji/ebestmall-html
 
-or install
-
+or Install
 composer require hongyukeji/ebestmall-html dev-master
 
-update
+Install new project
+composer create-project hongyukeji/ebestmall ebestmall dev-master
+
+Update
 composer update hongyukeji/ebestmall-html
 
 ```
