@@ -7,6 +7,7 @@
 .product-intro {
     width: 100%;
     float: left;
+    margin-bottom: 20px;
 }
 
 .product-preview {
@@ -105,6 +106,14 @@
 
 .product-preview-thumbnail-wrap > .next {
     right: 0;
+}
+
+.product-preview-info {
+    width: 100%;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    background-color: #f5f5f5;
 }
 
 .product-preview-thumbnail-list > ul {
@@ -645,7 +654,6 @@
 .product-recommend-wrap {
     width: 100%;
     float: left;
-    margin-top: 10px;
 }
 
 .product-recommend {
