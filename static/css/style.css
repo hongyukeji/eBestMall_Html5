@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?xc6v8u');
-  src:  url('fonts/icomoon.eot?xc6v8u#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?xc6v8u') format('truetype'),
-    url('fonts/icomoon.woff?xc6v8u') format('woff'),
-    url('fonts/icomoon.svg?xc6v8u#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4fjg2v');
+  src:  url('fonts/icomoon.eot?4fjg2v#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4fjg2v') format('truetype'),
+    url('fonts/icomoon.woff?4fjg2v') format('woff'),
+    url('fonts/icomoon.svg?4fjg2v#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -294,7 +294,7 @@
 .icon-search:before {
   content: "\e986";
 }
-.icon-heart3:before {
+.icon-goods-heart:before {
   content: "\e9da";
 }
 .icon-move-up:before {
@@ -330,6 +330,9 @@
 .icon-weixin:before {
   content: "\f1d7";
 }
+.icon-share-alt:before {
+  content: "\f1e0";
+}
 .icon-hourglass-1:before {
   content: "\f251";
 }
@@ -341,6 +344,9 @@
 }
 .icon-id-card-o:before {
   content: "\f2c3";
+}
+.icon-qq:before {
+  content: "\f1d6";
 }
 .icon-qq:before {
   content: "\f1d6";

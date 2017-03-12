@@ -113,7 +113,30 @@
     float: left;
     height: 20px;
     line-height: 20px;
-    background-color: #f5f5f5;
+    font-family: tahoma, arial, 'Microsoft YaHei', 'Hiragino Sans GB', u5b8bu4f53, sans-serif;
+}
+
+.product-preview-info a > i {
+    color: #E3393C;
+    font-size: 13px;
+    vertical-align: -1px;
+    margin-right: 3px;
+}
+
+.product-preview-info-left {
+    float: left;
+}
+
+.product-preview-info-left > a {
+    margin-right: 5px;
+}
+
+.product-preview-info-right {
+    float: right;
+}
+
+.product-preview-info-right > a {
+    color: #999999;
 }
 
 .product-preview-thumbnail-list > ul {
