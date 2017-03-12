@@ -467,7 +467,7 @@
     width: 100%;
     height: 465px;
     float: left;
-    overflow: hidden;
+    position: relative;
 }
 
 .guess-you-like-content > ul > li {

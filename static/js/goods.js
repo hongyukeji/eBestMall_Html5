@@ -43,7 +43,7 @@ $(document).ready(function () {
         });
     }
 
-    /* Product preview tab */
+    /* Product preview Tab */
     tabProductPreview();
     function tabProductPreview() {
         var productPreviewWrap = $('.product-preview');
@@ -85,7 +85,7 @@ $(document).ready(function () {
         });
     }
 
-    /* Tab Transverse Start*/
+    /* Transverse Tab */
     tabGoods('.product-recommend-header li', '.product-recommend-content-list', '.product-recommend-content');
     tabGoods('.product-detail-aside-tab-header li', '.product-detail-aside-item-content ul', '.product-detail-aside-item-content');
     function tabGoods(tabBtnName, tabContentName, tabContentWrapName) {
@@ -101,7 +101,7 @@ $(document).ready(function () {
         })
     }
 
-    /* Tab Product Detail */
+    /* Product detail Tab */
     tabProductDetail('.product-detail-header li', '.product-detail-content', '.product-detail-content-wrap');
     function tabProductDetail(tabBtnName, tabContentName, tabContentWrapName) {
         var tabBtn = $(tabBtnName);
@@ -119,7 +119,7 @@ $(document).ready(function () {
         })
     }
 
-    /* Product Choose Attr */
+    /* Product choose attr */
     productChooseAttr();
     function productChooseAttr() {
         var btnChooseAttr = $('.product-info-choose-attr .dd a');
@@ -131,7 +131,7 @@ $(document).ready(function () {
         })
     }
 
-    /* Product Choose Amount */
+    /* Product choose amount */
     productChooseAmount();
     function productChooseAmount() {
         var productNumberText = $('.product-info-choose-amount .goods-number');
@@ -157,6 +157,45 @@ $(document).ready(function () {
             var productNumber = productNumberText.val();
             if (parseInt(productNumber) > 1) {
                 productNumberText.val(parseInt(productNumber) - 1);
+            }
+        });
+    }
+
+    /* Guess you like Tab */
+    tabPublic('.guess-you-like-content ul', '.guess-you-like-content-footer .prev', '.guess-you-like-content-footer .next', 'height');
+    function tabPublic(tabWraps, tabBtnPrevs, tabBtnNexts, tabUnitLengths) {
+        var tabWrap = $(tabWraps);
+        var tabBtnPrev = $(tabBtnPrevs);
+        var tabBtnNext = $(tabBtnNexts);
+        var tabUnitLength = tabUnitLengths;
+        var tabPage = 1;
+        var tabPageNum = 3;
+        var tabNum = tabWrap.find("li").length;
+        var tabLength = null;
+        if (tabUnitLength == 'width') {
+            tabLength = tabWrap.find("li").outerWidth(true) * tabPageNum;
+        } else if (tabUnitLength == 'height') {
+            tabLength = tabWrap.find("li").outerHeight(true) * tabPageNum;
+        }
+
+        var tabPageCount = Math.ceil(tabNum / tabPageNum);
+        tabBtnPrev.on('click', function () {
+            if (tabPage == 1) {
+                var tabPageEnd = tabLength * tabPageCount - tabLength;
+                tabWrap.animate({top: '-=' + tabPageEnd}, 'slow');
+                tabPage = tabPageCount;
+            } else {
+                tabWrap.animate({top: '+=' + tabLength}, 'slow');
+                tabPage--;
+            }
+        });
+        tabBtnNext.on('click', function () {
+            if (tabPage == tabPageCount) {
+                tabWrap.animate({top: '0'}, 'slow');
+                tabPage = 1;
+            } else {
+                tabWrap.animate({top: '-=' + tabLength}, 'slow');
+                tabPage++;
             }
         });
     }
