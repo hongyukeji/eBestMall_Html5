@@ -80,4 +80,28 @@ $(document).ready(function () {
         }
     });
     /* Product preview tab End*/
+
+    /* Tab Transverse Start*/
+    tabGoods('.product-recommend-header li','.product-recommend-content-list','.product-recommend-content');
+    tabGoods('.product-detail-aside-tab-header li','.product-detail-aside-item-content ul','.product-detail-aside-item-content');
+    tabGoods('.product-detail-header li','.product-detail-content','.product-detail-content-wrap');
+
+    function tabGoods(tabBtnName, tabContentName,tabContentWrapName) {
+        var tabBtn = $(tabBtnName);
+        var tabContent = $(tabContentName);
+        var tabContentWrap = $(tabContentWrapName);
+        tabBtn.on('click', function () {
+            var _this = $(this);
+            if (!_this.hasClass("active")){
+                _this.addClass('active').siblings('li').removeClass("active");
+                _this.parent().parent().siblings(tabContentWrap).find(tabContent).eq(_this.index()).css({"display":"block"}).siblings().css({"display":"none"});
+            }
+        })
+    }
+    /* Tab Transverse End*/
+});
+
+
+$(document).ready(function () {
+
 });

@@ -9,7 +9,6 @@ $(document).ready(function () {
     scrollOverall();    // 全局-滚动-事件
     sideBarOverall();    // 全局-侧边栏-事件
     searchOverall();    // 全局-input搜索框-事件
-    contentOverall();    // 全局-Content-事件
 
     /* 全局-页面鼠标点击-函数 */
     function clickEventOverall() {
@@ -242,15 +241,6 @@ $(document).ready(function () {
             var itemBg = "#C40000";
             thisAll.css({"background-color": ""}).find('.item-body').animate({"right": itemBodyClose}, "fast");
             thisNow.css({"background-color": itemBg}).find('.item-body').animate({"right": itemBodyOpen}, "fast");
-        }
-    }
-
-    /* 全局-Content-函数 */
-    function contentOverall() {
-        var content = $('.content');
-        var contentHeight = $(document).outerHeight(true) - ($('#header').outerHeight(true) + $('#footer').outerHeight(true));
-        if (content.outerHeight(true) < contentHeight) {
-            content.css({'min-height':contentHeight});
         }
     }
 });
