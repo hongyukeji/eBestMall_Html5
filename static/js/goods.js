@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    /* Magnifier Start*/
+    /* Magnifier */
     magnifierProductPreview();
     function magnifierProductPreview() {
         var magnifierImgBox = $('.product-preview-main-img-box');   //中图片容器
@@ -43,7 +43,7 @@ $(document).ready(function () {
         });
     }
 
-    /* Product preview tab Start*/
+    /* Product preview tab */
     tabProductPreview();
     function tabProductPreview() {
         var productPreviewWrap = $('.product-preview');
@@ -101,7 +101,7 @@ $(document).ready(function () {
         })
     }
 
-    /* Tab Product Detail Start*/
+    /* Tab Product Detail */
     tabProductDetail('.product-detail-header li', '.product-detail-content', '.product-detail-content-wrap');
     function tabProductDetail(tabBtnName, tabContentName, tabContentWrapName) {
         var tabBtn = $(tabBtnName);
@@ -117,6 +117,49 @@ $(document).ready(function () {
                 current.prevAll().css({"display": "none"});
             }
         })
+    }
+
+    /* Product Choose Attr */
+    productChooseAttr();
+    function productChooseAttr() {
+        var btnChooseAttr = $('.product-info-choose-attr .dd a');
+        btnChooseAttr.on('click', function () {
+            var _this = $(this);
+            if (!_this.hasClass("disabled")) {
+                _this.addClass('active').siblings().removeClass('active');
+            }
+        })
+    }
+
+
+    /* Product Choose Amount */
+    productChooseAmount();
+    function productChooseAmount() {
+        var productNumberText = $('.product-info-choose-amount .goods-number');
+        var productBtnAdd = $('.product-info-choose-amount .btn-add');
+        var productBtnReduce = $('.product-info-choose-amount .btn-reduce');
+
+        productNumberText.on('change', function () {
+            var productNumber = productNumberText.val();
+            if (parseInt(productNumber) <= 0) {
+                productNumberText.val(1);
+            } else if (parseInt(productNumber) > 9999) {
+                productNumberText.val(9999);
+            }
+        });
+
+        productBtnAdd.on('click', function () {
+            var productNumber = productNumberText.val();
+            if (parseInt(productNumber) < 9999) {
+                productNumberText.val(parseInt(productNumber) + 1);
+            }
+        });
+        productBtnReduce.on('click', function () {
+            var productNumber = productNumberText.val();
+            if (parseInt(productNumber) > 1) {
+                productNumberText.val(parseInt(productNumber) - 1);
+            }
+        });
     }
 
 });
