@@ -894,11 +894,6 @@
     position: relative;
     overflow: hidden;
     margin-top: 10px;
-    display: none;
-}
-
-.product-detail-content-wrap > .product-detail-content:first-child {
-    display: block;
 }
 
 .product-detail-content-parameter {
