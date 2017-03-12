@@ -131,7 +131,6 @@ $(document).ready(function () {
         })
     }
 
-
     /* Product Choose Amount */
     productChooseAmount();
     function productChooseAmount() {
