@@ -12,9 +12,7 @@ $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
 $this->registerCssFile($baseUrl .'/css/index.css', ['depends' => EbmAsset::className()]);
 $this->registerJsFile($baseUrl .'/js/index.js',['depends' => EbmAsset::className()]);
 
-$this->title = 'eBestMall - B2B2C商城系统';
-$this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
-$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
+$this->title = Yii::$app->params['shopTitle'];
 
 //$this->params['breadcrumbs'][] = ['label' => Yii::t('common','Article'),'url' => ['article/index']];
 //$this->params['breadcrumbs'][] = $this->title;
@@ -854,7 +852,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -870,7 +868,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -886,7 +884,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -902,7 +900,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -918,7 +916,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -935,7 +933,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -951,7 +949,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -967,7 +965,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -983,7 +981,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -999,7 +997,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1016,7 +1014,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1032,7 +1030,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1048,7 +1046,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1064,7 +1062,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1080,7 +1078,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1097,7 +1095,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1113,7 +1111,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1129,7 +1127,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1145,7 +1143,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1161,7 +1159,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1178,7 +1176,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>值得买</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1194,7 +1192,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>超值</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1210,7 +1208,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1226,7 +1224,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
@@ -1242,7 +1240,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
                                         <b></b>
                                         <span>推荐</span>
                                     </div>
-                                    <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
+                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
                                         <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
                                     </a>
                                     <span></span>
