@@ -897,6 +897,19 @@
     margin-top: 10px;
 }
 
+.product-detail-content-title {
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.product-detail-content-title > h3 {
+    font: 700 14px "microsoft yahei";
+}
+
 .product-detail-content-parameter {
     padding: 0 10px 10px;
     margin-bottom: 10px;
@@ -1057,7 +1070,6 @@
 
 .product-detail-guarantee {
     margin-top: 10px;
-    margin-bottom: 15px;
 }
 
 .product-detail-guarantee-title {
@@ -1121,6 +1133,90 @@
 
 .product-detail-guarantee-explain > strong {
     color: #e4393c;
+}
+
+.product-detail-comment-info {
+    padding: 25px 0;
+    overflow: hidden;
+}
+
+.product-detail-comment-info .comment-percent {
+    width: 90px;
+    padding: 15px 0 0 40px;
+    float: left;
+}
+
+.product-detail-comment-info .comment-percent > strong {
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+}
+
+.product-detail-comment-info .comment-percent .percent-con {
+    line-height: 110%;
+    font-size: 45px;
+    color: #E4393C;
+    font-family: arial;
+}
+
+.product-detail-comment-info .comment-percent .percent-con > span {
+    font-size: 23px;
+}
+
+.product-detail-comment-info .percent-info {
+    margin-left: 90px;
+}
+
+.product-detail-comment-info .percent-info .tag-list {
+    padding-left: 20px;
+    height: auto;
+    overflow: visible;
+}
+
+.product-detail-comment-info .percent-info .tag-list > span {
+    display: inline-block;
+    line-height: 20px;
+    padding: 0 9px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.product-detail-comment-list {
+    min-height: 93px;
+}
+
+.product-detail-comment-list-tab-main {
+    position: relative;
+    border: 1px solid #f5f5f5;
+    background-color: #fafafa;
+    padding-left: 10px;
+    display: block;
+}
+
+.product-detail-comment-list-tab-main > ul > li {
+    position: relative;
+    display: inline-block;
+    font-family: "microsoft yahei";
+    cursor: pointer;
+    padding: 6px 10px;
+}
+
+.product-detail-comment-list-tab-main > ul > .active {
+    background: #fafafa;
+    color: #e4393c;
+    cursor: default;
+}
+
+.product-detail-comment-list-tab-main > ul > .active > a {
+    background: #fafafa;
+    color: #e4393c;
+}
+
+.product-detail-comment-list-tab-con {
+    padding: 10px 0;
 }
 
 .product-detail-aside-item-wrap {
