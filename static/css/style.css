@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?4fjg2v');
-  src:  url('fonts/icomoon.eot?4fjg2v#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?4fjg2v') format('truetype'),
-    url('fonts/icomoon.woff?4fjg2v') format('woff'),
-    url('fonts/icomoon.svg?4fjg2v#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?teacvw');
+  src:  url('fonts/icomoon.eot?teacvw#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?teacvw') format('truetype'),
+    url('fonts/icomoon.woff?teacvw') format('woff'),
+    url('fonts/icomoon.svg?teacvw#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -315,6 +315,9 @@
 .icon-chevron-down2:before {
   content: "\f078";
 }
+.icon-wrench2:before {
+  content: "\f0ad";
+}
 .icon-star-half-empty:before {
   content: "\f123";
 }
@@ -323,6 +326,9 @@
 }
 .icon-star-half-o:before {
   content: "\f123";
+}
+.icon-shield:before {
+  content: "\f132";
 }
 .icon-wechat:before {
   content: "\f1d7";
@@ -344,9 +350,6 @@
 }
 .icon-id-card-o:before {
   content: "\f2c3";
-}
-.icon-qq:before {
-  content: "\f1d6";
 }
 .icon-qq:before {
   content: "\f1d6";

@@ -831,6 +831,7 @@
     position: relative;
     background-color: #f7f7f7;
     border: 1px solid #eeeeee;
+    border-bottom: none;
 }
 
 .product-detail-header > ul {
@@ -1052,6 +1053,74 @@
 .product-detail-packing > p {
     margin-left: 155px;
     padding-right: 50px;
+}
+
+.product-detail-guarantee {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+.product-detail-guarantee-title {
+    position: relative;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.product-detail-guarantee-title > h3 {
+    font: 700 14px "microsoft yahei";
+}
+
+.product-detail-guarantee-content {
+    padding: 10px;
+    overflow: visible;
+}
+
+.product-detail-guarantee-serve-agree-bd {
+    padding: 20px 20px 20px 62px;
+}
+
+.product-detail-guarantee-serve-agree-bd > dl > dt {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    margin-left: -42px;
+    font-size: 16px;
+    color: #e4393c;
+    font-family: "microsoft yahei";
+}
+
+.product-detail-guarantee-serve-agree-bd > dl > dd {
+    display: block;
+    padding: 10px 0 30px;
+    line-height: 18px;
+}
+
+.product-detail-guarantee-serve-agree-bd > dl > dt > strong {
+    display: inline-block;
+    padding: 8px 0 3px;
+}
+
+.product-detail-guarantee-serve-agree-bd > dl > dt > i {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    margin-right: 10px;
+    vertical-align: bottom;
+    color: #ffffff;
+    background-color: #E50100;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 100%;
+}
+
+.product-detail-guarantee-explain {
+}
+
+.product-detail-guarantee-explain > strong {
+    color: #e4393c;
 }
 
 .product-detail-aside-item-wrap {
