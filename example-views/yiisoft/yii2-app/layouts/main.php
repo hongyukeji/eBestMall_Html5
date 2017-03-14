@@ -25,6 +25,9 @@ EbmAsset::register($this);  // 在本视图注册此资源包
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;   // 获取发布后资源包对应的临时目录
 //$this->registerCssFile($baseUrl .'/css/demo.css', ['depends' => EbmAsset::className()]); // 视图引用单独文件示例
 
+$this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
+$this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
+
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -246,7 +249,7 @@ $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;   // 获取发�
                                             <li class="item">
                                                 <div class="goods-img">
                                                     <a href="javascript:;" target="_blank">
-                                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_small_001.jpg" width="50" height="50" alt="">
+                                                        <img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-goods_img_001_small.jpg" width="50" height="50" alt="">
                                                     </a>
                                                 </div>
                                                 <div class="goods-name">
@@ -409,7 +412,7 @@ $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;   // 获取发�
             <li class="item">
                 <div class="item-btn">
                     <!--登陆后显示用户头像-->
-                    <!--<a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/getAvatar.jpg" /></a>-->
+                    <!--<a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/user_default_avatar.jpg" /></a>-->
                     <a href="javascript:;"><i class="icon-user-o"></i></a>
                     <div class="item-title"><a href="javascript:;">会员中心<span>◆</span></a></div>
                 </div>
