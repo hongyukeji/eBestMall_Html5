@@ -1219,6 +1219,177 @@
     padding: 10px 0;
 }
 
+.product-detail-comment-list-tab-con .comment-item {
+    zoom: 1;
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product-detail-comment-list-tab-con .user-column {
+    width: 140px;
+    float: left;
+}
+
+.product-detail-comment-list-tab-con .user-info {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.product-detail-comment-list-tab-con .user-info > img {
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.product-detail-comment-list-tab-con .user-level {
+    padding-top: 3px;
+}
+
+.product-detail-comment-list-tab-con .user-level > span {
+    margin-right: 8px;
+}
+
+.product-detail-comment-list-tab-con .comment-column {
+    margin-left: 150px;
+}
+
+.product-detail-comment-list-tab-con .comment-star {
+    height: 15px;
+    line-height: 15px;
+    overflow: hidden;
+}
+
+.product-detail-comment-list-tab-con .comment-star > i {
+    font-size: 15px;
+    color: #E4393C;
+}
+
+.product-detail-comment-list-tab-con .comment-star > .item {
+    color: #C0C0C0;
+}
+
+.product-detail-comment-list-tab-con .comment-con {
+    font-size: 14px;
+    padding: 10px 0;
+    line-height: 180%;
+    color: #333;
+}
+
+.product-detail-comment-list-tab-con .pic-list {
+    padding-bottom: 15px;
+}
+
+.product-detail-comment-list-tab-con .pic-list > a > img {
+    border: 1px solid #e2e2e2;
+    padding: 1px;
+    margin-right: 6px;
+}
+
+.product-detail-comment-list-tab-con .tag-list {
+    padding-bottom: 12px;
+    height: 22px;
+    overflow: hidden;
+}
+
+.product-detail-comment-list-tab-con .tag-list > span {
+    display: inline-block;
+    line-height: 20px;
+    padding: 0 9px;
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+.product-detail-comment-list-tab-con .comment-message {
+    height: 18px;
+    overflow: hidden;
+}
+
+.product-detail-comment-list-tab-con .comment-message .order-info {
+    float: left;
+    color: #999;
+}
+
+.product-detail-comment-list-tab-con .comment-message .order-info > span {
+    margin-right: 20px;
+}
+
+.product-detail-comment-list-tab-con .comment-op {
+    float: right;
+}
+
+.product-detail-comment-list-tab-con .comment-op > a {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+.product-detail-comment-list-tab-con .comment-op > a:hover {
+    color: #e4393c;
+}
+
+.product-detail-comment-list-tab-con .comment-op > a > i {
+    vertical-align: -1px;
+    color: #C0C0C0;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.product-detail-comment-list-tab-con .comment-op > a:hover i {
+    color: #e4393c;
+}
+
+.product-detail-comment-list-tab-con .append-comment {
+    border-top: 1px solid #f0f0f0;
+    margin-top: 12px;
+    padding-top: 12px;
+}
+
+.product-detail-comment-list-tab-con .append-comment .append-time {
+    color: #999;
+}
+
+.product-detail-comment-list-tab-con .append-comment > .comment-con {
+    font-size: 14px;
+    padding: 5px 0 10px 0;
+    line-height: 180%;
+    color: #333;
+}
+
+.com-table-footer {
+    text-align: right;
+    /*padding-top: 15px;*/
+}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 20px 0;
+    border-radius: 4px;
+}
+
+.pagination > li {
+    display: inline;
+}
+
+.pagination > li > a {
+    position: relative;
+    float: left;
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 4px 1.2em;
+    margin-left: 3px;
+    border-radius: 2px;
+}
+
+.pagination > li > a:hover {
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .1);
+    color: #e33b3d;
+}
+
 .product-detail-aside-item-wrap {
     width: 208px;
     float: left;

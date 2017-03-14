@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?teacvw');
-  src:  url('fonts/icomoon.eot?teacvw#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?teacvw') format('truetype'),
-    url('fonts/icomoon.woff?teacvw') format('woff'),
-    url('fonts/icomoon.svg?teacvw#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?tk6yzc');
+  src:  url('fonts/icomoon.eot?tk6yzc#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?tk6yzc') format('truetype'),
+    url('fonts/icomoon.woff?tk6yzc') format('woff'),
+    url('fonts/icomoon.svg?tk6yzc#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -315,6 +315,12 @@
 .icon-chevron-down2:before {
   content: "\f078";
 }
+.icon-thumbs-o-up:before {
+  content: "\f087";
+}
+.icon-thumbs-o-down:before {
+  content: "\f088";
+}
 .icon-wrench2:before {
   content: "\f0ad";
 }
@@ -344,6 +350,9 @@
 }
 .icon-hourglass-start:before {
   content: "\f251";
+}
+.icon-commenting-o:before {
+  content: "\f27b";
 }
 .icon-drivers-license-o:before {
   content: "\f2c3";
