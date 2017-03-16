@@ -1803,6 +1803,7 @@ em, i {
 #footer {
     width: 100%;
     float: left;
+    background-color: #313030;
 }
 
 #footer .footer-service {
@@ -1861,7 +1862,7 @@ em, i {
 }
 
 #footer .footer-info > div {
-    border-top: 1px solid #E5E5E5;
+    /*border-top: 1px solid #E5E5E5;*/
     padding: 20px 0;
 }
 
