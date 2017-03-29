@@ -6,7 +6,7 @@
 }
 
 html, body {
-    font: 12px/1.5 Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
+    font: 12px/1.5 Helvetica,sans-serif;
     color: #000000;
 }
 
@@ -22,10 +22,6 @@ a:hover {
 img {
     border: 0;
     vertical-align: middle;
-}
-
-button, input {
-    font-family: Microsoft YaHei, tahoma, arial, Hiragino Sans GB, \\5b8b\4f53, sans-serif;
 }
 
 ul, ol, li {
@@ -55,6 +51,7 @@ em, i {
     top: 0;
     right: 0;
     z-index: 7;
+    /*background: #F10215;*/
 }
 
 .header-wrap {
@@ -62,7 +59,6 @@ em, i {
     height: 40px;
     line-height: 40px;
     position: relative;
-    background: #F10215;
 }
 
 .header-logo {
@@ -112,7 +108,7 @@ em, i {
     float: left;
     border: none;
     color: #989191;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .header-search-wrap form button {
