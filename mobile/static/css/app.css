@@ -191,18 +191,18 @@ em, i {
     width: 35px;
     height: 35px;
     z-index: 7;
-    /*display: none;*/
+    display: none;
     border: 1px solid #eeeeee;
     border-radius: 100%;
     background-color: #ffffff;
     text-align: center;
     line-height: 35px;
 }
+
 .returnTop a {
     font-size: 18px;
     color: #888888;
 }
-
 
 .slide {
     width: 100%;
