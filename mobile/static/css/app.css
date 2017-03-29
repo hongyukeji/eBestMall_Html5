@@ -167,8 +167,7 @@ em, i {
 
 .footer {
     width: 100%;
-    height: 55px;
-    line-height: 55px;
+    height: 54px;
     position: fixed;
     left: 0;
     bottom: 0;
@@ -197,8 +196,26 @@ em, i {
 
 .footer-wrap ul li a {
     width: 100%;
-    height: 100%;
+    height: 40px;
+    padding: 7px 0;
     display: block;
+    text-align: center;
+}
+
+.footer-menu-icon {
+    width: 100%;
+    height: 22px;
+    float: left;
+}
+
+.footer-menu-icon i {
+    font-size: 20px;
+}
+
+.footer-menu-title {
+    width: 100%;
+    height: 18px;
+    float: left;
 }
 
 /* index css */
