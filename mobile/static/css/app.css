@@ -40,10 +40,17 @@ em, i {
     outline: none !important;
 }
 
+.hide {
+    display: none !important;
+}
+
+.show {
+    display: block !important;
+}
+
 .header {
     width: 100%;
-    height: 40px;
-    line-height: 40px;
+
     position: fixed;
     left: 0;
     top: 0;
@@ -52,12 +59,79 @@ em, i {
 }
 
 .header-wrap {
-    height: 100%;
-    padding: 0 10px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
     position: relative;
     background: #F10215;
 }
 
+.header-logo {
+    width: 56px;
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    left: 10px;
+}
+.header-logo-wrap{
+    width: 100%;
+    height: 30px;
+    margin: 5px 0;
+    position: relative;
+    overflow: hidden;
+}
+.header-logo-wrap span{
+    width: 100%;
+    height: 20px;
+    margin-top: 5px;
+    background: url("https://st.360buyimg.com/m/images/index/jd-sprites.png") no-repeat 0 -109px;
+    background-size: 200px 200px;
+    display: block;
+}
+.header-search {
+    margin: 0 10px;
+    padding: 5px 40px 5px 66px;
+}
+
+.header-search-wrap{
+    position: relative;
+    padding: 0 15px 0 35px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    background-color: #FFFFFF;
+}
+
+.header-search-wrap form input[type="text"] {
+    width: 100%;
+    height: 100%;
+    margin-top: 5px;
+    float: left;
+    border: none;
+    color: #989191;
+    font-size: 14px;
+}
+.header-search-wrap form button {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top:5px;
+    border: none;
+    background: url("https://st.360buyimg.com/m/images/index/jd-sprites.png") no-repeat -60px -109px;
+    background-size: 200px 200px;
+}
+
+.header-login {
+    position: absolute;
+    right: 10px;
+    top: 0;
+}
+
+.header-login a {
+    font-size: 15px;
+    color: #FFFFFF;
+}
 .content {
     width: 100%;
     min-height: 800px;
