@@ -96,7 +96,7 @@ em, i {
 
 .header-search-wrap {
     position: relative;
-    padding: 0 15px 0 35px;
+    padding: 0 15px 0 30px;
     height: 30px;
     line-height: 30px;
     border-radius: 15px;
@@ -118,11 +118,12 @@ em, i {
     width: 20px;
     height: 20px;
     position: absolute;
-    left: 10px;
+    left: 6px;
     top: 5px;
     border: none;
-    background: url("https://st.360buyimg.com/m/images/index/jd-sprites.png") no-repeat -60px -109px;
-    background-size: 200px 200px;
+    font-size: 16px;
+    color: #989191;
+    background-color: #ffffff;
 }
 
 .header-login {
