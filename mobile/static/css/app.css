@@ -6,7 +6,7 @@
 }
 
 html, body {
-    font: 12px/1.5 Helvetica,sans-serif;
+    font: 12px/1.5 Helvetica, sans-serif;
     color: #000000;
 }
 
@@ -51,7 +51,9 @@ em, i {
     top: 0;
     right: 0;
     z-index: 7;
-    /*background: #F10215;*/
+    background: #F10215;
+    /*opacity: 0.8;*/
+    /*filter: alpha(opacity=80);*/
 }
 
 .header-wrap {
