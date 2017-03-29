@@ -127,14 +127,24 @@ em, i {
 }
 
 .header-login {
+    height: 100%;
+    line-height: 40px;
     position: absolute;
     right: 10px;
     top: 0;
 }
 
 .header-login a {
+    display: block;
+    min-width: 32px;
+    text-align: center;
     font-size: 16px;
     color: #FFFFFF;
+}
+
+.header-login a i {
+    font-size: 20px;
+    vertical-align: -3px;
 }
 
 .content {
