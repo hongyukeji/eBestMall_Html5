@@ -6,7 +6,14 @@ $(document).ready(function () {
     function indexScroll() {
         /* 鼠标滚动监听事件 */
         $(window).on('scroll', function () {
-            /* 侧边栏-返回顶部按钮 显示/隐藏事件 */
+            /* 搜索条背景色 显示/隐藏事件*/
+            if ($(window).scrollTop() > ($('.shortcut-menu').offset().top - $('.header').outerHeight())) {
+                $('.header-item').fadeIn();
+            } else {
+                $('.header-item').fadeOut();
+            }
+
+            /* 返回顶部按钮 显示/隐藏事件 */
             var returnTop = $('.returnTop');
             if ($(window).scrollTop() > $(window).height()) {
                 returnTop.fadeIn();
