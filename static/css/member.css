@@ -105,29 +105,11 @@ div, table {
     border-bottom: 1px solid #e2e2e2;
 }
 
-/*.t_bg1 > i{*/
-    /*font-size: 18px;*/
-    /*margin-left: -25px;*/
-    /*vertical-align: -2px;*/
-/*}*/
-/*.m_left i{*/
-    /*font-size: 18px;*/
-    /*margin-left: -25px;*/
-    /*vertical-align: -2px;*/
-/*}*/
-
-/*.t_bg2 i{*/
-    /*font-size: 18px;*/
-    /*margin-left: -25px;*/
-    /*vertical-align: -2px;*/
-/*}*/
-
-.t_bg3 {
-    background: url(../images/m_i_3.png) no-repeat 31px center;
-}
-
-.t_bg4 {
-    background: url(../images/m_i_4.png) no-repeat 31px center;
+.m_left i {
+    font-size: 16px;
+    margin-left: -21px;
+    margin-right: 5px;
+    vertical-align: -1px;
 }
 
 .left_m ul li {
@@ -182,8 +164,13 @@ div, table {
     height: 35px;
     line-height: 35px;
     overflow: hidden;
-    background: url(../images/n_not.png) no-repeat left center;
     padding-left: 32px;
+}
+
+.m_notice i {
+    font-size: 16px;
+    vertical-align: -1px;
+    margin-right: 3px;
 }
 
 .mem_t {
