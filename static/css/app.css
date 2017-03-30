@@ -270,7 +270,6 @@ em, i {
     border: 1px solid #F5F5F5;
     border-bottom: none;
     position: relative;
-    z-index: 3;
 }
 
 #header .downTop:hover {

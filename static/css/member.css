@@ -83,7 +83,9 @@ div, table {
     text-indent: 68px;
     margin-bottom: 10px;
 }
-
+.left_n a{
+    color: #ffffff;
+}
 .left_m {
     overflow: hidden;
     background-color: #FFF;
@@ -124,7 +126,7 @@ div, table {
     color: #3e3e3e;
 }
 
-.left_m ul li a:hover, .left_m ul li a.now {
+.left_m ul li a:hover, .left_m ul li a.active {
     color: #F10215;
 }
 
