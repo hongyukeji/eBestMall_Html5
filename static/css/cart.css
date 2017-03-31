@@ -143,12 +143,14 @@
 }
 
 .cart-body {
-}
-
-.cart-list {
     width: 100%;
     float: left;
     min-height: 180px;
+}
+
+.cart-list-wrap {
+    width: 100%;
+    float: left;
 }
 
 .cart-footer {
@@ -185,7 +187,7 @@
     float: left;
 }
 
-.cart-footer-btn-area a {
+.cart-footer-btn-area button {
     position: relative;
     padding: 0 58px;
     height: 52px;
@@ -196,7 +198,9 @@
     text-align: center;
     font-size: 18px;
     font-family: "Microsoft YaHei";
+    border: none;
     background: #F10215;
+    cursor: pointer;
     overflow: hidden;
     display: block;
 }
