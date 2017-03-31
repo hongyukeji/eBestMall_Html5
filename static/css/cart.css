@@ -161,7 +161,7 @@
 }
 
 .cart-footer .cart-checkbox {
-    width: 55px;
+    width: 68px;
     float: left;
     line-height: 50px;
 }
@@ -174,7 +174,7 @@
 
 .cart-footer-operation a {
     float: left;
-    margin-right: 10px;
+    margin-right: 25px;
 }
 
 .cart-footer-right {
