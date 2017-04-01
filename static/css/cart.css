@@ -7,7 +7,7 @@
 .cart-title {
     width: 100%;
     float: left;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 .cart-title .active {
