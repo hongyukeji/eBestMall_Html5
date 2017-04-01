@@ -45,9 +45,9 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
 <body>
 <?php $this->beginBody() ?>
 
-<!-- 公共页眉 -->
+<!-- Public-Header -->
 <div id="header">
-    <!-- 公共页眉-顶部广告 -->
+    <!-- Public-Header Top-Images -->
     <div class="header-event">
         <div class="w">
             <a class="header-event-bar" href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/header-top.jpg" /> </a>
@@ -55,7 +55,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
         </div>
     </div>
 
-    <!-- 公共页眉-顶部导航 -->
+    <!-- Public-Header Top-Nav -->
     <div class="headerTop">
         <div class="w">
             <ul class="fl">
@@ -179,13 +179,13 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
         </div>
     </div>
 
-    <!-- 公共页眉-主要内容 -->
+    <!-- Public-Header-Main -->
     <div class="headerMain">
         <div class="w">
             <div class="logo">
                 <h1><a href="<?= Yii::$app->homeUrl ?>">eBestMall<img src="<?= Html::encode($baseUrl) ?>/img/public/logo-e.png" alt="eBestMall" /> </a></h1>
             </div>
-            <!-- 公共页眉-搜索框-购物车-导航 -->
+            <!-- Public-Header Search-Cart-Nav -->
             <div class="header-main-right">
                 <div class="header-search-cart-bar">
                     <div class="header-search-bar">
@@ -298,10 +298,10 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
     </div>
 </div>
 
-<!-- Content -->
+<!-- Public-Content -->
 <div id="content">
 
-    <!-- Content-内容 -->
+    <!-- Content-Main -->
     <div class="content">
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -312,7 +312,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
 
 </div>
 
-<!-- 公共-页脚 -->
+<!-- Public-Footer -->
 <div id="footer">
     <div class="footer-service">
         <ul class="w">
@@ -390,7 +390,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
     </div>
 </div>
 
-<!-- 搜索条 -->
+<!-- Public-Search -->
 <div id="searchBar">
     <div class="w">
         <div class="searchBar-logo">
@@ -406,7 +406,7 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
 
 </div>
 
-<!-- 侧边栏 -->
+<!-- Public-Side -->
 <div id="sideBar">
     <div class="sideBarBody"></div>
     <div class="sideBarContent">
