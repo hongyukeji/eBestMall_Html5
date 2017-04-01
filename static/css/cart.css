@@ -332,23 +332,24 @@
 
 .cart-footer {
     width: 100%;
-    height: 50px;
+    height: 45px;
     float: left;
     border: 1px solid #f0f0f0;
     background: #fff;
     position: relative;
 }
 
+.cart-footer-item {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+}
+
 .cart-footer .cart-checkbox {
     width: 68px;
-    float: left;
-    line-height: 50px;
 }
 
 .cart-footer-operation {
-    float: left;
-    height: 50px;
-    line-height: 50px;
 }
 
 .cart-footer-operation a {
@@ -361,14 +362,13 @@
 }
 
 .cart-footer-btn-area {
-    float: left;
 }
 
 .cart-footer-btn-area button {
     position: relative;
     padding: 0 58px;
-    height: 52px;
-    line-height: 52px;
+    height: 47px;
+    line-height: 47px;
     margin-top: -1px;
     margin-right: -1px;
     color: #fff;
@@ -383,16 +383,10 @@
 }
 
 .cart-footer-total {
-    height: 50px;
-    line-height: 50px;
-    float: left;
     margin-right: 30px;
 }
 
 .cart-footer-amount-sum {
-    height: 50px;
-    line-height: 50px;
-    float: left;
     margin-right: 30px;
 }
 
