@@ -395,3 +395,16 @@
     float: left;
     margin-right: 30px;
 }
+
+.cart-footer-amount-sum em {
+    color: #e4393c;
+    font-family: verdana;
+    font-weight: 700;
+    margin: 0 3px;
+}
+
+.cart-footer-total em {
+    font-size: 16px;
+    color: #e4393c;
+    font-weight: 700;
+}
