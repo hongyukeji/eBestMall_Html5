@@ -103,6 +103,12 @@ em, i {
     display: block !important;
 }
 
+.hr {
+    border-bottom: 1px solid #e6e6e6;
+    height: 0;
+    margin-bottom: 10px;
+}
+
 /*背景色*/
 .bg-gray {
     background-color: #F5F5F5;

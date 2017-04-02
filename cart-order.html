@@ -9,7 +9,7 @@
     <meta name="description" content="eBestMall是国内电子商务系统及服务解决方案新创品牌。为传统企业及创业者提供零售网店系统、网上商城系统、分销系统、B2B2C商城系统、微信分销系统、行业ERP等产品和解决方案。" />
     <meta name="keyword" content="eBestMall,鸿宇商城,鸿宇分销,网店系统,网上商城系统,分销系统,B2B2C商城系统,微信分销系统" />
     <link rel="stylesheet" href="static/css/app.css" />
-    <link rel="stylesheet" href="static/css/member.css" />
+    <link rel="stylesheet" href="static/css/cart.css" />
 </head>
 <body>
 
@@ -271,128 +271,207 @@
 
     <!-- Content-Main -->
     <div class="content">
+        <ul class="breadcrumb"><li><a href="javascript:;">首页</a></li>
+            <li><a href="javascript:;">购物车</a></li>
+            <li class="active">确认订单信息</li>
+        </ul>
 
-        <!--Begin 用户中心 Begin -->
-        <div class="m_content">
-            <div class="m_left">
-                <div class="left_n"><a href="javascript:;">会员中心</a></div>
-                <div class="left_m">
-                    <div class="left_m_t"><i class="icon-edit"></i>订单中心</div>
-                    <ul>
-                        <li><a href="javascript:;">我的订单</a></li>
-                        <li><a href="javascript:;">收货地址</a></li>
-                        <li><a href="javascript:;">缺货登记</a></li>
-                        <li><a href="javascript:;">跟踪订单</a></li>
-                    </ul>
-                </div>
-                <div class="left_m">
-                    <div class="left_m_t"><i class="icon-user-o"></i>会员信息</div>
-                    <ul>
-                        <!--<li><a class="active" href="javascript:;">用户信息</a></li>-->
-                        <li><a href="javascript:;">用户信息</a></li>
-                        <li><a href="javascript:;">我的收藏</a></li>
-                        <li><a href="javascript:;">我的留言</a></li>
-                        <li><a href="javascript:;">推广链接</a></li>
-                        <li><a href="javascript:;">我的评论</a></li>
-                    </ul>
-                </div>
-                <div class="left_m">
-                    <div class="left_m_t"><i class="icon-coin-yen"></i>账户中心</div>
-                    <ul>
-                        <li><a href="javascript:;">账户安全</a></li>
-                        <li><a href="javascript:;">我的红包</a></li>
-                        <li><a href="javascript:;">资金管理</a></li>
-                    </ul>
-                </div>
-                <div class="left_m">
-                    <div class="left_m_t"><i class="icon-banknote"></i>分销中心</div>
-                    <ul>
-                        <li><a href="javascript:;">我的会员</a></li>
-                        <li><a href="javascript:;">我的业绩</a></li>
-                        <li><a href="javascript:;">我的佣金</a></li>
-                        <li><a href="javascript:;">申请提现</a></li>
-                    </ul>
+        <!-- Cart Main -->
+        <div class="my-cart">
+            <div class="cart-title">
+                <div class="see-cart"><span>1</span>我的购物车<div class="back"></div></div>
+                <div class="firm-order active"><div class="front"></div><span>2</span>确认订单信息<div class="back"></div></div>
+                <div class="place-order"><div class="front"></div><span>3</span>成功提交订单</div>
+            </div>
+            <div class="cart-order-wrap">
+                <div class="cart-order">
+                    <div class="consignee-info-title">
+                        <h3>收货人信息</h3>
+                        <div class="consignee-info-create"><a href="javascript:;">新增收货地址</a></div>
+                    </div>
+                    <div class="consignee-info-content">
+                        <div class="consignee-address">
+                            <div class="consignee-address-list">
+                                <ul>
+                                    <li>
+                                        <div class="consignee-address-list-name">Shadow<span class="item-selected"></span></div>
+                                        <div class="consignee-address-list-detail">
+                                            <div class="consignee-address-list-detail-name">Shadow</div>
+                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
+                                            <div class="consignee-address-list-detail-tel">138****8000</div>
+                                            <div class="consignee-address-list-detail-default">默认地址</div>
+                                        </div>
+                                        <div class="consignee-address-list-detail-operation">
+                                            <a href="javascript:;">编辑</a>
+                                            <a href="javascript:;">删除</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="consignee-address-list-name">Shadow</div>
+                                        <div class="consignee-address-list-detail">
+                                            <div class="consignee-address-list-detail-name">Shadow</div>
+                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
+                                            <div class="consignee-address-list-detail-tel">138****8000</div>
+                                        </div>
+                                        <div class="consignee-address-list-detail-operation">
+                                            <a href="javascript:;">设为默认地址</a>
+                                            <a href="javascript:;">编辑</a>
+                                            <a href="javascript:;">删除</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="consignee-address-list-name">Shadow</div>
+                                        <div class="consignee-address-list-detail">
+                                            <div class="consignee-address-list-detail-name">Shadow</div>
+                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
+                                            <div class="consignee-address-list-detail-tel">138****8000</div>
+                                        </div>
+                                        <div class="consignee-address-list-detail-operation">
+                                            <a href="javascript:;">设为默认地址</a>
+                                            <a href="javascript:;">编辑</a>
+                                            <a href="javascript:;">删除</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="consignee-address-list-name">Shadow</div>
+                                        <div class="consignee-address-list-detail">
+                                            <div class="consignee-address-list-detail-name">Shadow</div>
+                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
+                                            <div class="consignee-address-list-detail-tel">138****8000</div>
+                                        </div>
+                                        <div class="consignee-address-list-detail-operation">
+                                            <a href="javascript:;">设为默认地址</a>
+                                            <a href="javascript:;">编辑</a>
+                                            <a href="javascript:;">删除</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="consignee-address-list-name">Shadow</div>
+                                        <div class="consignee-address-list-detail">
+                                            <div class="consignee-address-list-detail-name">Shadow</div>
+                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
+                                            <div class="consignee-address-list-detail-tel">138****8000</div>
+                                        </div>
+                                        <div class="consignee-address-list-detail-operation">
+                                            <a href="javascript:;">设为默认地址</a>
+                                            <a href="javascript:;">编辑</a>
+                                            <a href="javascript:;">删除</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="consignee-address-more-btn">
+                            <a href="javascript:;">更多地址 >></a>
+                        </div>
+                        <div class="consignee-address-more-btn hide">
+                            <a href="javascript:;">收起地址 >></a>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="consignee-info-content-body">
+                        <div class="consignee-info-title">
+                            <h3>支付方式</h3>
+                        </div>
+                        <div class="consignee-info-content">
+                            <div class="consignee-payment-list">
+                                <ul>
+                                    <li class="item active">货到付款<span class="item-selected"></span></li>
+                                    <li class="invalid">在线支付</li>
+                                    <li class="item">微信支付</li>
+                                    <li class="item">支付宝</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hr"></div>
+                    <div class="consignee-info-content-body">
+                        <div class="consignee-info-title">
+                            <h3>送货清单</h3>
+                            <div class="consignee-info-create"><a href="javascript:;">返回购物车</a></div>
+                        </div>
+                        <div class="consignee-info-content">
+                            <div class="delivery-list-wrap">
+                                <div class="delivery-list">
+                                    <div class="dis-modes">
+                                        <div class="delivery-list-shipping">
+                                            <h4>配送方式</h4>
+                                            <div class="delivery-list-shipping-list">
+                                                <ul>
+                                                    <li class="item active">快递运输<span class="item-selected"></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="delivery-list-shipping-introduce">
+                                                <span class="delivery-list-shipping-introduce-title">配送时间：</span>
+                                                <span class="delivery-list-shipping-introduce-content">工作日、双休日与节假日均可送货</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="goods-list">
+                                        <div class="goods-list-title"><h4>商家：佳沪数码手机旗舰店</h4></div>
+                                        <div class="goods-items">
+                                            <div class="goods-items-img">
+                                                <a href="javascript:;"><img src="static/img/temp/temp-goods_002.jpg" width="100" height="100" alt=""></a>
+                                            </div>
+                                            <div class="goods-items-info">
+                                                <div class="goods-items-info-name"><a href="javascript:;">苹果Apple iPhone7 手机 黑色 移动联通 128GB</a></div>
+                                                <div class="goods-items-info-list">
+                                                    <strong class="goods-items-info-price">￥ 5299.00</strong>
+                                                    <span class="goods-items-info-number">x1</span>
+                                                    <span class="goods-items-info-state">有货</span>
+                                                </div>
+                                                <div class="goods-items-info-extend">
+                                                    <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
+                                                </div>
+                                                <div class="goods-items-info-extend">
+                                                    <p><span class="goods-items-info-extend-item">【赠品】 苹果品牌钢化膜（图片仅供参考） iPhone 7 ×1</span>&nbsp;&nbsp;<a href="javascript:;">查看价格</a></p>
+                                                    <p><span class="goods-items-info-extend-item">【赠品】 苹果品牌软胶套（图片仅供参考） iPhone7 ×1</span>&nbsp;&nbsp;<a href="javascript:;">查看价格</a></p>
+                                                    <p><span class="goods-items-info-extend-item">【赠品】 手机指环扣 （请以实物为准） 颜色随机发 ×1</span>&nbsp;&nbsp;<a href="javascript:;">查看价格</a></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="delivery-list-wrap order-remarks-wrap">
+                                <div class="order-remarks-title">添加订单备注</div>
+                                <div class="order-remarks-content">
+                                    <input type="text" placeholder="限45个字（定制类商品，请将购买需求在备注中做详细说明）">
+                                    <span>提示：请勿填写有关支付、收货、发票方面的信息</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="m_right">
-                <div class="m_des">
-                    <table border="0" style="width:870px; line-height:22px;" cellspacing="0" cellpadding="0">
-                        <tr valign="top">
-                            <td width="115"><img src="static/img/public/user/no_login_default_avatar.jpg" width="90" height="90" /></td>
-                            <td>
-                                <div class="m_user">Shadow</div>
-                                <p>
-                                    等级：注册用户 <br />
-                                    <font color="#ff4e00">您还差 270 积分达到 分红100</font><br />
-                                    上一次登录时间: 2017-09-28 18:19:47<br />
-                                    您还没有通过邮件认证 <a href="javascript:;" style="color:#ff4e00;">点此发送认证邮件</a>
-                                </p>
-                                <div class="m_notice"><i class="icon-megaphone"></i>
-                                    用户中心公告！
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
+            <div class="cart-order-footer-wrap">
+                <div class="cart-order-footer">
+                    <div class="order-summary">
+                        <div class="order-summary-item">
+                            <span><em class="order-summary-item-num">1</em>&nbsp;件商品，总商品金额：</span>
+                            <em>￥5299.00</em>
+                        </div>
+                        <div class="order-summary-item">
+                            <span>运费：</span>
+                            <em>￥0.00</em>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="mem_t">资产信息</div>
-                <table border="0" class="mon_tab" style="width:870px; margin-bottom:20px;" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td width="33%">用户等级：<span style="color:#555555;">普通会员</span></td>
-                        <td width="33%">消费金额：<span>￥200元</span></td>
-                        <td width="33%">返还积分：<span>99R</span></td>
-                    </tr>
-                    <tr>
-                        <td>账户余额：<span>￥200元</span></td></td>
-                        <td>红包个数：<span style="color:#555555;">3个</span></td></td>
-                        <td>红包价值：<span>￥50元</span></td></td>
-                    </tr>
-                    <tr>
-                        <td colspan="3">订单提醒：
-                            <font style="font-family:'宋体';">待付款(<span>0</span>) &nbsp; &nbsp; &nbsp; &nbsp; 待收货(<span>2</span>) &nbsp; &nbsp; &nbsp; &nbsp; 待评论(<span>1</span>)</font>
-                        </td>
-                    </tr>
-                </table>
-
-                <div class="mem_t">账号信息</div>
-                <table border="0" class="acc_tab" style="width:870px;" cellspacing="0" cellpadding="0">
-                    <tr>
-                        <td class="td_l">用户ID： </td>
-                        <td>12345678</td>
-                    </tr>
-                    <tr>
-                        <td class="td_l b_none">身份证号：</td>
-                        <td>522124***********8</td>
-                    </tr>
-                    <tr>
-                        <td class="td_l b_none">电  话：</td>
-                        <td>186****1234</td>
-                    </tr>
-                    <tr>
-                        <td class="td_l">邮   箱： </td>
-                        <td>*******789@qq.com</td>
-                    </tr>
-                    <tr>
-                        <td class="td_l b_none">注册时间：</td>
-                        <td>2017/10/10</td>
-                    </tr>
-                    <tr>
-                        <td class="td_l">完成订单：</td>
-                        <td>0</td>
-                    </tr>
-                    <tr>
-                        <td class="td_l b_none">邀请人：</td>
-                        <td>邀请人</td>
-                    </tr>
-                    <tr>
-                        <td class="td_l">登录次数：</td>
-                        <td>3</td>
-                    </tr>
-                </table>
-
+                <div class="cart-order-footer-detail">
+                    <div class="cart-order-footer-detail-price">
+                        <p>应付总额：<strong class="price-num">￥5299.00</strong></p>
+                    </div>
+                    <div class="cart-order-footer-detail-consignee-info">
+                        <span class="cart-order-footer-detail-address">北京 北京市 朝阳区 望京路1288号A-8-8</span>
+                        <span class="cart-order-footer-detail-contact">收货人：Shadow 138****8000</span>
+                    </div>
+                </div>
+                <div class="cart-order-footer-btn">
+                    <button type="submit">提交订单</button>
+                </div>
             </div>
         </div>
-        <!--End 用户中心 End-->
 
     </div>
 
@@ -660,6 +739,7 @@
 
 <script type="text/javascript" src="static/js/jquery.min.js"></script>
 <script type="text/javascript" src="static/js/app.js"></script>
+<script type="text/javascript" src="static/js/cart.js"></script>
 
 </body>
 </html>
