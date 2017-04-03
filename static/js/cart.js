@@ -88,7 +88,7 @@ $(document).ready(function () {
 
         cartCheckboxWrap.find(cartCheckbox).on('click', function () {
             if ($(this).prop('checked') === true) {
-                if ($(this).parents('.cart-list').siblings('.cart-list').find(cartCheckbox).prop('checked') === true) {
+                if ($(this).parents('.cart-list').siblings('.cart-list').find(cartCheckbox).prop('checked') !== false) {
                     cartCheckboxAll.prop('checked', this.checked);
                 }
             } else {
@@ -99,7 +99,7 @@ $(document).ready(function () {
 
         $('.cart-list-body-info-wrap').find('.checkbox').on('click', function () {
             if ($(this).prop('checked') === true) {
-                if ($(this).parents('.cart-list-body-info').siblings('.cart-list-body-info').find('.checkbox').prop('checked') === true) {
+                if ($(this).parents('.cart-list-body-info').siblings('.cart-list-body-info').find('.checkbox').prop('checked') !== false) {
                     $(this).parentsUntil(cartCheckboxWrap).find(cartCheckbox).prop('checked', this.checked);
                     if ($(this).parents('.cart-list').siblings('.cart-list').find(cartCheckbox).prop('checked') === true) {
                         cartCheckboxAll.prop('checked', this.checked);
