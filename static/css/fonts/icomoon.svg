@@ -7,8 +7,8 @@
 <font-face units-per-em="1024" ascent="960" descent="-64" />
 <missing-glyph horiz-adv-x="1024" />
 <glyph unicode="&#x20;" horiz-adv-x="512" d="" />
-<glyph unicode="&#xe145;" glyph-name="add2" d="M810 402.953h-256v-256h-84v256h-256v84h256v256h84v-256h256v-84z" />
-<glyph unicode="&#xe15b;" glyph-name="remove" d="M810 402.953h-596v84h596v-84z" />
+<glyph unicode="&#xe145;" glyph-name="increase" d="M810 402.953h-256v-256h-84v256h-256v84h256v256h84v-256h256v-84z" />
+<glyph unicode="&#xe15b;" glyph-name="decrease" d="M810 402.953h-596v84h596v-84z" />
 <glyph unicode="&#xe838;" glyph-name="star2" d="M512 220.953l-264-160 70 300-232 202 306 26 120 282 120-282 306-26-232-202 70-300z" />
 <glyph unicode="&#xe839;" glyph-name="star_half" d="M512 298.953l160-96-42 182 142 124-188 16-72 172v-398zM938 562.953l-232-202 70-300-264 160-264-160 70 300-232 202 306 26 120 282 120-282z" />
 <glyph unicode="&#xe83a;" glyph-name="star_border" d="M512 298.953l160-96-42 182 142 124-188 16-72 172-72-172-188-16 142-124-42-182zM938 562.953l-232-202 70-300-264 160-264-160 70 300-232 202 306 26 120 282 120-282z" />

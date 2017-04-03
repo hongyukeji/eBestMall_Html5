@@ -331,6 +331,11 @@
 .cart-list-body-info-item-form .number {
     width: 100px;
     text-align: center;
+    position: relative;
+}
+
+.cart-list-body-info-item-form .number .cart-goods-number {
+    margin: -1px auto 0 auto;
 }
 
 .cart-list-body-info-item-form .price {
@@ -338,6 +343,63 @@
     padding-right: 40px;
     font-family: verdana;
     text-align: right;
+}
+
+.cart-goods-number {
+    position: relative;
+    overflow: hidden;
+    height: 22px;
+    width: 86px;
+    margin: 0 auto;
+}
+
+.cart-goods-number i {
+    vertical-align: -1px;
+}
+
+.cart-goods-number .goods-number-input {
+    position: absolute;
+    left: 19px;
+    top: 0;
+    border: 1px solid #cacbcb;
+    width: 44px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    padding: 1px;
+    margin: 0;
+    font-size: 12px;
+    font-family: verdana;
+    color: #333;
+    -webkit-appearance: none;
+}
+
+.cart-goods-number .increase {
+    float: right;
+    border: 1px solid #cacbcb;
+    border-left: 0;
+    color: #666;
+    height: 18px;
+    line-height: 18px;
+    padding: 1px 0;
+    width: 18px;
+    text-align: center;
+    margin: 0;
+    background: #fff;
+}
+
+.cart-goods-number .decrease {
+    float: left;
+    border: 1px solid #cacbcb;
+    border-right: 0;
+    height: 18px;
+    line-height: 18px;
+    padding: 1px 0;
+    width: 18px;
+    text-align: center;
+    color: #666;
+    margin: 0;
+    background: #fff;
 }
 
 .cart-list-body-info-item-form .price strong {

@@ -1,8 +1,3 @@
-/**
- * Created by Shadow on 2017/3/1.
- */
-
-/* 首页-在DOM加载完成时运行 */
 $(document).ready(function () {
     indexClickEvent();    // 首页-单击事件
     indexScroll();    // 首页-滚动事件
