@@ -219,6 +219,8 @@
 }
 
 .cart-list-body-info {
+    width: 1170px;
+    float: left;
     position: relative;
     padding-left: 40px;
     line-height: 20px;
