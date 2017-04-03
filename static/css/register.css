@@ -8,6 +8,16 @@
     background: url(../img/public/login_header_bg.jpg) repeat-x left bottom;
 }
 
+.form-item p {
+    position: absolute;
+    bottom: -25px;
+    left: 20px;
+    color: #c81623;
+    max-width: 380px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
 .header-register > .w > .logo {
     width: 100%;
     height: 60px;
