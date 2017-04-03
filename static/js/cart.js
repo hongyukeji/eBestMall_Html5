@@ -3,8 +3,10 @@ $(document).ready(function () {
 
     function cartClickEvent() {
         cartGoodsNumber();
+        cartCheckbox();
     }
 
+    /* Cart Goods Number */
     function cartGoodsNumber() {
         var NumberValue = $('.cart-goods-number .goods-number-input');
         NumberValue.on('change', function () {
@@ -35,4 +37,35 @@ $(document).ready(function () {
             }
         });
     }
+
+    /* Cart Checkbox */
+    function cartCheckbox(){
+        console.log(1);
+    }
+
+    function cartCheckbox_old() {
+        var cartCheckboxAll = $('.cart-checkbox-all');
+        cartCheckboxAll.on('click', function () {
+            var _this = $(this);
+            if($(_this).is(':checked')) {
+                $('.my-cart').find('.checkbox').attr("checked",true);
+            }else {
+                $('.my-cart').find('.checkbox').attr("checked",false);
+            }
+        });
+
+        var cartCheckboxWrap = $('.cart-list');
+        var cartCheckbox = $('.cart-checkbox-list-all .checkbox');
+
+        cartCheckboxWrap.find(cartCheckbox).on('click', function () {
+            var _this = $(this);
+            if($(_this).is(':checked')) {
+                _this.parents('.cart-list-body-shop').siblings('.cart-list-body-info-wrap').find('.checkbox').attr("checked","checked");
+            }else {
+                $('.cart-checkbox-all').attr("checked",false);
+                _this.parents('.cart-list-body-shop').siblings('.cart-list-body-info-wrap').find('.checkbox').attr("checked",false);
+            }
+        })
+    }
+
 });
