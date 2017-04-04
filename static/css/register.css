@@ -8,7 +8,7 @@
     background: url(../img/public/login_header_bg.jpg) repeat-x left bottom;
 }
 
-.form-group p {
+.form-item p {
     position: absolute;
     bottom: -26px;
     left: 20px;
@@ -110,14 +110,14 @@
     margin-right: 5px;
 }
 
-.content-register-from > form > .form-group {
+.content-register-from > form > .form-item {
     position: relative;
     border: solid 1px #ddd;
     width: 398px;
     height: 52px;
 }
 
-.content-register-from > form > .form-group > label {
+.content-register-from > form > .form-item > label {
     font-size: 14px;
     float: left;
     width: 90px;
@@ -126,7 +126,7 @@
     padding-left: 20px;
 }
 
-.content-register-from > form > .form-group > input[type="text"] {
+.content-register-from > form > .form-item > input[type="text"] {
     border: 0 none;
     font-size: 14px;
     width: 190px;
@@ -136,7 +136,7 @@
     padding-top: 16px;
 }
 
-.content-register-from > form > .form-group > input[type="password"] {
+.content-register-from > form > .form-item > input[type="password"] {
     border: 0 none;
     font-size: 14px;
     width: 190px;
