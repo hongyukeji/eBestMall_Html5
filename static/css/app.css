@@ -1129,6 +1129,10 @@ em, i {
     position: relative;
 }
 
+.side-login-prompt .active {
+    color: #F10215;
+}
+
 .side-bar-body-no-login-img {
     overflow: hidden;
     width: 113px;
