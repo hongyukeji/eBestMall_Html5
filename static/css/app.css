@@ -392,7 +392,7 @@ em, i {
 #header .siteTop {
     position: absolute;
     top: 31px;
-    z-index: 1;
+    z-index: 3;
     display: none;
     border: 1px solid #EEEEEE;
     border-top: none;
