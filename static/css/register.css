@@ -8,14 +8,17 @@
     background: url(../img/public/login_header_bg.jpg) repeat-x left bottom;
 }
 
-.form-item p {
+.form-item .help-block {
     position: absolute;
     bottom: -26px;
     left: 20px;
-    color: #c81623;
     max-width: 380px;
     white-space: nowrap;
     overflow: hidden;
+}
+
+.form-item .help-block-error {
+    color: #c81623;
 }
 
 .header-register > .w > .logo {
@@ -97,7 +100,7 @@
     height: 32px;
     line-height: 32px;
     font-size: 12px;
-    visibility: hidden;
+    display: none;
 }
 
 .content-register-from > form > .input-tip > .error {
@@ -115,12 +118,13 @@
     border: solid 1px #ddd;
     width: 398px;
     height: 52px;
+    margin-bottom: 32px;
 }
 
 .content-register-from > form > .form-item > label {
     font-size: 14px;
     float: left;
-    width: 90px;
+    width: 100px;
     height: 52px;
     line-height: 52px;
     padding-left: 20px;
@@ -149,6 +153,7 @@
 .content-register-from .form-agreement {
     height: 18px;
     line-height: 18px;
+    margin-bottom: 30px;
 }
 
 .content-register-from .form-agreement > div > input[type="checkbox"] {
