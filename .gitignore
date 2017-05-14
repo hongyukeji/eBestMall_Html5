@@ -8,6 +8,7 @@
 composer.phar
 
 # folder
+example-views
 test
 mobile-old
 shop
@@ -20,3 +21,4 @@ goods.html
 login.html
 member.html
 register.html
+example-views/
