@@ -138,3 +138,7 @@ CSSID的命名
 
 /* [移动端调用删除/PC端保留]解决引用Bootstrap造成在IE中position: fixed;定位和滚动条问题*/
 @-ms-viewport {width: auto;}
+
+~~~
+git -c core.quotepath=false rm --ignore-unmatch --cached -- [file]
+~~~
