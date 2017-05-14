@@ -140,5 +140,6 @@ CSSID的命名
 @-ms-viewport {width: auto;}
 
 ~~~
-git -c core.quotepath=false rm --ignore-unmatch --cached -- [file]
+Git rm -r --cached [file]
+git commit -m [file]
 ~~~
