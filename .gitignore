@@ -7,8 +7,17 @@
 # composer itself is not needed
 composer.phar
 
+# folder
 test
 mobile-old
 shop
 
-mobile/static/img/
+# html5
+cart.html
+cart-order.html
+cart-cashier.html
+goods.html
+index.html
+login.html
+member.html
+register.html

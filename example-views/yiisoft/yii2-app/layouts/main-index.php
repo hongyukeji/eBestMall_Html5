@@ -13,6 +13,7 @@
  */
 
 use yii\helpers\Html;
+
 use ebestmall\web\EbmAsset;
 EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
@@ -21,37 +22,43 @@ $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['ke
 $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
-<?= $this->render('head.php') ?>
-<body>
-<?php $this->beginBody() ?>
+    <!DOCTYPE html>
+    <html lang="<?= Yii::$app->language ?>">
+    <?= $this->render('head.php') ?>
+    <body>
+    <?php $this->beginBody() ?>
 
-<!-- Public-Header -->
-<?= $this->render(
-    'header.php',
-    ['baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Header -->
+    <?= $this->render(
+        'header.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
 
-<!-- Public-Content -->
-<?= $this->render(
-    'content.php',
-    ['content' => $content,'baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Content -->
+    <?= $this->render(
+        'content.php',
+        ['content' => $content,'baseUrl' => $baseUrl]
+    ) ?>
 
-<!-- Public-Footer -->
-<?= $this->render(
-    'footer.php',
-    ['baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Footer -->
+    <?= $this->render(
+        'footer.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
 
-<!-- Public-Side -->
-<?= $this->render(
-    'side.php',
-    ['baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Search -->
+    <?= $this->render(
+        'search.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
 
-<?php $this->endBody() ?>
-</body>
-</html>
+    <!-- Public-Side -->
+    <?= $this->render(
+        'side.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
+
+    <?php $this->endBody() ?>
+    </body>
+    </html>
 <?php $this->endPage() ?>

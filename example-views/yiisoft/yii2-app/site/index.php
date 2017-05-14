@@ -775,11 +775,19 @@ $this->title = Yii::$app->params['title'];
                             <a href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/public/user/no_login_default_avatar.jpg" alt=""></a>
                         </div>
                         <div class="content-focus-right-user-info_show">
+                            <?php if(Yii::$app->user->isGuest) : ?>
                             <p>Hi，欢迎来到eBestMall</p>
                             <p>
                                 <a href="<?= Url::to(['site/login']) ?>">登录</a>
                                 <a href="<?= Url::to(['site/register']) ?>">注册</a>
                             </p>
+                            <?php else : ?>
+                                <p>Hi，<?= Html::encode(Yii::$app->user->identity->username);?></p>
+                                <p>
+                                    <a href="<?= Url::to(['member/index']) ?>">会员中心</a>
+                                    <a href="<?= Url::to(['site/logout']) ?>" data-method="post">退出</a>
+                                </p>
+                            <?php endif; ?>
                         </div>
                         <div class="content-focus-right-user-profit">
                             <a href="javascript:;" target="_blank">新人福利</a>
@@ -850,16 +858,32 @@ $this->title = Yii::$app->params['title'];
                                 <div>
                                     <div class="content-sec-kill-body-list-wrapper-tag">
                                         <b></b>
-                                        <span>值得买</span>
+                                        <span>测试商品</span>
                                     </div>
-                                    <a href="<?= Url::to(["goods/index"]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="">
-                                        <p>麦博（microlab） M200十周年纪念版 2.1多媒体音箱 音响</p>
+                                    <a href="<?= Url::to(["goods/view","id" => 1]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
+                                        <p>eBestMall 测试商品</p>
                                     </a>
                                     <span></span>
                                 </div>
                                 <p>
-                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>159.00</span></span>
-                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>359.00</del></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>1210.90</del></span>
+                                </p>
+                            </li>
+                            <li class="item">
+                                <div>
+                                    <div class="content-sec-kill-body-list-wrapper-tag">
+                                        <b></b>
+                                        <span>测试商品</span>
+                                    </div>
+                                    <a href="<?= Url::to(["goods/view","id" => 2]) ?>"><img src="<?= Html::encode($baseUrl) ?>/img/temp/temp-06.jpg" alt="eBestMall 测试商品">
+                                        <p>eBestMall 测试商品</p>
+                                    </a>
+                                    <span></span>
+                                </div>
+                                <p>
+                                    <span class="content-sec-kill-body-list-wrapper-price-new"><i>¥</i><span>1288.88</span></span>
+                                    <span class="content-sec-kill-body-list-wrapper-price-origin"><i>¥</i><del>1210.90</del></span>
                                 </p>
                             </li>
                             <li class="item">

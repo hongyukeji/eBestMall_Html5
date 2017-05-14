@@ -13,45 +13,47 @@
  */
 
 use yii\helpers\Html;
+
 use ebestmall\web\EbmAsset;
 EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
+$this->registerCssFile($baseUrl .'/css/member.css', ['depends' => EbmAsset::className()]);
 
 $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['keywords']]);
 $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['description']], 'description');
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
-<?= $this->render('head.php') ?>
-<body>
-<?php $this->beginBody() ?>
+    <!DOCTYPE html>
+    <html lang="<?= Yii::$app->language ?>">
+    <?= $this->render('head.php') ?>
+    <body>
+    <?php $this->beginBody() ?>
 
-<!-- Public-Header -->
-<?= $this->render(
-    'header.php',
-    ['baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Header -->
+    <?= $this->render(
+        'header.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
 
-<!-- Public-Content -->
-<?= $this->render(
-    'content.php',
-    ['content' => $content,'baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Content -->
+    <?= $this->render(
+        'content-member.php',
+        ['content' => $content,'baseUrl' => $baseUrl]
+    ) ?>
 
-<!-- Public-Footer -->
-<?= $this->render(
-    'footer.php',
-    ['baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Footer -->
+    <?= $this->render(
+        'footer.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
 
-<!-- Public-Side -->
-<?= $this->render(
-    'side.php',
-    ['baseUrl' => $baseUrl]
-) ?>
+    <!-- Public-Side -->
+    <?= $this->render(
+        'side.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
 
-<?php $this->endBody() ?>
-</body>
-</html>
+    <?php $this->endBody() ?>
+    </body>
+    </html>
 <?php $this->endPage() ?>
