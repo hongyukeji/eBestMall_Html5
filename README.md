@@ -40,6 +40,7 @@ composer update hongyukeji/ebestmall-html
 系统 CSS + DIV 命名标准
 -------------------
 
+~~~
 页头:header
 登录条:loginBar
 标志:logo
@@ -118,7 +119,6 @@ CSSID的命名
 主题:themes.css
 通用：common.css/public
 
-
 /*
  * Define global variables
  * Defined: --name:value;
@@ -135,11 +135,7 @@ CSSID的命名
  * @ width:calc(100% - 100px);
  */
 
-
 /* [移动端调用删除/PC端保留]解决引用Bootstrap造成在IE中position: fixed;定位和滚动条问题*/
 @-ms-viewport {width: auto;}
 
-~~~
-Git rm -r --cached [file]
-git commit -m [file]
 ~~~
