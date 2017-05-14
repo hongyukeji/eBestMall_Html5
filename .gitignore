@@ -8,10 +8,10 @@
 composer.phar
 
 # folder
-example-views
-test
-mobile-old
-shop
+example-views/
+test/
+mobile-old/
+shop/
 
 # html5
 cart.html
@@ -21,4 +21,3 @@ goods.html
 login.html
 member.html
 register.html
-example-views/
