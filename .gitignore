@@ -13,11 +13,11 @@ mobile-old
 shop
 
 # html5
-cart.html
-cart-order.html
-cart-cashier.html
-goods.html
-index.html
-login.html
-member.html
-register.html
+#cart.html
+#cart-order.html
+#cart-cashier.html
+#goods.html
+#index.html
+#login.html
+#member.html
+#register.html
