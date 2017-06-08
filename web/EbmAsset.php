@@ -9,7 +9,7 @@ use yii\web\AssetBundle;
  */
 class EbmAsset extends AssetBundle
 {
-    public $sourcePath = '@vendor/hongyukeji/ebestmall-html/static';
+    public $sourcePath = '@vendor/hongyukeji/ebestmall-html/static/';
     public $css = [
         'css/app.css',
     ];

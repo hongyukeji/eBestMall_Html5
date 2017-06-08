@@ -178,8 +178,14 @@
     cursor: pointer;
 }
 
-.content-login-form-main > .msg-error {
-    width: 284px;
+.content-login-form-main > .msg-wrap {
+    width: 310px;
+    height: 23px;
+    padding: 5px 20px;
+}
+
+.content-login-form-main > .msg-wrap > .msg-error {
+    width: 290px;
     height: 15px;
     line-height: 15px;
     overflow: hidden;
@@ -188,11 +194,10 @@
     color: #666666;
     border: 1px solid #f6c090;
     padding: 3px 10px 3px 10px;
-    margin: 5px 20px;
-    visibility: hidden;
+    visibility: visible;
 }
 
-.content-login-form-main > .msg-error > i {
+.content-login-form-main > .msg-wrap > .msg-error > i {
     font-size: 14px;
     color: #e4393c;
     vertical-align: -1px;
