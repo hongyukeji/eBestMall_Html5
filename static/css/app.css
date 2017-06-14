@@ -627,8 +627,8 @@ em, i {
 
 #header .header-search-record > ul > li {
     padding: 1px 6px;
-    height: 30px;
-    line-height: 30px;
+    height: 28px;
+    line-height: 28px;
 }
 
 #header .header-search-record > ul > li:hover {
@@ -677,8 +677,8 @@ em, i {
 
 #header .header-search-record .close {
     padding: 1px 6px;
-    height: 30px;
-    line-height: 30px;
+    height: 28px;
+    line-height: 28px;
     border-top: 1px solid #efefef;
 }
 
