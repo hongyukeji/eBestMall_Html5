@@ -7,6 +7,9 @@
 # composer itself is not needed
 composer.phar
 
+# node js
+node_modules/
+
 # folder
 example-views/
 test/
@@ -14,11 +17,11 @@ mobile-old/
 shop/
 
 # html5
-cart.html
-cart-order.html
-cart-cashier.html
-goods.html
-login.html
-member.html
-register.html
-404.html
+#cart.html
+#cart-order.html
+#cart-cashier.html
+#goods.html
+#login.html
+#member.html
+#register.html
+#404.html
