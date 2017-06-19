@@ -12,12 +12,13 @@ node_modules/
 
 # folder
 example-views/
-test/
 mobile-old/
 shop/
+data/
+demo/
 
 # html5
-#cart.html
+cart_old.html
 #cart-order.html
 #cart-cashier.html
 #goods.html
