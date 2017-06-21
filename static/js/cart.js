@@ -14,7 +14,7 @@ new Vue({
     methods: {
         cartView: function () {
             var _this = this;
-            this.$http.get("data/storeData.json", {"id": 1}).then(function (res) {
+            this.$http.get("data/cartData.json", {"id": 1}).then(function (res) {
                 _this.storeList = res.body.result.storeList;
             });
         },
