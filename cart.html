@@ -285,7 +285,7 @@
             </div>
             <div class="cart-header">
                 <div class="cart-checkbox">
-                    <input class="cart-checkbox-all checkbox" type="checkbox" id="cart-checkbox-all">
+                    <input class="cart-checkbox-all checkbox" type="checkbox" id="cart-checkbox-all" v-model="selectedAll" @change="selectedAllEvent">
                     <label for="cart-checkbox-all">全选</label>
                 </div>
                 <div class="cart-goods">商品</div>
@@ -298,19 +298,19 @@
             <div class="cart-body">
                 <div class="cart-list-wrap">
 
-                    <div class="cart-list" v-for="(item,index) in storeList">
+                    <div class="cart-list" v-for="(store,index1) in storeList">
                         <div class="cart-list-body">
                             <div class="cart-list-body-shop">
                                 <div class="cart-checkbox cart-checkbox-list-all">
-                                    <input class="checkbox" type="checkbox">
+                                    <input class="checkbox" type="checkbox" v-model="store.selectedStore" @change="selectedStoreEvent(index1)">
                                 </div>
-                                <div class="cart-shop-name"><a href="javascript:;">{{item.storeName}}</a></div>
+                                <div class="cart-shop-name"><a href="javascript:;">{{store.storeName}}</a></div>
                             </div>
-                            <div class="cart-list-body-info-wrap" v-for="(goods,index) in item.goodsList">
+                            <div class="cart-list-body-info-wrap" v-for="(goods,index2) in store.goodsList">
                                 <div class="cart-list-body-info">
                                     <div class="cart-list-body-info-item-form">
                                         <div class="item cart-checkbox">
-                                            <input class="cart-goods-id checkbox" type="checkbox" v-bind:value="goods.goodsId">
+                                            <input class="cart-goods-id checkbox" type="checkbox" v-model="goods.selectedGoods" @change="selectedGoodsEvent(index1,index2)">
                                         </div>
                                         <div class="item goods">
                                             <div class="goods-item">
@@ -326,7 +326,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                         <div class="item attribute">
                                             <div class="goods-attribute" v-for="attributes in goods.attributes">
@@ -343,8 +342,8 @@
                                         </div>
                                         <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">{{goods.goodsPrice * goods.goodsNumber | money}}</span></strong></div>
                                         <div class="item operation">
-                                            <a href="javascript:;" v-bind:data-id="goods.goodsId">删除</a>
-                                            <a href="javascript:;" v-bind:data-id="goods.goodsId">移入收藏夹</a>
+                                            <a href="javascript:;" v-bind:data-id="goods.cartId" @click="delGoods(index1,index2)">删除</a>
+                                            <a href="javascript:;" v-bind:data-id="goods.cartId">移入收藏夹</a>
                                         </div>
                                     </div>
                                     <div class="cart-list-body-info-item-extra"></div>
@@ -412,18 +411,18 @@
             </div>
             <div class="cart-footer">
                 <div class="cart-checkbox cart-footer-item">
-                    <input class="cart-checkbox-all checkbox" type="checkbox" id="cart-footer-checkbox-all">
+                    <input class="cart-checkbox-all checkbox" type="checkbox" id="cart-footer-checkbox-all" v-model="selectedAll" @change="selectedAllEvent">
                     <label for="cart-footer-checkbox-all">全选</label>
                 </div>
                 <div class="cart-footer-operation cart-footer-item">
-                    <a href="javascript:;">删除</a>
+                    <a href="javascript:;" @click="delAllGoods">清空购物车</a>
                     <a href="javascript:;">清除失效商品</a>
                     <a href="javascript:;">移入收藏夹</a>
                 </div>
                 <div class="cart-footer-right">
-                    <div class="cart-footer-amount-sum cart-footer-item">已选商品 <em class="cart-goods-total-number">0</em> 件</div>
+                    <div class="cart-footer-amount-sum cart-footer-item">已选商品 <em class="cart-goods-total-number">{{totalNumber}}</em> 件</div>
                     <div class="cart-footer-total cart-footer-item">总价（不含运费）：<em>¥<span class="cart-goods-total-price">{{totalMoney | money}}</span></em></div>
-                    <div class="cart-footer-btn-area cart-footer-item"><button type="submit">结&nbsp;算</button></div>
+                    <div class="cart-footer-btn-area cart-footer-item"><a href="cart-order.html" v-bind:data-ids="cartIds">结&nbsp;算</a></div>
                 </div>
             </div>
         </div>

@@ -6,6 +6,7 @@
         "storeName":"网站自营",
         "goodsList":[
           {
+            "cartId":"1",
             "goodsId":"2017061888888888",
             "goodsName":"苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)",
             "goodsPrice":"6999.00",
@@ -23,12 +24,14 @@
                 "attributeValue":"移动联通版(32G)"
               }
             ]
+
           },
           {
+            "cartId":"2",
             "goodsId":"2017061888888889",
             "goodsName":"苹果 Apple iPhone8 4G手机 黑色",
             "goodsPrice":"88.88",
-            "goodsNumber":"8",
+            "goodsNumber":"1",
             "goodsImage":"static/img/temp/temp-goods_002.jpg",
             "attributes":[
               {
@@ -49,6 +52,7 @@
         "storeName":"第三方商家",
         "goodsList":[
           {
+            "cartId":"3",
             "goodsId":"2017061888888899",
             "goodsName":"第三方商家-苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)",
             "goodsPrice":"6999.00",
@@ -69,6 +73,7 @@
             ]
           },
           {
+            "cartId":"4",
             "goodsId":"2017061888888898",
             "goodsName":"第三方商家-苹果 Apple iPhone8 4G手机 黑色",
             "goodsPrice":"88.88",

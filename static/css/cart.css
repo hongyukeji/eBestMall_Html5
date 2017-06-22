@@ -448,7 +448,7 @@
 .cart-footer-btn-area {
 }
 
-.cart-footer-btn-area button {
+.cart-footer-btn-area a {
     position: relative;
     padding: 0 58px;
     height: 47px;
@@ -911,12 +911,13 @@
     text-align: right;
 }
 
-.cart-order-footer-btn button {
+.cart-order-footer-btn a {
     float: right;
-    width: 135px;
+    /*width: 135px;*/
     height: 36px;
     line-height: 36px;
-    padding: 0;
+    padding: 0 30px;
+    text-align: center;
     background-color: #e00e00;
     overflow: hidden;
     color: #ffffff;
@@ -928,7 +929,7 @@
     border: 0;
 }
 
-.cart-order-footer-btn button:hover {
+.cart-order-footer-btn a:hover {
     background-color: #d00d00;
 }
 
