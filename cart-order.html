@@ -293,67 +293,16 @@
                         <div class="consignee-address">
                             <div class="consignee-address-list">
                                 <ul>
-                                    <li>
-                                        <div class="consignee-address-list-name">Shadow<span class="item-selected"></span></div>
+                                    <li v-for="(address,index) in filterAddress">
+                                        <div class="consignee-address-list-name">{{address.userName}}<span v-if="address.isDefault" class="item-selected"></span></div>
                                         <div class="consignee-address-list-detail">
-                                            <div class="consignee-address-list-detail-name">Shadow</div>
-                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
-                                            <div class="consignee-address-list-detail-tel">138****8000</div>
-                                            <div class="consignee-address-list-detail-default">默认地址</div>
+                                            <div class="consignee-address-list-detail-name">{{address.userName}}</div>
+                                            <div class="consignee-address-list-detail-info">{{address.streetName}}</div>
+                                            <div class="consignee-address-list-detail-tel">{{address.mobile}}</div>
+                                            <div class="consignee-address-list-detail-default" v-if="address.isDefault">默认地址</div>
                                         </div>
                                         <div class="consignee-address-list-detail-operation">
-                                            <a href="javascript:;">编辑</a>
-                                            <a href="javascript:;">删除</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="consignee-address-list-name">Shadow</div>
-                                        <div class="consignee-address-list-detail">
-                                            <div class="consignee-address-list-detail-name">Shadow</div>
-                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
-                                            <div class="consignee-address-list-detail-tel">138****8000</div>
-                                        </div>
-                                        <div class="consignee-address-list-detail-operation">
-                                            <a href="javascript:;">设为默认地址</a>
-                                            <a href="javascript:;">编辑</a>
-                                            <a href="javascript:;">删除</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="consignee-address-list-name">Shadow</div>
-                                        <div class="consignee-address-list-detail">
-                                            <div class="consignee-address-list-detail-name">Shadow</div>
-                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
-                                            <div class="consignee-address-list-detail-tel">138****8000</div>
-                                        </div>
-                                        <div class="consignee-address-list-detail-operation">
-                                            <a href="javascript:;">设为默认地址</a>
-                                            <a href="javascript:;">编辑</a>
-                                            <a href="javascript:;">删除</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="consignee-address-list-name">Shadow</div>
-                                        <div class="consignee-address-list-detail">
-                                            <div class="consignee-address-list-detail-name">Shadow</div>
-                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
-                                            <div class="consignee-address-list-detail-tel">138****8000</div>
-                                        </div>
-                                        <div class="consignee-address-list-detail-operation">
-                                            <a href="javascript:;">设为默认地址</a>
-                                            <a href="javascript:;">编辑</a>
-                                            <a href="javascript:;">删除</a>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="consignee-address-list-name">Shadow</div>
-                                        <div class="consignee-address-list-detail">
-                                            <div class="consignee-address-list-detail-name">Shadow</div>
-                                            <div class="consignee-address-list-detail-info">北京 北京市 朝阳区 望京路1288号A-8-8</div>
-                                            <div class="consignee-address-list-detail-tel">138****8000</div>
-                                        </div>
-                                        <div class="consignee-address-list-detail-operation">
-                                            <a href="javascript:;">设为默认地址</a>
+                                            <a href="javascript:;" v-if="!address.isDefault" @click="setAddressDefault(address.addressId)">设为默认地址</a>
                                             <a href="javascript:;">编辑</a>
                                             <a href="javascript:;">删除</a>
                                         </div>
@@ -362,10 +311,10 @@
                             </div>
                         </div>
                         <div class="consignee-address-more-btn">
-                            <a href="javascript:;">更多地址 >></a>
+                            <a href="javascript:;" @click="limitNum=addressList.length" v-if="limitNum!=addressList.length">更多地址 >></a>
                         </div>
-                        <div class="consignee-address-more-btn hide">
-                            <a href="javascript:;">收起地址 >></a>
+                        <div class="consignee-address-more-btn">
+                            <a href="javascript:;" @click="limitNum=1" v-if="limitNum!=1">收起地址 >></a>
                         </div>
                     </div>
                     <div class="hr"></div>
@@ -399,6 +348,7 @@
                                             <div class="delivery-list-shipping-list">
                                                 <ul>
                                                     <li class="item active">快递运输<span class="item-selected"></span></li>
+                                                    <li class="item">自提点自提</li>
                                                 </ul>
                                             </div>
                                             <div class="delivery-list-shipping-introduce">
@@ -747,7 +697,9 @@
 
 <script type="text/javascript" src="static/js/jquery.min.js"></script>
 <script type="text/javascript" src="static/js/app.js"></script>
-<script type="text/javascript" src="static/js/cart.js"></script>
+<script type="text/javascript" src="static/js/lib/vue.min.js"></script>
+<script type="text/javascript" src="static/js/lib/vue-resource.min.js"></script>
+<script type="text/javascript" src="static/js/order.js"></script>
 
 </body>
 </html>

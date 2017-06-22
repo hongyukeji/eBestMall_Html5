@@ -1,0 +1,40 @@
+{
+  "status": true,
+  "result": [
+    {
+      "addressId":"1",
+      "userName":"Shadow",
+      "streetName":"北京 北京市 朝阳区 望京路1288号A-8-8",
+      "mobile":"138****8000",
+      "isDefault":true
+    },
+    {
+      "addressId":"2",
+      "userName":"小明",
+      "streetName":"北京 北京市 朝阳区 望京路1288号A-8-8",
+      "mobile":"138****8000",
+      "isDefault":false
+    },
+    {
+      "addressId":"3",
+      "userName":"小蓝",
+      "streetName":"北京 北京市 朝阳区 望京路1288号A-8-8",
+      "mobile":"138****8000",
+      "isDefault":false
+    },
+    {
+      "addressId":"4",
+      "userName":"小黄",
+      "streetName":"北京 北京市 朝阳区 望京路1288号A-8-8",
+      "mobile":"138****8000",
+      "isDefault":false
+    },
+    {
+      "addressId":"5",
+      "userName":"小王",
+      "streetName":"北京 北京市 朝阳区 望京路1288号A-8-8",
+      "mobile":"138****8000",
+      "isDefault":false
+    }
+  ]
+}
