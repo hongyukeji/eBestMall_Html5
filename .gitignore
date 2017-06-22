@@ -17,7 +17,6 @@ shop/
 demo/
 
 # html5
-cart_old.html
 #cart-order.html
 #cart-cashier.html
 #goods.html
@@ -26,3 +25,4 @@ cart_old.html
 #register.html
 #404.html
 /data/
+/cart_old.html
