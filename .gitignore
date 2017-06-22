@@ -14,7 +14,6 @@ node_modules/
 example-views/
 mobile-old/
 shop/
-data/
 demo/
 
 # html5
@@ -26,3 +25,4 @@ cart_old.html
 #member.html
 #register.html
 #404.html
+/data/
