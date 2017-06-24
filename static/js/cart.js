@@ -1,146 +1,159 @@
-new Vue({
-    el: "#content",
-    data: {
-        selectedAll: false,
-        totalMoney: 0,
-        totalNumber: 0,
-        cartIds: [],
-        storeList: []
-    },
-    filters: {},
-    mounted: function () {
-        this.$nextTick(function () {
-            this.cartList();
+$(document).ready(function () {
+    cartClickEvent();    // Cart Click
+
+    function cartClickEvent() {
+        cartGoodsNumber();
+        cartCheckbox();
+    }
+
+    /* Cart Goods Number */
+    function cartGoodsNumber() {
+        var NumberValue = $('.cart-goods-number .goods-number-input');
+        NumberValue.on('change', function () {
+            var index = NumberValue.index(this);
+            var Number = NumberValue.eq(index).val();
+            if (Number <= 0) {
+                NumberValue.eq(index).val(1);
+                NumberValue.eq(index).attr("value", parseInt(1));
+            } else if (Number > 99999) {
+                NumberValue.eq(index).val(99999);
+                NumberValue.eq(index).attr("value", parseInt(99999));
+            }
+            NumberValue.eq(index).attr("value", NumberValue.eq(index).val());
+            calcTotalPrice();
         });
-    },
-    methods: {
-        //请求购物车json数据
-        cartList: function () {
+
+        var BtnIncrease = $('.cart-goods-number .increase');
+        var BtnDecrease = $('.cart-goods-number .decrease');
+        var inputName = '.goods-number-input';
+
+        BtnIncrease.on('click', function () {
             var _this = this;
-            this.$http.get("data/cartData.json", {"id": 1}).then(function (res) {
-                _this.storeList = res.body.result.storeList;
+            var Number = $(_this).siblings(inputName).attr("value");
+            if (parseInt(Number) < 9999) {
+                $(_this).siblings(inputName).attr("value", parseInt(Number) + 1);
+                $(_this).siblings(inputName).val(parseInt(Number) + 1);
+                CalculatePrice($(_this).siblings(inputName));
+            }
+            calcTotalPrice();
+        });
+        BtnDecrease.on('click', function () {
+            var _this = this;
+            var Number = $(_this).siblings(inputName).attr("value");
+            if (parseInt(Number) > 1) {
+                $(_this).siblings(inputName).attr("value", parseInt(Number) - 1);
+                $(_this).siblings(inputName).val(parseInt(Number) - 1);
+                CalculatePrice($(_this).siblings(inputName));
+            }
+            calcTotalPrice();
+        });
 
-                //添加selected
-                for (var i = 0; i < this.storeList.length; i++) {
-                    this.$set(this.storeList[i], "selectedStore", false);
-                    this.$set(this.storeList[i], "sellength", "0");
-                    for (var n = 0; n < this.storeList[i].goodsList.length; n++) {
-                        this.$set(this.storeList[i].goodsList[n], "selectedGoods", false);
-                    }
-                }
+        /* Cart Price */
+        var cartListItem = '.cart-list-body-info-item-form';
+        var cartNumber = $('.goods-number-input');
+        var cartUnitPrice = $('.cart-goods-unit-price');
+        var cartSubtotal = $('.cart-goods-subtotal');
+        var cartTotalPrice = $('.cart-goods-total-price');
+        var cartTotalNumber = $('.cart-goods-total-number');
+        cartNumber.change(function () {
+            var _this = $(this);
+            CalculatePrice(_this);
+        });
+
+        function CalculatePrice(_this) {
+            var _Number = _this.attr("value");
+            var _UnitPrice = _this.parents(cartListItem).find(cartUnitPrice).text();
+            var _Subtotal = (_UnitPrice * _Number).toFixed(2);
+            _this.parents(cartListItem).find(cartSubtotal).text(_Subtotal);
+            // cartTotal();
+        }
+
+        function cartTotal() {
+            var _TotalPrice = 0;
+            var _TotalNumber = 0;
+            cartNumber.each(function () {
+                var _NumberThis = $(this);
+                _TotalNumber += parseFloat(_NumberThis.val()) * 1;
             });
-        },
+            cartSubtotal.each(function () {
+                var _SubtotalThis = $(this);
+                _TotalPrice += parseFloat(_SubtotalThis.text()) * 1;
+            });
 
-        //数量发生改变
-        changeNumber: function (goods) {
-            if (isNaN(goods.goodsNumber)) {
-                goods.goodsNumber = 1;
-            }
-            if (goods.goodsNumber > 9999) {
-                goods.goodsNumber = 9999;
-            }
-            if (goods.goodsNumber <= 0) {
-                goods.goodsNumber = 1;
-            }
-            this.calcTotalPrice();
-            //console.log(goods.goodsNumber); //商品数量
-            //console.log('此处执行ajax更新购物车列表中商品数量');
-        },
-
-        //操作数量
-        operationNumber: function (goods, way) {
-            if (way > 0) {
-                goods.goodsNumber++;
-            } else {
-                goods.goodsNumber--;
-            }
-            this.changeNumber(goods);
-        },
-
-        //删除购物车商品
-        delGoods: function (index1, index2) {
-            //console.log(index1, index2);
-            this.storeList[index1].goodsList.splice(index2, 1);
-            //console.log(this.storeList[index1].goodsList.length);
-            if (this.storeList[index1].goodsList.length === 0) {
-                this.storeList.splice(index1, 1);
-            }
-            this.calcTotalPrice();
-        },
-
-        delAllGoods: function () {
-            this.storeList.splice(0, this.storeList.length);
-            this.selectedAll = false;
-            this.calcTotalPrice();
-        },
-
-        //购物车总价计算
-        calcTotalPrice: function () {
-            this.totalMoney = 0;
-            this.totalNumber = 0;
-            this.cartIds = [];
-            for (var i = 0; i < this.storeList.length; i++) {
-                for (var n = 0; n < this.storeList[i].goodsList.length; n++) {
-                    // console.log(this.storeList[i].goodsList[n].selectedGoods);
-                    if ((this.storeList[i].goodsList[n].selectedGoods) === true) {
-                        this.cartIds.push(this.storeList[i].goodsList[n].cartId);
-                        this.totalNumber += parseInt(this.storeList[i].goodsList[n].goodsNumber);
-                        this.totalMoney += this.storeList[i].goodsList[n].goodsPrice * this.storeList[i].goodsList[n].goodsNumber;
-                    }
-                }
-            }
-            // console.log(this.cartIds);    //购物车id
-        },
-
-        //全选/再次单击取消全选
-        selectedAllEvent: function () {
-            for (var i = 0; i < this.storeList.length; i++) {
-                var store = this.storeList[i];
-                store.sellength = this.selectedAll ? store.goodsList.length : 0;
-                store.selectedStore = this.selectedAll;
-                for (var j = 0; j < store.goodsList.length; j++) {
-                    store.goodsList[j].selectedGoods = this.selectedAll;
-                }
-            }
-            this.calcTotalPrice();
-        },
-
-        //该商家下面所有商品选中/再次单击取消选中/所有商家都为选中状态自动更新全选为选中状态
-        selectedStoreEvent: function (index1) {
-            var store = this.storeList[index1];
-            var res = store.selectedStore;
-            store.sellength = res ? store.goodsList.length : 0;
-
-            for (var i = 0; i < store.goodsList.length; i++) {
-                store.goodsList[i].selectedGoods = res;
-            }
-            this.selectedAll = true;
-            for (var j = 0; j < this.storeList.length; j++) {
-                if (!this.storeList[j].selectedStore) {
-                    this.selectedAll = false;
-                    break;
-                }
-            }
-            this.calcTotalPrice();
-        },
-
-        //选中商品/商家下面所有商品为选中状态自动更新商家也为选中状态
-        selectedGoodsEvent: function (index1, index2) {
-            var store = this.storeList[index1];
-            var Goods = store.goodsList[index2];
-            store.sellength = Goods.selectedGoods ? parseInt(store.sellength) + 1 : parseInt(store.sellength) - 1;
-            store.selectedStore = store.sellength === store.goodsList.length;
-            this.selectedAll = true;
-            for (var j = 0; j < this.storeList.length; j++) {
-                if (!this.storeList[j].selectedStore) {
-                    this.selectedAll = false;
-                    break;
-                }
-            }
-            this.calcTotalPrice();
+            cartTotalNumber.text(_TotalNumber);
+            cartTotalPrice.text(_TotalPrice.toFixed(2));
         }
     }
-});
-Vue.filter("money", function (value) {
-    return value.toFixed(2);
+
+    /* Cart Checkbox */
+    function cartCheckbox() {
+        var cartCheckboxAll = $('.cart-checkbox-all');
+        var cartCheckboxWrap = $('.cart-list');
+        var cartCheckbox = $('.cart-checkbox-list-all .checkbox');
+
+        cartCheckboxAll.on('click', function () {
+            $('.my-cart').find($('.checkbox')).prop('checked', this.checked);
+            calcTotalPrice();
+        });
+
+        cartCheckboxWrap.find(cartCheckbox).on('click', function () {
+            if ($(this).prop('checked') === true) {
+                if ($(this).parents('.cart-list').siblings('.cart-list').find(cartCheckbox).prop('checked') !== false) {
+                    cartCheckboxAll.prop('checked', this.checked);
+                }
+            } else {
+                $('.my-cart').find(cartCheckboxAll).prop('checked', this.checked);
+            }
+            $(this).parents('.cart-list-body-shop').siblings('.cart-list-body-info-wrap').find('.checkbox').prop('checked', this.checked);
+            calcTotalPrice();
+        });
+
+        $('.cart-list-body-info-wrap').find('.checkbox').on('click', function () {
+            if ($(this).prop('checked') === true) {
+                if ($(this).parents('.cart-list-body-info').siblings('.cart-list-body-info').find('.checkbox').prop('checked') !== false) {
+                    $(this).parentsUntil(cartCheckboxWrap).find(cartCheckbox).prop('checked', this.checked);
+                    if ($(this).parents('.cart-list').siblings('.cart-list').find(cartCheckbox).prop('checked') === true) {
+                        cartCheckboxAll.prop('checked', this.checked);
+                    }
+                }
+            } else {
+                cartCheckboxAll.prop('checked', this.checked);
+                $(this).parentsUntil(cartCheckboxWrap).find(cartCheckbox).prop('checked', this.checked);
+            }
+            calcTotalPrice();
+        });
+    }
+
+    /* Calc Total Price */
+    function calcTotalPrice() {
+        var selected = [];
+        var wrap = $('.cart-body');
+        var goodsChebox = '.goods-selected';
+        var goodsNum = wrap.find(goodsChebox).length;
+
+        var _TotalNumber = 0;
+        var _TotalPrice = 0;
+
+        var cartTotalPrice = $('.cart-goods-total-price');
+        var cartTotalNumber = $('.cart-goods-total-number');
+
+        for (var i = 0; i < goodsNum; i++) {
+            if (wrap.find(goodsChebox).eq(i).is(':checked') === true) {
+                //console.log(wrap.find(goodsChebox).eq(i).attr('value'));
+                // console.log(wrap.find(goodsChebox).eq(i).parent().siblings('.number').find('.goods-number-input').attr('value'));
+                // console.log(wrap.find(goodsChebox).eq(i).parent().siblings('.number').find('.goods-number-input').addClass("test"));
+                // console.log(wrap.find(goodsChebox).eq(i).parent().siblings('.price').find('.cart-goods-unit-price').text());
+                selected.push(wrap.find(goodsChebox).eq(i).attr('value'));
+                _TotalNumber += Number(wrap.find(goodsChebox).eq(i).parent().siblings('.number').find('.goods-number-input').attr('value'));
+                _TotalPrice += Number(wrap.find(goodsChebox).eq(i).parent().siblings('.number').find('.goods-number-input').attr('value')) * (Number(wrap.find(goodsChebox).eq(i).parent().siblings('.price').find('.cart-goods-unit-price').text())).toFixed(2);
+            }
+        }
+        // console.log(selected);
+        // console.log(_TotalNumber);
+        // console.log(_TotalPrice);
+        $('.settlement-button').attr("data-id", selected);
+        cartTotalNumber.text(_TotalNumber);
+        cartTotalPrice.text(_TotalPrice.toFixed(2));
+    }
+
 });

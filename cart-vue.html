@@ -285,7 +285,7 @@
             </div>
             <div class="cart-header">
                 <div class="cart-checkbox">
-                    <input class="cart-checkbox-all checkbox" type="checkbox" id="cart-checkbox-all">
+                    <input class="cart-checkbox-all checkbox" type="checkbox" id="cart-checkbox-all" v-model="selectedAll" @change="selectedAllEvent">
                     <label for="cart-checkbox-all">全选</label>
                 </div>
                 <div class="cart-goods">商品</div>
@@ -297,97 +297,53 @@
             </div>
             <div class="cart-body">
                 <div class="cart-list-wrap">
-                    <div class="cart-list">
+
+                    <div class="cart-list" v-for="(store,index1) in storeList">
                         <div class="cart-list-body">
                             <div class="cart-list-body-shop">
                                 <div class="cart-checkbox cart-checkbox-list-all">
-                                    <input class="checkbox" type="checkbox">
+                                    <input class="checkbox" type="checkbox" v-model="store.selectedStore" @change="selectedStoreEvent(index1)">
                                 </div>
-                                <div class="cart-shop-name"><a href="javascript:;">网站自营</a></div>
+                                <div class="cart-shop-name"><a href="javascript:;">{{store.storeName}}</a></div>
                             </div>
-                            <div class="cart-list-body-info-wrap">
+                            <div class="cart-list-body-info-wrap" v-for="(goods,index2) in store.goodsList">
                                 <div class="cart-list-body-info">
                                     <div class="cart-list-body-info-item-form">
                                         <div class="item cart-checkbox">
-                                            <input class="cart-goods-id checkbox goods-selected" type="checkbox" value="20170626888">
+                                            <input class="cart-goods-id checkbox" type="checkbox" v-model="goods.selectedGoods" @change="selectedGoodsEvent(index1,index2)">
                                         </div>
                                         <div class="item goods">
                                             <div class="goods-item">
                                                 <div class="goods-item-img">
-                                                    <a href="javascript:;"><img src="static/img/temp/temp-goods_002.jpg" width="100" height="100" alt=""></a>
+                                                    <a href="javascript:;"><img v-bind:src="goods.goodsImage" width="100" height="100" alt=""></a>
                                                 </div>
                                             </div>
                                             <div class="goods-item">
                                                 <div class="goods-item-info">
-                                                    <div class="goods-item-info-name"><a href="javascript:;">苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)</a></div>
+                                                    <div class="goods-item-info-name"><a href="javascript:;">{{goods.goodsName}}</a></div>
                                                     <div class="goods-item-info-extend">
                                                         <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
                                         <div class="item attribute">
-                                            <div class="goods-attribute">
-                                                <div class="goods-attribute-list">颜色：黑色</div>
-                                                <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
+                                            <div class="goods-attribute" v-for="attributes in goods.attributes">
+                                                <div class="goods-attribute-list" v-bind:data-attribute-id="attributes.attributeId">{{attributes.attributeName}}：{{attributes.attributeValue}}</div>
                                             </div>
                                         </div>
-                                        <div class="item price"><strong>¥<span class="cart-goods-unit-price">6999.99</span></strong></div>
+                                        <div class="item price"><strong>¥<span class="cart-goods-unit-price">{{goods.goodsPrice}}</span></strong></div>
                                         <div class="item number">
                                             <div class="cart-goods-number">
-                                                <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
-                                                <input type="text" class="goods-number-input" value="1">
-                                                <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
+                                                <a href="javascript:;" v-on:click="operationNumber(goods,1)" class="increase"><i class="icon-increase"></i></a>
+                                                <input type="text" @change="changeNumber(goods)" class="goods-number-input" v-model="goods.goodsNumber">
+                                                <a href="javascript:;" @click="operationNumber(goods,-1)" class="decrease"><i class="icon-decrease"></i></a>
                                             </div>
                                         </div>
-                                        <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">6999.00</span></strong></div>
+                                        <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">{{goods.goodsPrice * goods.goodsNumber | money}}</span></strong></div>
                                         <div class="item operation">
-                                            <a href="javascript:;">删除</a>
-                                            <a href="javascript:;">移入收藏夹</a>
-                                        </div>
-                                    </div>
-                                    <div class="cart-list-body-info-item-extra"></div>
-                                </div>
-                                <div class="cart-list-body-info">
-                                    <div class="cart-list-body-info-item-form">
-                                        <div class="item cart-checkbox">
-                                            <input class="cart-goods-id checkbox goods-selected" type="checkbox" value="20170626889">
-                                        </div>
-                                        <div class="item goods">
-                                            <div class="goods-item">
-                                                <div class="goods-item-img">
-                                                    <a href="javascript:;"><img src="static/img/temp/temp-goods_002.jpg" width="100" height="100" alt=""></a>
-                                                </div>
-                                            </div>
-                                            <div class="goods-item">
-                                                <div class="goods-item-info">
-                                                    <div class="goods-item-info-name"><a href="javascript:;">苹果 Apple iPhone7 4G手机 黑色 移动联通版(32G)</a></div>
-                                                    <div class="goods-item-info-extend">
-                                                        <div class="goods-item-info-extend-item"><a href="javascript:;"><i class="icon-shield"></i>支持7天无理由退货</a></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div class="item attribute">
-                                            <div class="goods-attribute">
-                                                <div class="goods-attribute-list">颜色：黑色</div>
-                                                <div class="goods-attribute-list">尺码：移动联通版(32G)</div>
-                                            </div>
-                                        </div>
-                                        <div class="item price"><strong>¥<span class="cart-goods-unit-price">6999.00</span></strong></div>
-                                        <div class="item number">
-                                            <div class="cart-goods-number">
-                                                <a href="javascript:;" class="increase"><i class="icon-increase"></i></a>
-                                                <input type="text" class="goods-number-input" value="1">
-                                                <a href="javascript:;" class="decrease"><i class="icon-decrease"></i></a>
-                                            </div>
-                                        </div>
-                                        <div class="item subtotal"><strong>¥<span class="cart-goods-subtotal">6999.00</span></strong></div>
-                                        <div class="item operation">
-                                            <a href="javascript:;">删除</a>
-                                            <a href="javascript:;">移入收藏夹</a>
+                                            <a href="javascript:;" v-bind:data-id="goods.cartId" @click="delGoods(index1,index2)">删除</a>
+                                            <a href="javascript:;" v-bind:data-id="goods.cartId">移入收藏夹</a>
                                         </div>
                                     </div>
                                     <div class="cart-list-body-info-item-extra"></div>
@@ -396,7 +352,7 @@
                         </div>
                     </div>
 
-                    <div class="cart-list">
+                    <div class="cart-list hide">
                         <div class="cart-list-body">
                             <div class="cart-list-body-shop">
                                 <div class="cart-checkbox cart-checkbox-list-all">
@@ -408,7 +364,7 @@
                                 <div class="cart-list-body-info">
                                     <div class="cart-list-body-info-item-form">
                                         <div class="item cart-checkbox">
-                                            <input class="cart-goods-id checkbox goods-selected" type="checkbox" value="20170626899">
+                                            <input class="cart-goods-id checkbox" type="checkbox" value="">
                                         </div>
                                         <div class="item goods">
                                             <div class="goods-item">
@@ -455,18 +411,18 @@
             </div>
             <div class="cart-footer">
                 <div class="cart-checkbox cart-footer-item">
-                    <input class="cart-checkbox-all checkbox" type="checkbox" id="cart-footer-checkbox-all">
+                    <input class="cart-checkbox-all checkbox" type="checkbox" id="cart-footer-checkbox-all" v-model="selectedAll" @change="selectedAllEvent">
                     <label for="cart-footer-checkbox-all">全选</label>
                 </div>
                 <div class="cart-footer-operation cart-footer-item">
-                    <a href="javascript:;">删除</a>
+                    <a href="javascript:;" @click="delAllGoods">清空购物车</a>
                     <a href="javascript:;">清除失效商品</a>
                     <a href="javascript:;">移入收藏夹</a>
                 </div>
                 <div class="cart-footer-right">
-                    <div class="cart-footer-amount-sum cart-footer-item">已选商品 <em class="cart-goods-total-number">0</em> 件</div>
-                    <div class="cart-footer-total cart-footer-item">总价（不含运费）：<em>¥<span class="cart-goods-total-price">0.00</span></em></div>
-                    <div class="cart-footer-btn-area cart-footer-item"><a href="javascript:;" class="settlement-button" data-id="">结&nbsp;算</a></div>
+                    <div class="cart-footer-amount-sum cart-footer-item">已选商品 <em class="cart-goods-total-number">{{totalNumber}}</em> 件</div>
+                    <div class="cart-footer-total cart-footer-item">总价（不含运费）：<em>¥<span class="cart-goods-total-price">{{totalMoney | money}}</span></em></div>
+                    <div class="cart-footer-btn-area cart-footer-item"><a href="cart-order.html" v-bind:data-ids="cartIds">结&nbsp;算</a></div>
                 </div>
             </div>
         </div>
@@ -745,6 +701,8 @@
 
 <script type="text/javascript" src="static/js/jquery.min.js"></script>
 <script type="text/javascript" src="static/js/app.js"></script>
+<script type="text/javascript" src="static/js/lib/vue.min.js"></script>
+<script type="text/javascript" src="static/js/lib/vue-resource.min.js"></script>
 <script type="text/javascript" src="static/js/cart.js"></script>
 
 </body>

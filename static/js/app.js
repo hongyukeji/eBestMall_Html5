@@ -15,7 +15,7 @@ $(document).ready(function () {
         /* 页面鼠标点击事件 */
         $(document).click(function whichButton(event) {
             var btnNum = event.button;
-            if (btnNum == 0) {
+            if (btnNum === 0) {
                 // console.log("鼠标左键被点击！");
                 // $('.header-search-record').css('display', 'none');  // 关闭搜索下拉框
             }
@@ -39,7 +39,7 @@ $(document).ready(function () {
         /* 关闭顶部广告 */
         $('.close-event').on('click', function () {
             $(this).parent().parent().fadeOut(588);
-            /* $(this).parent().next().find().addClass("hidden").removeClass("hidden");  // @父辈 parent() @同辈 next()  @儿子 find() */
+            /* $(this).parent().next().find().addClass("hidden").removeClass("hidden");  // @父辈 parent() @同辈 siblings() next()  @儿子 find() */
         });
         /* 返回顶部按钮被单击事件 */
         $('.returnTop').click(function () {
