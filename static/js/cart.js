@@ -1,9 +1,25 @@
 $(document).ready(function () {
-    cartClickEvent();    // Cart Click
+    cartClickEvent();
 
     function cartClickEvent() {
+        cartScroll();
         cartGoodsNumber();
         cartCheckbox();
+    }
+
+    /* Cart Scroll Event */
+    function cartScroll() {
+        $(window).on('scroll', function () {
+            var cartList = $('.my-cart');
+            var cartFooter = $('.cart-footer');
+            var className = 'cart-footer-fixed';
+            var triggerHeight = cartList.offset().top + cartList.outerHeight(true) - $(window).height();
+            if ($(window).scrollTop() > triggerHeight) {
+                cartFooter.removeClass(className);
+            } else {
+                cartFooter.addClass(className);
+            }
+        });
     }
 
     /* Cart Goods Number */

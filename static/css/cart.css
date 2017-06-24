@@ -427,12 +427,19 @@
 }
 
 .cart-footer {
-    width: 100%;
+    width: 1210px;
     height: 45px;
     float: left;
     border: 1px solid #f0f0f0;
-    background: #fff;
+    background: #ffffff;
     position: relative;
+}
+
+.cart-footer-fixed {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    box-shadow: 1px -1px 8px rgba(0, 1, 1, .08);
 }
 
 .cart-footer-item {

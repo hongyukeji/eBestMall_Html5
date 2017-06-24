@@ -139,3 +139,12 @@ CSSID的命名
 @-ms-viewport {width: auto;}
 
 ~~~
+
+常用jQuery函数
+-------------------
+
+```
+console.log("可视页面的高度:" + $(window).height());
+console.log("网页被卷起来的高度:" + $(window).scrollTop());
+console.log("元素距离顶部的高度:" + Name.offset().top);
+```
