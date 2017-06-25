@@ -1517,6 +1517,10 @@ em, i {
     float: left;
 }
 
+#sideBar .sideBar-cartBar-body-head-left > label {
+    cursor: pointer;
+}
+
 #sideBar .sideBar-cartBar-body-head-right {
     margin-right: 8px;
     float: right;
