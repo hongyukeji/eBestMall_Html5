@@ -14,7 +14,6 @@ class EbmAsset extends AssetBundle
         'css/app.css',
     ];
     public $js = [
-        'js/jquery.min.js',
         'js/app.js',
     ];
     public $depends = [
