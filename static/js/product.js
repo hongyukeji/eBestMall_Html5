@@ -148,15 +148,19 @@ $(document).ready(function () {
         });
 
         productBtnAdd.on('click', function () {
-            var productNumber = productNumberText.val();
-            if (parseInt(productNumber) < 9999) {
-                productNumberText.val(parseInt(productNumber) + 1);
+            var productNumber = productNumberText.attr("value");
+            if (productNumber < 9999) {
+                var number = parseInt(productNumber) + 1;
+                productNumberText.attr("value", number);
+                productNumberText.val(number);
             }
         });
         productBtnReduce.on('click', function () {
-            var productNumber = productNumberText.val();
-            if (parseInt(productNumber) > 1) {
-                productNumberText.val(parseInt(productNumber) - 1);
+            var productNumber = productNumberText.attr("value");
+            if (productNumber > 1) {
+                var number = parseInt(productNumber) - 1;
+                productNumberText.attr("value", number);
+                productNumberText.val(number);
             }
         });
     }
