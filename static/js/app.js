@@ -1,6 +1,6 @@
 $(function () {
     /* JavaScript Test */
-    // console.log();
+    console.log(1);
 });
 
 /* 全局-在DOM加载完成时运行 */
@@ -8,7 +8,7 @@ $(document).ready(function () {
     clickEventOverall();    // 全局-页面鼠标点击-事件
     scrollOverall();    // 全局-滚动-事件
     sideBarOverall();    // 全局-侧边栏-事件
-    searchOverall();    // 全局-input搜索框-事件
+    //searchOverall();    // 全局-input搜索框-事件
 
     /* 全局-页面鼠标点击-函数 */
     function clickEventOverall() {

@@ -44,11 +44,14 @@ html, body {
 
 a {
     color: #666666;
-    text-decoration: none;
 }
 
 a:hover {
     color: #C81623;
+}
+
+a, a:hover, a:link {
+    text-decoration: none;
 }
 
 img {
@@ -176,7 +179,6 @@ em, i {
     width: 100%;
     height: 80px;
     z-index: 1;
-    display: none;
     position: relative;
     background-color: #E63F37;
 }
@@ -398,7 +400,7 @@ em, i {
     border-top: none;
     padding: 20px 20px 20px 0;
     white-space: nowrap;
-    width: 1194px;
+    width: 1210px;
     min-height: 98px;
     right: -1px;
     background-color: #FFFFFF;
@@ -428,8 +430,7 @@ em, i {
 }
 
 #header .siteTop > dl {
-    width: 256px;
-    /*min-height: 128px;*/
+    width: 278px;
     float: left;
     padding-left: 20px;
     margin-right: 20px;
@@ -708,8 +709,8 @@ em, i {
 
 #header .header-search .header-search-form > input[type="text"] {
     width: 486px;
-    height: 31px;
-    line-height: 31px;
+    height: 35px;
+    line-height: 35px;
     padding: 0 5px;
     font-size: 14px;
     color: rgb(51, 51, 51);

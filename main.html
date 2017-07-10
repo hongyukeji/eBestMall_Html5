@@ -8,6 +8,7 @@
     <title>eBestMall - B2B2C商城系统</title>
     <meta name="description" content="eBestMall是国内电子商务系统及服务解决方案新创品牌。为传统企业及创业者提供零售网店系统、网上商城系统、分销系统、B2B2C商城系统、微信分销系统、行业ERP等产品和解决方案。" />
     <meta name="keyword" content="eBestMall,鸿宇商城,鸿宇分销,网店系统,网上商城系统,分销系统,B2B2C商城系统,微信分销系统" />
+    <link rel="stylesheet" href="static/css/bootstrap.min.css" />
     <link rel="stylesheet" href="static/css/app.css" />
 </head>
 <body>
@@ -15,7 +16,7 @@
 <!-- Public-Header -->
 <div id="header">
     <!-- Public-Header Top-Images -->
-    <div class="header-event">
+    <div class="header-event hidden">
         <div class="w">
             <a class="header-event-bar" href="javascript:;"><img src="static/img/temp/header-top.jpg" /> </a>
             <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
@@ -158,27 +159,9 @@
                     <div class="header-search-bar">
                         <div class="header-search">
                             <form class="header-search-form" action="javascript:;" method="get">
-                                <input class="header-search-form-input-text" type="text" name="key" placeholder="eBestMall" autocomplete="off" />
+                                <input class="header-search-form-input-text" id="header-search-form-input-public" type="text" name="key" placeholder="eBestMall" autocomplete="off" />
                                 <button type="submit"><i class="icon-search"></i></button>
                             </form>
-                            <div class="header-search-record">
-                                <ul id="header-search-record-ul">
-                                    <li class="item" title="eBestMall">
-                                        <div class="item-left"><a href="javascript:;">eBestMall</a></div>
-                                        <div class="item-right">搜索历史</div>
-                                        <div class="item-delete"><a href="javascript:;">删除</a></div>
-                                    </li>
-                                    <li class="item" title="eBestMall">
-                                        <div class="item-left"><a href="javascript:;">鸿宇科技</a></div>
-                                        <div class="item-right">搜索历史</div>
-                                        <div class="item-delete"><a href="javascript:;">删除</a></div>
-                                    </li>
-                                </ul>
-                                <div class="close">
-                                    <div class="item-left"><a href="javascript:;">清空历史</a></div>
-                                    <div class="item-right"><a href="javascript:;">关闭</a></div>
-                                </div>
-                            </div>
                         </div>
                         <div class="header-hot-words">
                             <ul>
