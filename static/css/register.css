@@ -123,6 +123,7 @@
 
 .content-register-from > form > .form-item > label {
     font-size: 14px;
+    font-weight: 400;
     float: left;
     width: 100px;
     height: 52px;
@@ -134,7 +135,7 @@
     border: 0 none;
     font-size: 14px;
     width: 190px;
-    height: 19px;
+    height: 46px;
     padding-bottom: 11px;
     padding-left: 20px;
     padding-top: 16px;

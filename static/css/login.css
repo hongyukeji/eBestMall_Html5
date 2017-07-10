@@ -130,7 +130,8 @@
     top: 0;
     left: 0;
     width: 38px;
-    height: 22px;
+    height: 36px;
+    margin-bottom: 0;
     padding: 8px 0;
     text-align: center;
     background-color: #F3F3F3;
@@ -145,10 +146,10 @@
 }
 
 .content-login-form-main > form > .form-checkbox {
-    height: 18px;
+    height: 20px;
     line-height: 18px;
     padding-top: 5px;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .content-login-form-main > form > .form-checkbox > input[type="checkbox"] {
@@ -162,7 +163,9 @@
 .content-login-form-main > form > .form-checkbox > a {
     float: right;
 }
-
+.content-login-form-main > form > .form-checkbox > label {
+    font-weight: 400;
+}
 .content-login-form-main > form > .form-btn {
     text-align: center;
 }
@@ -180,7 +183,7 @@
 
 .content-login-form-main > .msg-wrap {
     width: 310px;
-    height: 23px;
+    height: 35px;
     padding: 5px 20px;
 }
 
@@ -204,11 +207,11 @@
 }
 
 .content-login-form-main > form > .form-item > input[type="text"] {
-    line-height: 18px;
-    height: 18px;
+    width: 302px;
+    height: 36px;
+    line-height: 36px;
     border: 0;
     padding: 10px 0 10px 50px;
-    width: 254px;
     float: none;
     overflow: hidden;
     font-size: 14px;
@@ -216,11 +219,11 @@
 }
 
 .content-login-form-main > form > .form-item > input[type="password"] {
-    line-height: 18px;
-    height: 18px;
+    width: 302px;
+    height: 36px;
+    line-height: 36px;
     border: 0;
     padding: 10px 0 10px 50px;
-    width: 254px;
     float: none;
     overflow: hidden;
     font-size: 14px;
@@ -264,13 +267,13 @@
 }
 
 .content-login-form-footer > ul > .item > a > i {
-    width: 12px;
-    height: 12px;
+    width: 22px;
+    height: 22px;
     padding: 5px;
     font-size: 10px;
     color: #ffffff;
     float: left;
-    margin-top: 14px;
+    margin-top: 13px;
     margin-right: 5px;
     border-radius: 100%;
 }

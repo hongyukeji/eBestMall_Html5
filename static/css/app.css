@@ -65,10 +65,20 @@ button, input {
 
 ul, ol, li {
     list-style: none;
+    margin-bottom: 0;
+}
+
+h3, p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 em, i {
     font-style: normal;
+}
+
+@-ms-viewport {
+    width: auto;
 }
 
 :focus {
@@ -178,6 +188,7 @@ em, i {
 #header .header-event {
     width: 100%;
     height: 80px;
+    display: none;
     z-index: 1;
     position: relative;
     background-color: #E63F37;
@@ -257,7 +268,7 @@ em, i {
 
 #header .headerTop > div > ul > li {
     height: 100%;
-    line-height: 32px;
+    line-height: 31px;
 }
 
 #header .headerTop > div > ul > li > span {
@@ -286,7 +297,7 @@ em, i {
 
 #header .menuTop .spacer {
     overflow: hidden;
-    margin: 12px 5px 0;
+    margin: 10px 5px 0;
     width: 1px;
     height: 10px;
     background-color: #CCCCCC;
@@ -367,7 +378,7 @@ em, i {
 #header .listTop > div {
     height: 24px;
     line-height: 24px;
-    padding-left: 5px;
+    padding-left: 7px;
     padding-right: 5px;
 }
 
@@ -498,8 +509,8 @@ em, i {
     top: -4px;
     left: -1px;
     margin-top: 35px;
-    padding: 7px;
-    width: 300px;
+    padding: 8px 0;
+    width: 330px;
     height: auto;
     z-index: 2;
     display: none;
@@ -510,15 +521,16 @@ em, i {
 
 #header .listRegion > div {
     float: left;
-    width: 60px;
-    height: 28px;
-    line-height: 26px;
+    width: 65px;
+    height: 30px;
+    line-height: 30px;
     text-align: center;
-    padding: 2px 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 #header .listRegion > div > a {
-    padding: 4px 8px;
+    padding: 3px 6px;
     color: #6C6C6C;
 }
 
@@ -555,7 +567,7 @@ em, i {
     left: -10px;
     margin-top: 0;
     margin-bottom: 0;
-    width: 100%;
+    width: 210px;
     padding: 0 10px;
     height: 100%;
     overflow: hidden;
@@ -765,7 +777,7 @@ em, i {
 
 #header .header-cart {
     width: 190px;
-    height: 34px;
+    height: 35px;
     margin: 25px auto 0 auto;
     position: relative;
     border: 1px solid #E3E4E5;
@@ -783,8 +795,8 @@ em, i {
 
 #header .header-cart .header-cart-btn {
     width: 190px;
-    height: 34px;
-    line-height: 34px;
+    height: 35px;
+    line-height: 35px;
     overflow: hidden;
     text-align: center;
 }
@@ -816,7 +828,7 @@ em, i {
 }
 
 #header .header-cart-body {
-    width: 310px;
+    width: 326px;
     position: absolute;
     top: 34px;
     right: -1px;
@@ -930,7 +942,7 @@ em, i {
 }
 
 #header .header-cart-body .header-cart-spacer {
-    width: 190px;
+    width: 188px;
     height: 1px;
     margin-top: -1px;
     float: right;
@@ -939,8 +951,8 @@ em, i {
 
 #header .header-cart-body .no-goods {
     padding-left: 30px;
-    height: 49px;
-    line-height: 49px;
+    height: 51px;
+    line-height: 51px;
     overflow: hidden;
     color: #999999;
 }
@@ -1027,7 +1039,7 @@ em, i {
 /*-------------------- 搜索条 --------------------*/
 #searchBar {
     width: 100%;
-    height: 48px;
+    height: 50px;
     position: fixed;
     top: 0;
     left: 0;
@@ -1040,11 +1052,9 @@ em, i {
 
 .searchBar-logo {
     max-width: 300px;
-    min-width: 125px;
-    height: 40px;
+    height: 35px;
     float: left;
     overflow: hidden;
-    margin-top: -2px;
 }
 
 .searchBar-logo img {
@@ -1061,8 +1071,8 @@ em, i {
 
 .searchBar-search input[type="text"] {
     width: 486px;
-    height: 31px;
-    line-height: 31px;
+    height: 35px;
+    line-height: 35px;
     padding: 0 5px;
     font-size: 14px;
     color: rgb(51, 51, 51);
@@ -1969,6 +1979,8 @@ em, i {
     width: 100%;
     float: left;
     padding: 12px 0;
+    background-color: #ffffff;
+    margin-bottom: 0;
 }
 
 #content .breadcrumb > li {

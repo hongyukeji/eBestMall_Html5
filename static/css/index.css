@@ -35,7 +35,7 @@
     float: left;
     overflow: hidden;
     padding: 0 0 20px;
-    height: 35px;
+    height: 55px;
     background: url("../img/public/index_dot.png") repeat-x 2px 18px;
     text-align: center;
     font-size: 24px;
@@ -129,8 +129,8 @@
 }
 
 .content-focus-left-classify .list {
-    width: 1018px;
-    min-height: 478px;
+    width: 1020px;
+    min-height: 480px;
     position: absolute;
     left: 190px;
     top: 0;
@@ -436,8 +436,8 @@
 }
 
 .content-focus-right .content-focus-right-user {
-    width: 170px;
-    height: 102px;
+    width: 190px;
+    height: 118px;
     float: left;
     padding: 15px 10px 0 10px;
     border-bottom: 1px solid #e6e6e6;
@@ -471,8 +471,9 @@
 }
 
 .content-focus-right-user-info_show p {
-    overflow: hidden;
     margin-top: 2px;
+    margin-bottom: 0;
+    overflow: hidden;
     white-space: nowrap;
     -ms-text-overflow: ellipsis;
     text-overflow: ellipsis;
@@ -496,8 +497,8 @@
 }
 
 .content-focus-right-user-profit a {
-    width: 70px;
-    height: 20px;
+    width: 74px;
+    height: 24px;
     float: left;
     border: 2px solid #e01222;
     line-height: 20px;
@@ -537,8 +538,8 @@
     padding-bottom: 4px;
     width: 160px;
     float: left;
-    height: 14px;
-    line-height: 14px;
+    height: 19px;
+    line-height: 19px;
     border-bottom: 1px solid #e6e6e6;
 }
 
@@ -553,7 +554,7 @@
 
 .content-focus-right-middle-tab-title > ul > li > a {
     float: left;
-    height: 17px;
+    height: 19px;
     line-height: 14px;
     padding: 0 2px;
     color: #333333;
@@ -591,7 +592,7 @@
 
 .content-focus-right .content-focus-right-service {
     width: 100%;
-    height: 209px;
+    height: 210px;
     float: left;
     overflow: hidden;
     border-top: 1px solid #e6e6e6;
@@ -607,8 +608,8 @@
 }
 
 .content-focus-right-service > ul > li {
-    width: 47px;
-    height: 69px;
+    width: 48px;
+    height: 70px;
     float: left;
     border-right: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
@@ -653,7 +654,7 @@
 }
 
 .content-sec-kill .content-sec-kill-hd {
-    width: 1160px;
+    width: 1210px;
     float: left;
     height: 55px;
     position: relative;
@@ -689,19 +690,19 @@
 }
 
 .content-sec-kill .content-sec-kill-hd-title {
-    font-family: fzzhengheis-el-gbregular;
+    margin: 7px auto;
     font-size: 26px;
     font-weight: 400;
     line-height: 40px;
     height: 40px;
-    padding-top: 9px;
     float: left;
+    font-family: fzzhengheis-el-gbregular;
 }
 
 .content-sec-kill .content-sec-kill-hd-more {
     position: relative;
     float: left;
-    margin-top: 19px;
+    margin-top: 15px;
     padding-right: 20px;
     height: 24px;
     line-height: 24px;
@@ -784,7 +785,7 @@
 }
 
 .content-sec-kill-body-list-wrapper > ul > li {
-    width: 174px;
+    width: 204px;
     height: 226px;
     float: left;
     padding: 0 14px 0 15px;
@@ -955,9 +956,9 @@
 .content-coupons-head > a {
     display: block;
     padding: 25px 30px;
-    width: 140px;
-    height: 165px;
-    color: #fff
+    width: 200px;
+    height: 215px;
+    color: #ffffff;
 }
 
 .content-coupons-head > a:hover {
@@ -969,6 +970,7 @@
     width: 100%;
     height: 36px;
     line-height: 36px;
+    margin: 0 auto;
     font-size: 28px;
     font-family: fzzhengheis-el-gbregular;
     white-space: nowrap;
@@ -988,6 +990,7 @@
 .content-coupons-head > a > p {
     height: 20px;
     line-height: 20px;
+    margin-bottom: 0;
     overflow: hidden;
     word-break: break-all;
     white-space: nowrap;
@@ -998,10 +1001,10 @@
     display: block;
     position: relative;
     margin-top: 20px;
-    padding: 2px 35px 4px 15px;
-    height: 20px;
+    padding-left: 15px;
+    height: 30px;
     border: 2px solid #fff;
-    line-height: 22px;
+    line-height: 26px;
     overflow: hidden;
 }
 
@@ -1029,7 +1032,7 @@
 .content-coupons-body > ul > li {
     position: relative;
     float: left;
-    width: 199px;
+    width: 200px;
     height: 195px;
     border-right: 1px solid #e7e7e7;
     overflow: hidden;
@@ -1081,12 +1084,13 @@
 }
 
 .content-coupons-body-coupon-price {
-    overflow: hidden;
     margin-top: 7px;
+    margin-bottom: 0;
     height: 36px;
     line-height: 36px;
     font-size: 34px;
     font-weight: 700;
+    overflow: hidden;
 }
 
 .content-coupons-body-coupon-desc {
@@ -1105,8 +1109,9 @@
 .content-coupons-body-coupon-limit {
     overflow: hidden;
     padding: 15px 10px;
-    width: 80px;
-    height: 36px;
+    width: 100px;
+    height: 66px;
+    margin-bottom: 0;
     background: #e7e7e7 url("../img/public/coupon_limit_bg.jpg") repeat-x 0 0;
     color: #666666;
 }
@@ -1200,7 +1205,7 @@
 .content-find-brand-hot-head > a {
     position: relative;
     float: right;
-    margin-top: 19px;
+    margin-top: 16px;
     padding-right: 20px;
     height: 24px;
     line-height: 24px;
@@ -1237,13 +1242,14 @@
 }
 
 .content-find-brand-hot-head-title {
-    font-family: fzzhengheis-el-gbregular;
+    margin-top: -2px;
     font-size: 26px;
     font-weight: 400;
     line-height: 40px;
     height: 40px;
     padding-top: 9px;
     float: left;
+    font-family: fzzhengheis-el-gbregular;
 }
 
 .content-find-brand-hot-body {
@@ -1337,8 +1343,8 @@
 }
 
 .content-find-brand-hot-body-up > div > a {
-    width: 142px;
-    height: 202px;
+    width: 188px;
+    height: 227px;
     float: left;
     padding: 15px 22px 10px 23px;
     border-right: 1px solid #e7e7e7;
@@ -1735,7 +1741,7 @@
 .content-storey-nav > ul > li > a {
     overflow: hidden;
     display: block;
-    width: 25px;
+    width: auto;
     padding: 10px 5px;
     line-height: 14px;
     text-align: center;
@@ -1809,13 +1815,14 @@ content-storey-left-right {
 }
 
 .content-storey-head {
-    height: 26px;
+    height: 58px;
     padding: 16px 20px 16px 25px;
     overflow: hidden;
     background-color: #999999;
 }
 
 .content-storey-head > h3 {
+    margin-top: -2px;
     float: left;
     font-size: 22px;
     color: #fff;
@@ -1841,8 +1848,8 @@ content-storey-left-right {
 
 .content-storey-head > div > a {
     display: inline-block;
-    height: 24px;
-    line-height: 24px;
+    height: 26px;
+    line-height: 26px;
     padding: 0 10px;
     color: #ffffff;
     margin-left: 10px;
@@ -1875,7 +1882,7 @@ content-storey-left-right {
 }
 
 .content-storey-body-right {
-    width: 580px;
+    width: 595px;
     height: 400px;
     float: left;
     border-left: 1px solid #e6e6e6;
@@ -2381,13 +2388,13 @@ content-storey-left-right {
 }
 
 .content-unique-entry-text {
-    width: 154px;
+    width: 164px;
     padding: 5px;
     height: 50px;
     text-align: center;
     color: #ffffff;
     position: absolute;
-    bottom: -24px;
+    bottom: -50px;
     left: 0;
     right: 0;
     background-color: black;
@@ -2402,6 +2409,7 @@ content-storey-left-right {
 }
 
 .content-unique-entry-text > h3 {
+    margin-top: 0;
     margin-bottom: 2px;
     font-size: 18px;
     font-weight: 400;

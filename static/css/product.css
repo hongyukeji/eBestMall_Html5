@@ -363,6 +363,7 @@
     width: 18px;
     height: 100%;
     float: left;
+    background: #f1f1f1;
     border-left: 1px solid #ccc;
 }
 
@@ -373,7 +374,6 @@
     font-size: 14px;
     color: #666;
     float: left;
-    background: #f1f1f1;
     text-align: center;
 }
 
@@ -420,7 +420,7 @@
 }
 
 .guess-you-like-wrap {
-    width: 179px;
+    width: 200px;
     padding-left: 20px;
     float: left;
     border-left: 1px solid #eeeeee;
@@ -496,6 +496,7 @@
     width: 100%;
     height: 18px;
     line-height: 18px;
+    margin-bottom: 0;
     color: #404040;
     text-align: center;
     position: absolute;
@@ -569,11 +570,13 @@
 }
 
 .shop-info-name > h3 {
-    padding: 0 10px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1.17em;
 }
 
 .shop-info {
-    width: 188px;
+    width: 208px;
     padding: 10px;
     float: left;
     overflow: hidden;
@@ -587,6 +590,8 @@
 
 .shop-info > .item > dl > dt {
     float: left;
+    font-weight: 400;
+    line-height: 25px;
 }
 
 .shop-info > .item > dl > dd {
@@ -633,6 +638,7 @@
 .shop-info > .shop-rate-wrap > .shop-rate > dl {
     width: 68px;
     line-height: 20px;
+    margin-bottom: 0;
     float: left;
     text-align: center;
     border-left: 1px solid #ebebeb;
@@ -640,6 +646,10 @@
 
 .shop-info > .shop-rate-wrap > .shop-rate > dl:first-child {
     border-left: 1px solid #ffffff;
+}
+
+.shop-info > .shop-rate-wrap > .shop-rate > dl > dt {
+    font-weight: 400;
 }
 
 .shop-info > .shop-rate-wrap > .shop-rate > dl > dd > a {
@@ -694,6 +704,7 @@
 
 .product-recommend-header > ul {
     margin-top: -1px;
+    margin-bottom: 0;
     border-bottom: 1px solid #e4393c;
 }
 
@@ -771,10 +782,11 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -40px;
+    bottom: -36px;
+    margin-bottom: 0;
     padding: 2px 7px;
     height: 36px;
-    line-height: 18px;
+    line-height: 16px;
     overflow: hidden;
     color: #ffffff;
     background: rgba(0, 0, 0, .7);
@@ -788,6 +800,7 @@
 
 .product-recommend-content-list > ul > li > a:hover .product-recommend-content-list-up > p {
     bottom: 0;
+    margin-bottom: 0;
 }
 
 .product-recommend-content-list-dn {
@@ -838,6 +851,7 @@
 
 .product-detail-header > ul {
     margin-top: -1px;
+    margin-bottom: 0;
     border-bottom: 1px solid #e4393c;
 }
 
@@ -920,7 +934,7 @@
 
 .product-detail-content-parameter-title {
     padding: 20px 42px;
-    height: 30px;
+    height: 70px;
     line-height: 30px;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -993,9 +1007,10 @@
 }
 
 .more-parameter {
+    text-align: right;
     padding-right: 20px;
     margin-top: -5px;
-    text-align: right;
+    margin-bottom: 0;
 }
 
 .more-parameter > a {
@@ -1028,6 +1043,8 @@
 
 .product-detail-specifications .specifications-item > h3 {
     width: 110px;
+    height: 26px;
+    line-height: 26px;
     font-size: 12px;
     font-weight: 400;
     text-align: right;
@@ -1036,16 +1053,22 @@
 
 .product-detail-specifications .specifications-item > dl {
     margin-left: 110px;
+    height: 26px;
+    line-height: 26px;
+    margin-bottom: 0;
 }
 
 .product-detail-specifications .specifications-item > dl > dt {
     width: 150px;
+    line-height: 26px;
+    font-weight: 400;
     float: left;
     text-align: right;
 }
 
 .product-detail-specifications .specifications-item > dl > dd {
     margin-left: 190px;
+    line-height: 26px;
 }
 
 .product-detail-packing {
@@ -1059,6 +1082,7 @@
 
 .product-detail-packing > h3 {
     width: 130px;
+    line-height: 26px;
     font-size: 12px;
     font-weight: 400;
     text-align: right;
@@ -1067,6 +1091,7 @@
 
 .product-detail-packing > p {
     margin-left: 155px;
+    line-height: 26px;
     padding-right: 50px;
 }
 
@@ -1289,7 +1314,7 @@
 
 .product-detail-comment-list-tab-con .tag-list {
     padding-bottom: 12px;
-    height: 22px;
+    height:35px;
     overflow: hidden;
 }
 
@@ -1412,11 +1437,13 @@
 }
 
 .product-detail-aside-item-header > h3 {
-    padding: 0 10px;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 1.17em;
 }
 
 .product-detail-aside-item-content {
-    width: 188px;
+    width: 208px;
     padding: 10px;
     float: left;
     overflow: hidden;
@@ -1478,7 +1505,7 @@
 }
 
 .product-detail-aside-tab-header {
-    width: 100%;
+    width: 208px;
     float: left;
     position: relative;
     background-color: #f7f7f7;
@@ -1488,6 +1515,7 @@
     width: 100%;
     float: left;
     margin-top: -1px;
+    margin-bottom: 0;
     border-bottom: 1px solid #e4393c;
 }
 
@@ -1516,6 +1544,7 @@
 
 .product-detail-aside-host-content > ul {
     height: 1218px;
+    margin-bottom: 0;
 }
 
 .product-detail-aside-host-content > ul > li {
@@ -1551,6 +1580,7 @@
 
 .shop-new-product > ul {
     height: 1218px;
+    margin-bottom: 0;
 }
 
 .shop-new-product > ul > li {
