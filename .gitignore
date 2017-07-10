@@ -25,6 +25,5 @@ demo/
 #register.html
 #404.html
 data/
-cart-vue.html
 static/js/cart-vue.js
 

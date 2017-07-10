@@ -139,9 +139,11 @@
     margin-top: 16px;
     float: left;
 }
-.cart-body .cart-checkbox input[type="checkbox"]{
+
+.cart-body .cart-checkbox input[type="checkbox"] {
     margin-top: 8px;
 }
+
 .cart-goods {
     width: 300px;
     float: left;
@@ -518,7 +520,7 @@
 }
 
 .cart-order {
-    width: 1170px;
+    width: 1210px;
     float: left;
     background-color: #ffffff;
     padding: 10px 20px;
@@ -532,6 +534,7 @@
 
 .consignee-info-title h3 {
     font-size: 14px;
+    font-weight: 700;
     height: 40px;
     line-height: 40px;
     float: left;
@@ -660,7 +663,7 @@
     float: left;
     position: relative;
     border: 1px solid #ddd;
-    height: 18px;
+    height: 30px;
     line-height: 18px;
     padding: 5px 25px;
     cursor: pointer;
@@ -705,7 +708,7 @@
 
 .goods-list {
     float: right;
-    width: 800px;
+    width: 840px;
     background-color: #f3fbfe;
     padding: 10px 20px;
 }
@@ -723,7 +726,7 @@
     float: left;
     position: relative;
     border: 1px solid #ddd;
-    height: 18px;
+    height: 30px;
     line-height: 18px;
     padding: 5px 25px;
     cursor: pointer;
@@ -736,8 +739,9 @@
     float: left;
 }
 
-.delivery-list-shipping {
-
+.delivery-list-shipping h4 {
+    font-weight: 700;
+    font-size: 12px;
 }
 
 .delivery-list-shipping-introduce {
@@ -759,8 +763,13 @@
     line-height: 24px;
 }
 
+.goods-list-title h4 {
+    font-size: 12px;
+    font-weight: 700;
+}
+
 .goods-items {
-    width: 100%;
+    width: 840px;
     float: left;
     padding: 10px 0;
 }
@@ -844,7 +853,7 @@
 
 .order-remarks-content input[type="text"] {
     width: 45em;
-    height: 18px;
+    height: 26px;
     line-height: 18px;
     font-size: 12px;
     padding: 3px 5px;
@@ -992,6 +1001,7 @@
 }
 
 .order-info-left h3 {
+    font-weight: 700;
     line-height: 26px;
     height: 26px;
     overflow: hidden;
@@ -1090,7 +1100,7 @@
 }
 
 .order-payment-list {
-    height: 32px;
+    height: 53px;
     line-height: 32px;
     border-top: 1px solid #ddd;
     padding: 10px 18px;
