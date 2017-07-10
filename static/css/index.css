@@ -744,6 +744,10 @@
     overflow: hidden;
 }
 
+.content-sec-kill-body-list-wrapper > ul > li:last-child {
+    border-right: 0;
+}
+
 .content-sec-kill-body-list-wrapper:hover .content-sec-kill-body-list-wrapper-navigate {
     display: block;
 }
