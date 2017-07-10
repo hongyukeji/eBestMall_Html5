@@ -2089,7 +2089,7 @@ content-storey-left-right {
 }
 
 .content-storey-body-brand .tab .tab-body li {
-    width: 76px;
+    width: 97px;
     height: 20px;
     float: left;
     margin-top: 8px;
@@ -2100,6 +2100,10 @@ content-storey-left-right {
 
 .content-storey-body-brand .tab .tab-body li:last-child {
     border-right: 0;
+}
+
+.content-storey-body-brand .storey-tab-three .tab-body li {
+    width: 99px;
 }
 
 .content-storey-body-brand .tab .tab-body li a {
