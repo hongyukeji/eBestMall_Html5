@@ -6,6 +6,9 @@ use yii\web\AssetBundle;
 
 /**
  * Main frontend application asset bundle.
+ * use ebestmall\web\EbmAsset;
+ * EbmAsset::register($this);
+ * $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
  */
 class EbmAsset extends AssetBundle
 {
