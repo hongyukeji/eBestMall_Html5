@@ -1,6 +1,6 @@
 <?php
 
-namespace ebestmall\web;
+namespace ebestmall\assets;
 
 use yii\web\AssetBundle;
 
