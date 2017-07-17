@@ -10,7 +10,7 @@
 
 .form-item .help-block {
     position: absolute;
-    bottom: -26px;
+    bottom: -36px;
     left: 20px;
     max-width: 380px;
     white-space: nowrap;
@@ -134,11 +134,11 @@
 .content-register-from > form > .form-item > input[type="text"] {
     border: 0 none;
     font-size: 14px;
-    width: 190px;
-    height: 46px;
-    padding-bottom: 11px;
+    width: 296px;
+    height: 50px;
+    padding-bottom: 10px;
     padding-left: 20px;
-    padding-top: 16px;
+    padding-top: 10px;
 }
 
 .content-register-from > form > .form-item > input[type="password"] {
