@@ -11,19 +11,8 @@ composer.phar
 node_modules/
 
 # folder
-example-views/
-mobile-old/
-shop/
-demo/
-
-# html5
-#cart-order.html
-#cart-cashier.html
-#goods.html
-#login.html
-#member.html
-#register.html
-#404.html
-data/
-static/js/cart-vue.js
+/mobile-old
+/shop
+/demo
+/data
 
