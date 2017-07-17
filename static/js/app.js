@@ -1,6 +1,6 @@
 $(function () {
     /* JavaScript Test */
-    console.log(1);
+    /* console.log(); */
 });
 
 /* 全局-在DOM加载完成时运行 */
