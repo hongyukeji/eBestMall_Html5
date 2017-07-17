@@ -122,7 +122,7 @@
     height: 38px;
     width: 310px;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
 .content-login-form-main > form > .form-item > label {
@@ -163,9 +163,11 @@
 .content-login-form-main > form > .form-checkbox > a {
     float: right;
 }
+
 .content-login-form-main > form > .form-checkbox > label {
     font-weight: 400;
 }
+
 .content-login-form-main > form > .form-btn {
     text-align: center;
 }
@@ -183,7 +185,7 @@
 
 .content-login-form-main > .msg-wrap {
     width: 310px;
-    height: 35px;
+    height: 26px;
     padding: 5px 20px;
 }
 
