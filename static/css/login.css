@@ -185,7 +185,7 @@
 
 .content-login-form-main > .msg-wrap {
     width: 310px;
-    height: 26px;
+    height: 30px;
     padding: 5px 20px;
 }
 
@@ -205,6 +205,10 @@
     font-size: 14px;
     color: #e4393c;
     vertical-align: -1px;
+}
+
+.content-login-form-main form .form-group {
+    height: 45px;
 }
 
 .content-login-form-main > form > .form-item > input[type="text"] {
