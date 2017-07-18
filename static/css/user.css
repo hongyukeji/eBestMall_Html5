@@ -132,12 +132,9 @@ div, table {
 
 .m_right {
     width: 979px;
-    height: auto !important;
-    min-height: 782px;
     background-color: #FFF;
     float: right;
     display: inline;
-    padding-bottom: 50px;
     -webkit-box-shadow: 0 0 5px #e0e0e0;
     -moz-box-shadow: 0 0 5px #e0e0e0;
     box-shadow: 0 0 5px #e0e0e0;
