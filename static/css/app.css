@@ -216,6 +216,14 @@ em, i {
     line-height: 31px;
 }
 
+#header .headerTop .user-login-signup {
+    height: 31px;
+}
+
+#header .headerTop .user-login-signup .listTop {
+    top: 30px;
+}
+
 #header .headerTop > div > ul > li > span {
     color: #6C6C6C;
 }
