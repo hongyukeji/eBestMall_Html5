@@ -1,7 +1,7 @@
 <?php
 
 /**
- * 程序无BUG，神兽保平安！
+ * eBestMall-Html5 程序无BUG，神兽保平安！
  * ============================================================================
  * Copyright © 2016-2017 HongYuKeJi.Co.Ltd. All rights reserved.
  * Http://www.hongyuvip.com
