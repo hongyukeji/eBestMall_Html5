@@ -15,4 +15,14 @@ node_modules/
 /shop
 /demo
 /data
+/files
 
+main.html
+404.html
+cart.html
+cart-order.html
+cart-cashier.html
+login.html
+product.html
+signup.html
+user.html
