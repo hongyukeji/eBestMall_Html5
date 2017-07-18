@@ -1976,10 +1976,7 @@ em, i {
 
 /*-------------------- 面包屑导航 --------------------*/
 #content .breadcrumb {
-    width: 100%;
-    float: left;
-    padding: 12px 0;
-    background-color: #ffffff;
+    padding: 10px 0;
     margin-bottom: 0;
 }
 

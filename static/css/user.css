@@ -63,13 +63,11 @@ div, table {
 .m_content {
     width: 1210px;
     overflow: hidden;
-    margin-top: 20px;
 }
 
 .m_left {
     width: 211px;
     overflow: hidden;
-    padding: 5px;
     float: left;
 }
 
@@ -83,9 +81,11 @@ div, table {
     text-indent: 68px;
     margin-bottom: 10px;
 }
-.left_n a{
+
+.left_n a {
     color: #ffffff;
 }
+
 .left_m {
     overflow: hidden;
     background-color: #FFF;
@@ -131,14 +131,12 @@ div, table {
 }
 
 .m_right {
-    width: 970px;
+    width: 979px;
     height: auto !important;
-    min-height: 737px;
-    height: 737px;
+    min-height: 782px;
     background-color: #FFF;
     float: right;
     display: inline;
-    margin: 5px;
     padding-bottom: 50px;
     -webkit-box-shadow: 0 0 5px #e0e0e0;
     -moz-box-shadow: 0 0 5px #e0e0e0;
@@ -146,11 +144,15 @@ div, table {
 }
 
 .m_des {
-    overflow: hidden;
-    margin-top: 45px;
-    padding-bottom: 30px;
-    margin-bottom: 20px;
+    margin: 20px;
+    padding-bottom: 20px;
     border-bottom: 1px dotted #b6b6b6;
+    overflow: hidden;
+}
+
+.m_des table {
+    width: 100%;
+    line-height: 22px;
 }
 
 .m_user {
@@ -176,9 +178,8 @@ div, table {
 }
 
 .mem_t {
-    width: 870px;
-    height: 50px;
-    line-height: 50px;
+    margin: 20px;
+    line-height: 30px;
     overflow: hidden;
     color: #333333;
     font-size: 16px;
@@ -194,13 +195,15 @@ div, table {
 }
 
 table.mon_tab {
+    width: 939px;
     background-color: #f6f6f6;
+    margin: -10px 20px 20px 20px;
 }
 
 table.mon_tab tr td {
     border-collapse: collapse;
     border-bottom: 1px solid #FFF;
-    padding: 5px 25px;
+    padding: 10px 25px;
 }
 
 table.mon_tab tr td span {
@@ -210,14 +213,23 @@ table.mon_tab tr td span {
 }
 
 table.acc_tab {
+    width: 939px;
+    margin: -10px 20px 20px 20px;
     background-color: #f6f6f6;
     font-family: "宋体";
 }
 
+table.acc_tab tr {
+    border-bottom: 1px dotted #b6b6b6;
+}
+
+table.acc_tab tr:last-child {
+    border-bottom: none;
+}
+
 table.acc_tab tr td {
     border-collapse: collapse;
-    border-bottom: 1px dotted #b6b6b6;
-    padding: 7px 25px;
+    padding: 10px 25px;
 }
 
 table.acc_tab tr td.td_l {
