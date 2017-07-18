@@ -9,6 +9,12 @@ $(document).ready(function () {
     /* 首页-单击事件-函数 */
     function indexClickEvent() {
 
+        /* 关闭顶部广告 */
+        $('.close-event').on('click', function () {
+            $(this).parent().parent().fadeOut(588);
+            /* $(this).parent().next().find().addClass("hidden").removeClass("hidden");  // @父辈 parent() @同辈 siblings() next()  @儿子 find() */
+        });
+
         /* 首页-鼠标点击事件 */
         /*
          $(document).click(function whichButton(event) {
@@ -18,7 +24,6 @@ $(document).ready(function () {
          }
          });
          */
-
     }
 
     /* 首页-滚动事件-函数 */

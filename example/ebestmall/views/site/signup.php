@@ -12,7 +12,7 @@ use ebestmall\assets\EbmAsset;
 EbmAsset::register($this);
 
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
-$this->registerCssFile($baseUrl .'/css/register.css', ['depends' => EbmAsset::className()]);
+$this->registerCssFile($baseUrl .'/css/signup.css', ['depends' => EbmAsset::className()]);
 
 $this->title = '注册';
 ?>

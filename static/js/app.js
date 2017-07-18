@@ -36,11 +36,6 @@ $(document).ready(function () {
                 event.stopPropagation();
             });
         });
-        /* 关闭顶部广告 */
-        $('.close-event').on('click', function () {
-            $(this).parent().parent().fadeOut(588);
-            /* $(this).parent().next().find().addClass("hidden").removeClass("hidden");  // @父辈 parent() @同辈 siblings() next()  @儿子 find() */
-        });
         /* 返回顶部按钮被单击事件 */
         $('.returnTop').click(function () {
             $('html,body').animate({scrollTop: 0}, 588);

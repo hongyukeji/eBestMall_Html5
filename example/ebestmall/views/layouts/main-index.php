@@ -17,7 +17,6 @@ use yii\helpers\Html;
 use ebestmall\assets\EbmAsset;
 EbmAsset::register($this);
 $baseUrl = $this->assetBundles[EbmAsset::className()]->baseUrl;
-$this->registerCssFile($baseUrl .'/css/member.css', ['depends' => EbmAsset::className()]);
 
 $this->registerMetaTag(['name' => 'keywords', 'content' => Yii::$app->params['site']['keywords']]);
 $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params['site']['description']], 'description');
@@ -29,6 +28,14 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
     <body>
     <?php $this->beginBody() ?>
 
+    <!-- Public-Header Top-Images -->
+    <div class="header-event" style="display: block;">
+        <div class="w">
+            <a class="header-event-bar" href="javascript:;"><img src="<?= Html::encode($baseUrl) ?>/img/temp/header-top.jpg" /> </a>
+            <a class="close-event" href="javascript:;"><span class="icon-close"></span></a>
+        </div>
+    </div>
+
     <!-- Public-Header -->
     <?= $this->render(
         'header.php',
@@ -37,13 +44,19 @@ $this->registerMetaTag(['name' => 'description', 'content' => Yii::$app->params[
 
     <!-- Public-Content -->
     <?= $this->render(
-        'content-member.php',
+        'content.php',
         ['content' => $content,'baseUrl' => $baseUrl]
     ) ?>
 
     <!-- Public-Footer -->
     <?= $this->render(
         'footer.php',
+        ['baseUrl' => $baseUrl]
+    ) ?>
+
+    <!-- Public-Search -->
+    <?= $this->render(
+        'search.php',
         ['baseUrl' => $baseUrl]
     ) ?>
 
