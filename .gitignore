@@ -15,8 +15,9 @@ node_modules/
 /shop
 /demo
 /data
-/files
 
+# vip
+/files
 main.html
 404.html
 cart.html
