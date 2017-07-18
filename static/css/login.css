@@ -211,6 +211,14 @@
     height: 45px;
 }
 
+.content-login-form-main form .input-group-addon {
+    border-radius: 0;
+}
+
+.content-login-form-main form .form-control {
+    border-radius: 0;
+}
+
 .content-login-form-main > form > .form-item > input[type="text"] {
     width: 302px;
     height: 36px;
