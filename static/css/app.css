@@ -311,7 +311,7 @@ em, i {
     min-width: 63px;
     position: absolute;
     top: 31px;
-    left: -1px;
+    right: -1px;
     padding: 7px;
     z-index: 3;
     display: none;
