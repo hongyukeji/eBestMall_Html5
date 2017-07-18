@@ -1931,6 +1931,7 @@ em, i {
 #content .breadcrumb {
     padding: 10px 0;
     margin-bottom: 0;
+    background-color: #ffffff;
 }
 
 #content .breadcrumb > li {

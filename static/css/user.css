@@ -3,6 +3,10 @@
     margin-bottom: 30px;
 }
 
+#content .breadcrumb {
+    background-color: #f5f5f5;
+}
+
 div, table {
     margin: 0 auto;
 }
