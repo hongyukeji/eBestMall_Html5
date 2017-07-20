@@ -55,8 +55,11 @@ $(document).ready(function () {
         var tabNum = tabWrap.find("li").length;
         var tabWidth = tabWrap.find("li").outerWidth(true) * tabPageNum;
         var tabPageCount = Math.ceil(tabNum / tabPageNum);
+        var tabImgList = $('.product-preview-thumbnail-list ul li');
         tabWrap.css("width", (tabNum * tabWrap.find("li").outerWidth(true)));
-        $('.product-preview-thumbnail-list ul li').on('mouseover', function () {
+        $('.product-preview-main-img-box img').attr({'src': tabImgList.eq(0).find('img').attr('data-img')});
+        $('.product-preview-main-img-big-box img').attr({'src': tabImgList.eq(0).find('img').attr('data-img-big')});
+        tabImgList.on('mouseover', function () {
             var _this = $(this);
             _this.addClass('active').siblings().removeClass('active');
             var previewImg = _this.find('a img').attr('data-img');
