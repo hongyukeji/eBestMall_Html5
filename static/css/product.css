@@ -362,7 +362,7 @@
     right: 0;
     bottom: 0;
     z-index: -1;
-    cursor: not-allowed;
+    cursor: wait;
 }
 
 .product-info-choose-amount {
