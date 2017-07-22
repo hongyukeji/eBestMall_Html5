@@ -1,6 +1,34 @@
 $(document).ready(function () {
+
+    $("#add-cart").on('click', function () {
+        var addCartButton = $(".goods-cart-add");
+        var url = addCartButton.attr("data-url");
+        var skuId = addCartButton.attr("data-sku-id");
+        var productId = addCartButton.attr("data-goods-id");
+        var productNum = $('.goods-number').val();
+        $.ajax({
+            url: url,
+            type: 'post',
+            data: {
+                sku_id: skuId,
+                product_id: productId,
+                product_number: productNum
+            },
+            dataType: 'html',
+            success: function (response) {
+                //console.log(response);
+                var data = JSON.parse(response);
+                $('.modal-body').text(data.msg);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                $('.modal-body').text(textStatus + '：' + XMLHttpRequest.status + ' ' + errorThrown);
+            }
+        });
+    });
+
     /* Magnifier */
     magnifierProductPreview();
+
     function magnifierProductPreview() {
         var magnifierImgBox = $('.product-preview-main-img-box');   //中图片容器
         var magnifierImgMagnifier = $('.product-preview-main-img-box-magnifier');   //放大镜容器
@@ -45,6 +73,7 @@ $(document).ready(function () {
 
     /* Product preview Tab */
     tabProductPreview();
+
     function tabProductPreview() {
         var productPreviewWrap = $('.product-preview');
         var tabBtnPrev = $('.product-preview-thumbnail-wrap .prev');
@@ -91,6 +120,7 @@ $(document).ready(function () {
     /* Transverse Tab */
     tabGoods('.product-recommend-header li', '.product-recommend-content-list', '.product-recommend-content');
     tabGoods('.product-detail-aside-tab-header li', '.product-detail-aside-item-content ul', '.product-detail-aside-item-content');
+
     function tabGoods(tabBtnName, tabContentName, tabContentWrapName) {
         var tabBtn = $(tabBtnName);
         var tabContent = $(tabContentName);
@@ -106,6 +136,7 @@ $(document).ready(function () {
 
     /* Product detail Tab */
     tabProductDetail('.product-detail-header li', '.product-detail-content', '.product-detail-content-wrap');
+
     function tabProductDetail(tabBtnName, tabContentName, tabContentWrapName) {
         var tabBtn = $(tabBtnName);
         var tabContent = $(tabContentName);
@@ -124,6 +155,7 @@ $(document).ready(function () {
 
     /* Product choose attr */
     productChooseAttr();
+
     function productChooseAttr() {
         var btnChooseAttr = $('.product-info-choose-attr .dd a');
         btnChooseAttr.on('click', function () {
@@ -131,11 +163,44 @@ $(document).ready(function () {
             if (!_this.hasClass("disabled")) {
                 _this.addClass('active').siblings().removeClass('active');
             }
+            $('#product-price').text('0.00');
+            $('#product-market-price').text('0.00');
+            $('.product-info-choose-amount-wrap-bg').css('z-index', '1');
+            var newSku = new Array();
+            var url = $('.product-info-choose-attr').attr("data-url");
+            var productId = $(".goods-cart-add").attr("data-goods-id");
+            for (var i = 0; i < $(".product-info-choose-attr ul li").length; i++) {
+                newSku.push($(".product-info-choose-attr ul li").eq(i).find('.active').attr('data-attribute-extend'));
+            }
+            var sku = JSON.stringify(newSku);
+            $.ajax({
+                url: url,
+                type: 'post',
+                data: {
+                    id: productId,
+                    sku: sku
+                },
+                dataType: 'html',
+                success: function (data) {
+                    if (data == "" || data == undefined || data == null) {
+                        console.log('没有这个商品sku');
+                    } else {
+                        // 将返回的json转换为json对象
+                        var sku = $.parseJSON(data);
+                        //改变页面信息
+                        $('#product-price').text(sku.price);
+                        $('#product-market-price').text(sku.market_price);
+                        $('#add-cart').attr('data-sku-id', sku.id);
+                        $('.product-info-choose-amount-wrap-bg').css('z-index', '-1');
+                    }
+                }
+            });
         })
     }
 
     /* Product choose amount */
     productChooseAmount();
+
     function productChooseAmount() {
         var productNumberText = $('.product-info-choose-amount .goods-number');
         var productBtnAdd = $('.product-info-choose-amount .btn-add');
@@ -170,6 +235,7 @@ $(document).ready(function () {
 
     /* Guess you like Tab */
     tabPublic('.guess-you-like-content ul', '.guess-you-like-content-footer .prev', '.guess-you-like-content-footer .next', 'height');
+
     function tabPublic(tabWraps, tabBtnPrevs, tabBtnNexts, tabUnitLengths) {
         var tabWrap = $(tabWraps);
         var tabBtnPrev = $(tabBtnPrevs);
