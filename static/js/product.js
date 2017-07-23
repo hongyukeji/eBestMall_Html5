@@ -186,7 +186,6 @@ $(document).ready(function () {
                     if (data == "" || data == undefined || data == null) {
                         console.log('没有这个商品sku');
                     } else {
-                        // 将返回的json转换为json对象
                         var sku = $.parseJSON(data);
                         //改变页面信息
                         $('#product-price').text(sku.price);
