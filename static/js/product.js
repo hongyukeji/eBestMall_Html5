@@ -86,8 +86,11 @@ $(document).ready(function () {
         var tabPageCount = Math.ceil(tabNum / tabPageNum);
         var tabImgList = $('.product-preview-thumbnail-list ul li');
         tabWrap.css("width", (tabNum * tabWrap.find("li").outerWidth(true)));
+
+        tabImgList.eq(0).addClass('active');
         $('.product-preview-main-img-box img').attr({'src': tabImgList.eq(0).find('img').attr('data-img')});
         $('.product-preview-main-img-big-box img').attr({'src': tabImgList.eq(0).find('img').attr('data-img-big')});
+
         tabImgList.on('mouseover', function () {
             var _this = $(this);
             _this.addClass('active').siblings().removeClass('active');
