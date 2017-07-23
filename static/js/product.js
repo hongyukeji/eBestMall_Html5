@@ -166,8 +166,6 @@ $(document).ready(function () {
             if (!_this.hasClass("disabled")) {
                 _this.addClass('active').siblings().removeClass('active');
             }
-            $('#product-price').text('0.00');
-            $('#product-market-price').text('0.00');
             $('.product-info-choose-amount-wrap-bg').css('z-index', '1');
             var newSku = new Array();
             var url = $('.product-info-choose-attr').attr("data-url");
