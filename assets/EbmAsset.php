@@ -14,6 +14,7 @@ class EbmAsset extends AssetBundle
 {
     public $sourcePath = '@vendor/hongyukeji/ebestmall-html/static/';
     public $css = [
+        'css/bootstrap.min.css',
         'css/app.css',
     ];
     public $js = [
@@ -21,6 +22,5 @@ class EbmAsset extends AssetBundle
     ];
     public $depends = [
         'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
     ];
 }
