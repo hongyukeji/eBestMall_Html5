@@ -147,12 +147,13 @@
 .cart-goods {
     width: 300px;
     float: left;
+    padding: 0 20px;
 }
 
 .cart-attribute {
     width: 190px;
-    height: 32px;
     padding: 0 20px;
+    text-align: center;
 }
 
 .cart-price {
@@ -323,6 +324,7 @@
 .goods-attribute {
     width: 100%;
     float: left;
+    padding: 0 20px;
 }
 
 .goods-attribute-list {
