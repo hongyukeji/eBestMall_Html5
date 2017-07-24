@@ -1954,3 +1954,18 @@ em, i {
 #content .breadcrumb > .active {
     color: #999999;
 }
+
+/*--------------------- Bootstrap ---------------------*/
+
+/* 模态框 */
+.modal .modal-content {
+    border-radius: 0;
+}
+
+.modal.fade .modal-dialog {
+    margin-top: 200px;
+}
+
+.modal .modal-footer button {
+    border-radius: 0;
+}
