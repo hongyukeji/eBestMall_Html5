@@ -375,10 +375,6 @@
     margin: 0 auto;
 }
 
-.cart-goods-number i {
-    vertical-align: -1px;
-}
-
 .cart-goods-number .goods-number-input {
     position: absolute;
     left: 19px;
@@ -422,6 +418,10 @@
     color: #666;
     margin: 0;
     background: #fff;
+}
+
+.cart-goods-number .increase i {
+    vertical-align: 1px;
 }
 
 .cart-list-body-info-item-form .price strong {
