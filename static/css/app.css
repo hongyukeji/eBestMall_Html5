@@ -1969,3 +1969,7 @@ em, i {
 .modal .modal-footer button {
     border-radius: 0;
 }
+
+.modal .modal-footer a {
+    border-radius: 0;
+}
