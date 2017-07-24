@@ -1,27 +1,5 @@
 $(document).ready(function () {
 
-    function deleteSelected() {
-        var selectedId = $('.settlement-button').attr('data-id');
-        var url = $('.delete-selected').attr('data-url');
-        console.log(selectedId);
-        $.ajax({
-            url: url,
-            type: 'post',
-            data: {
-                id: selectedId
-            },
-            dataType: 'html',
-            success: function (response) {
-                //console.log(response);
-                //console.log('删除选中购物车商品成功');
-                window.location.reload();
-            },
-            error: function (XMLHttpRequest, textStatus, errorThrown) {
-                console.log(textStatus + '：' + XMLHttpRequest.status + ' ' + errorThrown);
-            }
-        });
-    }
-
     cartClickEvent();
 
     function cartClickEvent() {
