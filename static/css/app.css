@@ -47,8 +47,12 @@ a:hover {
     color: #C81623;
 }
 
-a, a:hover, a:link {
+a, a:hover {
     color: #666666;
+    text-decoration: none;
+}
+
+a:link {
     text-decoration: none;
 }
 
