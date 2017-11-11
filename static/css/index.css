@@ -250,6 +250,10 @@
     font-size: 12px;
 }
 
+.content-focus-classify-sub-category-content a:hover {
+    color: #C81623;
+}
+
 .content-focus-classify-sub-category-content > dl {
     position: relative;
     padding-left: 80px;
