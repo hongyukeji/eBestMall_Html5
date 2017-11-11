@@ -253,6 +253,9 @@
 .content-focus-classify-sub-category-content > dl {
     position: relative;
     padding-left: 80px;
+    width: 100%;
+    min-height: 30px;
+    margin-bottom: 10px;
     float: left;
 }
 
