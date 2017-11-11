@@ -43,12 +43,13 @@ html, body {
     color: #666666;
 }
 
-a:hover {
-    color: #C81623;
+a {
+    color: #666666;
+    text-decoration: none;
 }
 
-a, a:hover {
-    color: #666666;
+a:hover {
+    color: #C81623;
     text-decoration: none;
 }
 
