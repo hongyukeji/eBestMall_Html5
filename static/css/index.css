@@ -255,6 +255,7 @@
     padding-left: 80px;
     width: 100%;
     line-height: 36px;
+    min-height: 36px;
     margin-bottom: 0;
     float: left;
 }
