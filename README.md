@@ -38,9 +38,9 @@ composer update hongyukeji/ebestmall-html
 
 * Http： www.ebestmall.com
 * Author：Shadow
-* Email：hongyukeji@126.com
-* QQ：1527200768
+* QQ：1527200768 & 13391528
 * Phone：13952101395
+* Email：hongyukeji@126.com
 
 系统 CSS + DIV 命名标准
 -------------------
