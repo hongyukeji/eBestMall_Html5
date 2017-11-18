@@ -17,16 +17,16 @@ node_modules/
 /data
 
 # vip
-index.html
-main.html
-404.html
-cart.html
-cart-order.html
-cart-cashier.html
-login.html
-register.html
-user.html
-goods.html
-cart-vue.html
-article.html
+#index.html
+#main.html
+#404.html
+#cart.html
+#cart-order.html
+#cart-cashier.html
+#login.html
+#register.html
+#user.html
+#goods.html
+#cart-vue.html
+#article.html
 
