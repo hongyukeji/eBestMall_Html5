@@ -17,6 +17,7 @@ node_modules/
 /data
 
 # vip
+index.html
 main.html
 404.html
 cart.html
