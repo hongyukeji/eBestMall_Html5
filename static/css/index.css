@@ -2151,9 +2151,8 @@ content-storey-left-right {
 
 .content-storey-body-brand .tab .tab-body li {
     width: 97px;
-    height: 20px;
+    height: 35px;
     float: left;
-    margin-top: 8px;
     padding: 0 10px;
     border-right: 1px solid #dedfe0;
     position: relative;
@@ -2169,9 +2168,8 @@ content-storey-left-right {
 
 .content-storey-body-brand .tab .tab-body li a {
     width: 100%;
-    height: 35px;
+    height: 100%;
     float: left;
-    margin-top: -8px;
     overflow: hidden;
     text-align: center;
 }
